@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.12)  20 MAR 2018 19:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.12)  7 APR 2018 12:01
 entering extended mode
 **./W04_209118_2016_praca_inżynierska.tex
 (W04_209118_2016_praca_inżynierska.tex
@@ -855,6 +855,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 132--134
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--174
+
+ []
+
 [2] [3] [4
 
 
@@ -870,7 +880,7 @@ Here is how much of TeX's memory you used:
  16288 multiletter control sequences out of 15000+200000
  19125 words of font info for 51 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 55i,9n,54p,439b,229s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,9n,54p,439b,215s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plms.enc} <C:\Users\www\AppDa
 ta\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\w
 ww\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk>{C:/
@@ -885,10 +895,10 @@ C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmi8.pfb><C:/Program Files/M
 iKTeX 2.9/fonts/type1/public/pl/plr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/public/pl/plr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plsy1
 0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb>
-Output written on W04_209118_2016_praca_inżynierska.pdf (5 pages, 121375 bytes
+Output written on W04_209118_2016_praca_inżynierska.pdf (5 pages, 122014 bytes
 ).
 PDF statistics:
- 267 PDF objects out of 1000 (max. 8388607)
+ 269 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

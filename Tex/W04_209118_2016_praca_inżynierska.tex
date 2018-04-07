@@ -84,15 +84,15 @@
 
 
 \chapter{Model manipulatora mobilnego}
-Manipulator mobilny to platforma mobilna z zamontowanym na niej manipulatorem. Biorąc pod uwagę typ ograniczeń nałożonych na kolejno platformę i manipulator można wydzielić 4 typy manipulatorów mobilnych:
+Manipulator mobilny to platforma mobilna z zamontowanym na niej manipulatorem. Biorąc pod uwagę typ ograniczeń nałożonych kolejno na platformę i manipulator można wydzielić 4 typy manipulatorów mobilnych:
 \begin{enumerate}
 \item typ (\textit{h,h}) - platforma i manipulator związane są ograniczeniami holonomicznymi,
 \item typ (\textit{nh,h}) - na platformę nałożone są ograniczenia nieholonomiczne, natomiast na manipulator ograniczenia holonomiczne,
-\item typ (\textit{nh,nh}) - ograniczenia nałożone na platformę i manipulator są nieoholonomiczne. Taki  rodzaj manipulator mobilnego został przedstawiony w \cite{5},
+\item typ (\textit{nh,nh}) - ograniczenia nałożone na platformę i manipulator są nieholonomiczne. Taki  rodzaj manipulatora mobilnego został przedstawiony w \cite{5},
 \item typ (\textit{h,nh}) - na manipulator  nałożone są ograniczenia nieholonomiczne, natomiast na platformę holonomiczne.
 \end{enumerate} 
 
-W tym rozdziale przedstawiony zostanie model manipulatora mobilnego typu (\textit{nh,h}). W szczególności w rozważanym manipulatorze platformą będzie monocykl, czyli robot mobilny klasy (2,0). Za manipulator natomiast posłuży manipulator RRR. Rozważany manipulator mobilny przedstawia rys 1.
+W tym rozdziale zostanie przedstawiony model manipulatora mobilnego typu (\textit{nh,h}). W szczególności w rozważanym manipulatorze platformą będzie monocykl, czyli robot mobilny klasy (2,0). Za manipulator natomiast posłuży manipulator RTR. Rozważany manipulator mobilny przedstawiono na rys 1.
 
 Przyjmy następujący wektor współrzędnych uogólnionych manipulatora mobilnego:
 \begin{equation}
@@ -103,30 +103,30 @@ q_r\\
 \end{array}
 \right)\in R^{n+p},
 \end{equation}
-gdzie $q_m=(x,y,\theta, \phi_1, \phi_2)^T \in R^n$ - wektor współrzędnych uogólnionych platformy mobilnej, $q_r=(q_1,q_2,q_3)^T \in R^p$ - wektor współrzędnych wewnętrznych manipulatora. Rozmiary przestrzeni wyniosą więc $n=5$, $p=3$.\\
-Do wyprowadzenia równań manipulatora mobilnego wykorzystamy mechanikę Langrange'ą.\\ Lagranżjan L zdefiniowany jest jako różnica pomiędzy energią kinetyczną, a potencjalną układu:
+gdzie $q_m=(x,y,\theta, \phi_1, \phi_2)^T \in R^n$ - wektor współrzędnych uogólnionych platformy mobilnej, $q_r=(q_1,q_2,q_3)^T \in R^p$ - wektor współrzędnych przegubowych manipulatora. Rozmiary przestrzeni wyniosą więc $n=5$, $p=3$.\\
+Do wyprowadzenia równań manipulatora mobilnego wykorzystamy mechanikę Langrange'ą.\\ Lagranżjan L jest zdefiniowany jako różnica pomiędzy energią kinetyczną, a potencjalną układu
 \begin{equation}
 L(q,\dot{q})=T(q,\dot{q})-V(q).
 \end{equation}
-Równania ruchu przy braku sił działających na system są następujące:
+Równania ruchu przy braku sił działających na system są następujące
 \begin{equation}
 \label{lagrange}
-\frac{d}{dt}\frac{\partial L}{\partial\dot{q}}-\frac{\partial L}{\partial q}=0.
+\frac{d}{dt}(\frac{\partial L}{\partial\dot{q}})-\frac{\partial L}{\partial q}=0.
 \end{equation}
-Lewą stronę równania \eqref{lagrange} można przedstawić jako:
+Lewą stronę równania \eqref{lagrange} można przedstawić jako
 \begin{equation}
 \label{lagrange2}
-\frac{d}{dt}\frac{\partial L}{\partial \dot{q}}-\frac{\partial L}{\partial q}=Q(q)\ddot{q}+C(q,\dot{q})\dot{q}+D(q).
+\frac{d}{dt}(\frac{\partial L}{\partial \dot{q}})-\frac{\partial L}{\partial q}=Q(q)\ddot{q}+C(q,\dot{q})\dot{q}+D(q).
 \end{equation}
-Przy obecności sił zewnętrznych równanie \eqref{lagrange} wygląda następująco:
+Przy obecności sił zewnętrznych równanie \eqref{lagrange} wygląda następująco
 \begin{equation}
 \label{lagrange3}
 Q(q)\ddot{q}+C(q,\dot{q})\dot{q}+D(q)=F_e.
 \end{equation}
 W naszym przypadku siły zewnętrze $F_e$ są sumą 2 składowych: $F_e=B(q)u+F_{nh}$, gdzie $B(q)u$ to uogólnione siły wejściowe(tj. wywierane na system przez elementy wykonawcze), a $F_{nh}$ to siły więzów nieholonomicznych(tj. siły zapewniające spełnienie ograniczeń nieholonomicznych).\\
-\section{Ograniczenia nieholonomiczne}
-W naszym przypadku platforma manipulatora mobilnego to monocykl, który w założeniu będzie poruszać się bez poślizgu wzdłużnego i poprzecznego.\\
-Warunek na brak poślizgu poprzecznego to:\\
+\section{Ograniczenia nieholonomiczne dla platformy}
+W naszym przypadku platforma manipulatora mobilnego to monocykl, który w założeniu będzie poruszać się bez poślizgu wzdłużnego i poprzecznego kół.\\
+Warunek na brak poślizgu poprzecznego to\\
 \begin{equation}
 \dot{x}\sin(\theta)-\dot{y}\cos(\theta)=0,
 \end{equation} 
@@ -137,7 +137,7 @@ a warunki na brak poślizgu wzdłużnego pierwszego i drugiego koła to:\\
 \begin{equation}
 \dot{x}\cos(\theta)+\dot{y}\sin(\theta)+L\dot{\theta}-R\phi_2=0.
 \end{equation}
-Ograniczenia te są z nieholonomiczne można je przedstawić w postaci Pfaffa:
+Ograniczenia te są nieholonomiczne i można je przedstawić w postaci Pfaffa
 \begin{equation}
 \label{pfaff}
 A(q)\dot{q}=0,
@@ -148,19 +148,19 @@ A(q)=\begin{bmatrix}
     \sin(\theta)  &-\cos(\theta) & 0&0&0&0&0&0 \\
     \cos(\theta)  &\sin(\theta) & -L&-R&0&0&0&0\\
      \cos(\theta)  &\sin(\theta) & L&0&-R&0&0&0       
-\end{bmatrix}
+\end{bmatrix}.
 \end{equation}
-Z \cite{5} wiemy, że siła więzów nieholonomicznych równa jest $F_{nh}=A(q)^T\lambda$, gdzie $\lambda$ to wektor mnożników Lagrange'a. Równanie \ref{lagrange3} można więc teraz zapisać jako:
+Z \cite{5} wiemy, że siła więzów nieholonomicznych równa jest $F_{nh}=A(q)^T\lambda$, gdzie $\lambda$ to wektor mnożników Lagrange'a. Równanie (\ref{lagrange3}) można więc teraz zapisać jako
 \begin{equation}
 \label{lagrange4}
 Q(q)\ddot{q}+C(q,\dot{q})\dot{q}+D(q)=B(q)u+A(q)^T\lambda .
 \end{equation}
 \section{Model w prędkościach pomocniczych}
-Model postaci (\ref{lagrange4}) posiada pewne wady: macierz $B$ jest prostokątna i niedane się odwrócić. W jawnej postaci występują również mnożniki Lagrange'a odpowiadające siłom tarcia statycznego zależnego od $u$, $q$, $\dot{q}$, $t$. Aby pozbyć się tych wad można przekształcić (\ref{lagrange4}) do modelu w prędkościach pomocniczych.\\
-Najpierw zauważmy, że ograniczenia (\ref{pfaff}) wymagają aby prędkości $\dot{q}$ należały do jądra $A(q)$. Niech baza jądra $A(q)$ będzie zbiorem wektorów $\{g_1(q), g_2(q),..., g_m(q)\}$. Jeśli więc zapiszemy prędkość $\dot{q}$ w następujący sposób 
+Model postaci (\ref{lagrange4}) posiada pewne wady: macierz $B$ jest prostokątna i nie daje się odwrócić. W jawnej postaci występują również mnożniki Lagrange'a odpowiadające siłom tarcia statycznego zależnego od $u$, $q$, $\dot{q}$, $t$. Aby pozbyć się tych wad można przekształcić (\ref{lagrange4}) do modelu wyrażonego w prędkościach pomocniczych.\\
+\par Najpierw zauważmy, że ograniczenia (\ref{pfaff}) wymagają aby prędkości $\dot{q}$ należały do jądra macierzy $A(q)$. Niech baza jądra $A(q)$ będzie zbiorem wektorów $\{g_1(q), g_2(q),..., g_m(q)\}$. Jeśli więc zapiszemy prędkość $\dot{q}$ w następujący sposób 
 \begin{equation}
 \label{niewiem1}
-\dot{q}=\sum_{k=1}^{m} g_k(q)u_k=\left(
+\dot{q}=\sum_{k=1}^{m} g_k(q)\eta_k=\left(
 \begin{array}{c} g_1(q), g_2(q),..., g_m(q)\end{array}\right)\left(
 \begin{array}{c}
 \eta_1\\
@@ -169,33 +169,33 @@ Najpierw zauważmy, że ograniczenia (\ref{pfaff}) wymagają aby prędkości $\d
 \end{array}\right)
 =G(q)\eta
 \end{equation}
-będzie ona spełniać ograniczenia (\ref{pfaff}).
+to będzie ona spełniać ograniczenia (\ref{pfaff}).
 Wektor $\eta$ nazywamy wektorem prędkości pomocniczych.\\
-Zauważmy, że:
+\par Zauważmy, że
 \begin{equation}
 \label{AG}
 A(q)G(q)=0.
 \end{equation}
-Biorąc transpozycje \ref{AG} otrzymamy: 
+Biorąc transpozycje (\ref{AG}) otrzymamy
 \begin{equation}
 \label{AG2}
 G^T(q)A^T(q)=0.
 \end{equation}
-Aby wyeliminować mnożniki Lagrange'a z (\ref{lagrange4}) należy pomnożyć (\ref{lagrange4}) lewostronnie przez  $G^T$(dla czytelności pomińmy argumenty) i skorzystać z (\ref{AG2}). Otrzymamy wtedy:
+Aby wyeliminować mnożniki Lagrange'a z (\ref{lagrange4}) należy pomnożyć (\ref{lagrange4}) lewostronnie przez  $G^T$(dla czytelności pomińmy argumenty) i skorzystać z (\ref{AG2}). Otrzymamy wtedy
 \begin{equation}
 \label{predkoscipomoc1}
 G^TQ\ddot{q}+G^TC\dot{q}+G^TD=G^TBu+G^TA^T\lambda =G^TBu.
 \end{equation}
-Zróżniczkujmy jeszcze (\ref{niewiem1}) po czasie:
+Zróżniczkujmy jeszcze (\ref{niewiem1}) po czasie
 \begin{equation}
 \label{niewiem2}
-\ddot{q}=\dot{G}\eta+G\dot{\eta}
+\ddot{q}=\dot{G}\eta+G\dot{\eta}.
 \end{equation}
-Po podstawieniu (\ref{niewiem1}) i (\ref{niewiem2}) do (\ref{predkoscipomoc1}) otrzymamy model w prędkościach pomocniczych:
+Po podstawieniu (\ref{niewiem1}) i (\ref{niewiem2}) do (\ref{predkoscipomoc1}), otrzymamy model w prędkościach pomocniczych:
 \begin{equation}
 G^TQ(\dot{G}\eta+G\dot{\eta})+G^TCG\eta+G^TD=G^TQG\dot{\eta}+G^T(Q\dot{G}+CG)\eta+G^TD=G^TBu,
 \end{equation}
-a więc:
+czyli
 \begin{equation}
 Q^*\dot{\eta}+C^*\eta+D^*=B^*u,
 \end{equation}
