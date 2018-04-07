@@ -48,7 +48,7 @@ param.initCond.q0=[param.initCond.qm0;param.initCond.qr0];
 simTime=5;
 sim('Model3.slx',simTime);
 plot(k);
-ylim([10,-10])
+ylim([-10,10])
 legend('xg','yg','xl','yl','zl')
 figure;
 plot(kp)
