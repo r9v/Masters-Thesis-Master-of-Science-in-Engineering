@@ -10,6 +10,7 @@ initCond.theta10=pi/2;%
 initCond.theta20=0.2;%
 initCond.theta30=-pi/2;%
 
+
 %----- predkosci -----%
 initCond.phip10=0;
 initCond.phip20=0;
