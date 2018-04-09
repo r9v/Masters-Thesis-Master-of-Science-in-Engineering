@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     48059,       1147]
-NotebookOptionsPosition[     47501,       1125]
-NotebookOutlinePosition[     47876,       1141]
-CellTagsIndexPosition[     47833,       1138]
+NotebookDataLength[     52181,       1233]
+NotebookOptionsPosition[     51577,       1210]
+NotebookOutlinePosition[     51952,       1226]
+CellTagsIndexPosition[     51909,       1223]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -295,12 +295,12 @@ Cell[BoxData[{
      RowBox[{"a", " ", 
       SubscriptBox["c", "0"]}], "+", 
      RowBox[{
-      SubscriptBox["c", "1"], " ", 
-      SubscriptBox["l", "2"]}], "+", 
+      SubscriptBox["l", "2"], 
+      SubscriptBox["c", "01"]}], " ", "+", 
      RowBox[{
-      SubscriptBox["c", "1"], " ", 
-      SubscriptBox["c", "3"], " ", 
-      SubscriptBox["l", "3"]}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+      SubscriptBox["l", "3"], 
+      SubscriptBox["c", "01"], " ", 
+      SubscriptBox["c", "3"]}]}], " ", "}"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"k12", "=", 
    RowBox[{"{", 
@@ -309,11 +309,11 @@ Cell[BoxData[{
       SubscriptBox["s", "0"]}], "+", 
      RowBox[{
       SubscriptBox["l", "2"], " ", 
-      SubscriptBox["s", "1"]}], "+", 
+      SubscriptBox["s", "01"]}], "+", 
      RowBox[{
-      SubscriptBox["c", "3"], " ", 
       SubscriptBox["l", "3"], " ", 
-      SubscriptBox["s", "1"]}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+      SubscriptBox["s", "01"], 
+      SubscriptBox["c", "3"]}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"k1", "=", 
    RowBox[{"{", 
@@ -321,25 +321,25 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"k21", "=", 
    RowBox[{"{", 
-    RowBox[{"a", "+", 
+    RowBox[{"a", " ", "+", 
      RowBox[{
-      SubscriptBox["c", "1"], " ", 
-      SubscriptBox["l", "2"]}], "+", 
+      SubscriptBox["l", "2"], 
+      SubscriptBox["c", "01"]}], " ", "+", 
      RowBox[{
-      SubscriptBox["c", "1"], " ", 
-      SubscriptBox["c", "3"], " ", 
-      SubscriptBox["l", "3"]}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+      SubscriptBox["l", "3"], 
+      SubscriptBox["c", "01"], " ", 
+      SubscriptBox["c", "3"]}]}], " ", "}"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"k22", "=", 
    RowBox[{"{", 
     RowBox[{
      RowBox[{
       SubscriptBox["l", "2"], " ", 
-      SubscriptBox["s", "1"]}], "+", 
+      SubscriptBox["s", "01"]}], "+", 
      RowBox[{
-      SubscriptBox["c", "3"], " ", 
-      SubscriptBox["l", "3"], " ", 
-      SubscriptBox["s", "1"]}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+      SubscriptBox["l", "3"], 
+      SubscriptBox["s", "01"], 
+      SubscriptBox["c", "3"]}]}], "  ", "}"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"k23", "=", 
    RowBox[{"{", 
@@ -354,10 +354,9 @@ Cell[BoxData[{
     RowBox[{"k21", ",", "k22", ",", "k23"}], "}"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{
-   RowBox[{"k", "=", 
-    RowBox[{"Join", "[", 
-     RowBox[{"k1", ",", "k2"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"k", "=", 
+   RowBox[{"Join", "[", 
+    RowBox[{"k1", ",", "k2"}], "]"}]}], "\[IndentingNewLine]", 
   "\[IndentingNewLine]", 
   RowBox[{"(*", " ", 
    RowBox[{
@@ -643,8 +642,8 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"Export", "[", 
    RowBox[{
-   "\"\<C:\\\\Users\\\\www\\\\Magisterka\\\\Mathematica\\\\Phi.txt\>\"", ",", 
-    "matlab", ",", 
+   "\"\<C:\\\\Users\\\\www\\\\Magisterka\\\\Mathematica\\\\Platforma \
+Moblina\\\\Phi.txt\>\"", ",", "matlab", ",", 
     RowBox[{"CharacterEncoding", "\[Rule]", "\"\<UTF-8\>\""}]}], "]"}], 
   "\[IndentingNewLine]", "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
@@ -680,8 +679,8 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"Export", "[", 
    RowBox[{
-   "\"\<C:\\\\Users\\\\www\\\\Magisterka\\\\Mathematica\\\\Phip.txt\>\"", ",",
-     "matlab", ",", 
+   "\"\<C:\\\\Users\\\\www\\\\Magisterka\\\\Mathematica\\\\Platforma \
+Moblina\\\\Phip.txt\>\"", ",", "matlab", ",", 
     RowBox[{"CharacterEncoding", "\[Rule]", "\"\<UTF-8\>\""}]}], "]"}], 
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
@@ -704,7 +703,7 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"matlab", "=", 
    RowBox[{"ToMatlab", "[", 
-    RowBox[{"kk", ",", "\"\<k\>\""}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+    RowBox[{"kk", ",", "\"\<y\>\""}], "]"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"matlab", "=", 
    RowBox[{"StringReplace", "[", 
@@ -713,8 +712,8 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"Export", "[", 
    RowBox[{
-   "\"\<C:\\\\Users\\\\www\\\\Magisterka\\\\Mathematica\\\\k.txt\>\"", ",", 
-    "matlab", ",", 
+   "\"\<C:\\\\Users\\\\www\\\\Magisterka\\\\Mathematica\\\\Platforma \
+Moblina\\\\y.txt\>\"", ",", "matlab", ",", 
     RowBox[{"CharacterEncoding", "\[Rule]", "\"\<UTF-8\>\""}]}], "]"}], 
   " "}]}], "Input",
  CellChangeTimes->{{3.7175976755171876`*^9, 3.7175977656763444`*^9}, {
@@ -895,7 +894,85 @@ Cell[BoxData[{
    3.7255213349820943`*^9, 3.725521341675477*^9}, {3.7255269035035954`*^9, 
    3.725526938095574*^9}, {3.725527000233128*^9, 3.7255270236804695`*^9}, {
    3.7255272383017445`*^9, 3.7255272404688687`*^9}, {3.72552746270858*^9, 
-   3.725527465012712*^9}, {3.7255276313112235`*^9, 3.7255276402837367`*^9}}],
+   3.725527465012712*^9}, {3.7255276313112235`*^9, 3.7255276402837367`*^9}, 
+   3.7321904324758797`*^9, {3.7321904761454043`*^9, 3.7321904792652116`*^9}, {
+   3.732191184405134*^9, 3.7321911975735617`*^9}, {3.732191231307839*^9, 
+   3.7321912407510586`*^9}, {3.732191344136074*^9, 3.732191374683139*^9}, {
+   3.7321914926688013`*^9, 3.7321915021230216`*^9}, {3.7321921077183723`*^9, 
+   3.7321921168111925`*^9}, {3.732192868395322*^9, 3.732192872566347*^9}, {
+   3.7321929053765616`*^9, 3.732192949759909*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"x", "+", 
+     FractionBox[
+      RowBox[{"Cos", "[", "\[Theta]", "]"}], "5"], "+", 
+     RowBox[{
+      FractionBox["3", "10"], " ", 
+      RowBox[{"Cos", "[", 
+       RowBox[{"\[Theta]", "+", "\[Theta]1"}], "]"}]}], "+", 
+     RowBox[{
+      FractionBox["1", "5"], " ", 
+      RowBox[{"Cos", "[", 
+       RowBox[{"\[Theta]", "+", "\[Theta]1"}], "]"}], " ", 
+      RowBox[{"Cos", "[", "\[Theta]3", "]"}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"y", "+", 
+     FractionBox[
+      RowBox[{"Sin", "[", "\[Theta]", "]"}], "5"], "+", 
+     RowBox[{
+      FractionBox["3", "10"], " ", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"\[Theta]", "+", "\[Theta]1"}], "]"}]}], "+", 
+     RowBox[{
+      FractionBox["1", "5"], " ", 
+      RowBox[{"Cos", "[", "\[Theta]3", "]"}], " ", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"\[Theta]", "+", "\[Theta]1"}], "]"}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     FractionBox["1", "5"], "+", 
+     RowBox[{
+      FractionBox["3", "10"], " ", 
+      RowBox[{"Cos", "[", 
+       RowBox[{"\[Theta]", "+", "\[Theta]1"}], "]"}]}], "+", 
+     RowBox[{
+      FractionBox["1", "5"], " ", 
+      RowBox[{"Cos", "[", 
+       RowBox[{"\[Theta]", "+", "\[Theta]1"}], "]"}], " ", 
+      RowBox[{"Cos", "[", "\[Theta]3", "]"}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      FractionBox["3", "10"], " ", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"\[Theta]", "+", "\[Theta]1"}], "]"}]}], "+", 
+     RowBox[{
+      FractionBox["1", "5"], " ", 
+      RowBox[{"Cos", "[", "\[Theta]3", "]"}], " ", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"\[Theta]", "+", "\[Theta]1"}], "]"}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[Theta]2", "+", 
+     FractionBox[
+      RowBox[{"Sin", "[", "\[Theta]3", "]"}], "5"]}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.725455353682327*^9, 3.7254553743835106`*^9}, 
+   3.7254554252474203`*^9, 3.725455952477576*^9, 3.725456002429433*^9, 
+   3.725456078123762*^9, 3.725463085847581*^9, {3.725463135916445*^9, 
+   3.725463148514166*^9}, 3.725463182413104*^9, 3.725463225858589*^9, 
+   3.7254633474785457`*^9, {3.7254634519025183`*^9, 3.7254635457898884`*^9}, 
+   3.7254635836110516`*^9, 3.725463955791339*^9, 3.7254641652083173`*^9, {
+   3.725470243731989*^9, 3.7254702685494084`*^9}, 3.7254705048859262`*^9, 
+   3.7254706550435143`*^9, 3.725470688932453*^9, {3.725470726334592*^9, 
+   3.725470740874424*^9}, 3.725470800985862*^9, 3.7254708310645823`*^9, 
+   3.7254709160494432`*^9, 3.725519308595192*^9, {3.7255212716574726`*^9, 
+   3.7255213075805273`*^9}, 3.7255270314499135`*^9, 3.7255274686689215`*^9, 
+   3.725527642797881*^9, 3.732190434146083*^9, 3.7321913022685876`*^9, 
+   3.7321913517022896`*^9, 3.732191540547907*^9, 3.732192108466975*^9, 
+   3.7321921533915024`*^9, 3.732192454078246*^9}],
 
 Cell[BoxData[
  TagBox[
@@ -1068,10 +1145,12 @@ Cell[BoxData[
    3.725470740874424*^9}, 3.725470800985862*^9, 3.7254708310645823`*^9, 
    3.7254709160494432`*^9, 3.725519308595192*^9, {3.7255212716574726`*^9, 
    3.7255213075805273`*^9}, 3.7255270314499135`*^9, 3.7255274686689215`*^9, 
-   3.725527642797881*^9}],
+   3.725527642797881*^9, 3.732190434146083*^9, 3.7321913022685876`*^9, 
+   3.7321913517022896`*^9, 3.732191540547907*^9, 3.732192108466975*^9, 
+   3.7321921533915024`*^9, 3.732192454187252*^9}],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\www\\\\Magisterka\\\\Mathematica\\\\Phi.txt\"\
-\>"], "Output",
+Cell[BoxData["\<\"C:\\\\Users\\\\www\\\\Magisterka\\\\Mathematica\\\\\
+Platforma Moblina\\\\Phi.txt\"\>"], "Output",
  CellChangeTimes->{{3.725455353682327*^9, 3.7254553743835106`*^9}, 
    3.7254554252474203`*^9, 3.725455952477576*^9, 3.725456002429433*^9, 
    3.725456078123762*^9, 3.725463085847581*^9, {3.725463135916445*^9, 
@@ -1083,10 +1162,12 @@ Cell[BoxData["\<\"C:\\\\Users\\\\www\\\\Magisterka\\\\Mathematica\\\\Phi.txt\"\
    3.725470740874424*^9}, 3.725470800985862*^9, 3.7254708310645823`*^9, 
    3.7254709160494432`*^9, 3.725519308595192*^9, {3.7255212716574726`*^9, 
    3.7255213075805273`*^9}, 3.7255270314499135`*^9, 3.7255274686689215`*^9, 
-   3.725527645162016*^9}],
+   3.725527642797881*^9, 3.732190434146083*^9, 3.7321913022685876`*^9, 
+   3.7321913517022896`*^9, 3.732191540547907*^9, 3.732192108466975*^9, 
+   3.7321921533915024`*^9, 3.732192457776458*^9}],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\www\\\\Magisterka\\\\Mathematica\\\\Phip.txt\
-\"\>"], "Output",
+Cell[BoxData["\<\"C:\\\\Users\\\\www\\\\Magisterka\\\\Mathematica\\\\\
+Platforma Moblina\\\\Phip.txt\"\>"], "Output",
  CellChangeTimes->{{3.725455353682327*^9, 3.7254553743835106`*^9}, 
    3.7254554252474203`*^9, 3.725455952477576*^9, 3.725456002429433*^9, 
    3.725456078123762*^9, 3.725463085847581*^9, {3.725463135916445*^9, 
@@ -1098,10 +1179,12 @@ Cell[BoxData["\<\"C:\\\\Users\\\\www\\\\Magisterka\\\\Mathematica\\\\Phip.txt\
    3.725470740874424*^9}, 3.725470800985862*^9, 3.7254708310645823`*^9, 
    3.7254709160494432`*^9, 3.725519308595192*^9, {3.7255212716574726`*^9, 
    3.7255213075805273`*^9}, 3.7255270314499135`*^9, 3.7255274686689215`*^9, 
-   3.7255276568496847`*^9}],
+   3.725527642797881*^9, 3.732190434146083*^9, 3.7321913022685876`*^9, 
+   3.7321913517022896`*^9, 3.732191540547907*^9, 3.732192108466975*^9, 
+   3.7321921533915024`*^9, 3.73219247198127*^9}],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\www\\\\Magisterka\\\\Mathematica\\\\k.txt\"\>\
-"], "Output",
+Cell[BoxData["\<\"C:\\\\Users\\\\www\\\\Magisterka\\\\Mathematica\\\\\
+Platforma Moblina\\\\y.txt\"\>"], "Output",
  CellChangeTimes->{{3.725455353682327*^9, 3.7254553743835106`*^9}, 
    3.7254554252474203`*^9, 3.725455952477576*^9, 3.725456002429433*^9, 
    3.725456078123762*^9, 3.725463085847581*^9, {3.725463135916445*^9, 
@@ -1113,7 +1196,9 @@ Cell[BoxData["\<\"C:\\\\Users\\\\www\\\\Magisterka\\\\Mathematica\\\\k.txt\"\>\
    3.725470740874424*^9}, 3.725470800985862*^9, 3.7254708310645823`*^9, 
    3.7254709160494432`*^9, 3.725519308595192*^9, {3.7255212716574726`*^9, 
    3.7255213075805273`*^9}, 3.7255270314499135`*^9, 3.7255274686689215`*^9, 
-   3.72552765782374*^9}]
+   3.725527642797881*^9, 3.732190434146083*^9, 3.7321913022685876`*^9, 
+   3.7321913517022896`*^9, 3.732191540547907*^9, 3.732192108466975*^9, 
+   3.7321921533915024`*^9, 3.7321924727753153`*^9}]
 }, Open  ]],
 
 Cell[BoxData[""], "Input",
@@ -1141,14 +1226,15 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 37392, 875, 4774, "Input"],
-Cell[37975, 899, 6488, 171, 193, "Output"],
-Cell[44466, 1072, 929, 13, 39, "Output"],
-Cell[45398, 1087, 932, 13, 39, "Output"],
-Cell[46333, 1102, 926, 13, 96, "Output"]
+Cell[580, 22, 37863, 880, 4849, "Input"],
+Cell[38446, 904, 2867, 70, 179, "Output"],
+Cell[41316, 976, 6656, 173, 193, "Output"],
+Cell[47975, 1151, 1118, 15, 39, "Output"],
+Cell[49096, 1168, 1118, 15, 39, "Output"],
+Cell[50217, 1185, 1118, 15, 39, "Output"]
 }, Open  ]],
-Cell[47274, 1118, 96, 1, 39, "Input"],
-Cell[47373, 1121, 124, 2, 39, "Input"]
+Cell[51350, 1203, 96, 1, 39, "Input"],
+Cell[51449, 1206, 124, 2, 39, "Input"]
 }
 ]
 *)

@@ -29,25 +29,10 @@ initCond.n10=(v+L*omega)/2;
 initCond.n20=(v-L*omega)/2;
 
 %----- combined -----%
-initCond.z0=[
-    initCond.n10;
-    initCond.n20;
-    initCond.thetap10;
-    initCond.thetap20;
-    initCond.thetap30];
-initCond.qm0=[
-    initCond.x0;
-    initCond.y0;
-    initCond.theta0;
-    initCond.phi10;
-    initCond.phi20];
-initCond.qr0=[
-    initCond.theta10;
-    initCond.theta20;
-    initCond.theta30];
-initCond.q0=[
-    initCond.qm0;
-    initCond.qr0];
+initCond.z0=[initCond.n10;initCond.n20;initCond.thetap10;initCond.thetap20;initCond.thetap30];
+initCond.qm0=[initCond.x0;initCond.y0;initCond.theta0;initCond.phi10;initCond.phi20];
+initCond.qr0=[initCond.theta10;initCond.theta20;initCond.theta30];
+initCond.q0=[initCond.qm0;initCond.qr0];
 
 end
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.12)  7 APR 2018 12:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.12)  8 APR 2018 15:53
 entering extended mode
 **./W04_209118_2016_praca_inżynierska.tex
 (W04_209118_2016_praca_inżynierska.tex
@@ -841,64 +841,93 @@ Non-PDF special ignored!
 
 
 {C:/Users/www/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 125--127
+Underfull \hbox (badness 10000) in paragraph at lines 126--128
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 128--130
+Underfull \hbox (badness 10000) in paragraph at lines 129--131
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--134
+Underfull \hbox (badness 10000) in paragraph at lines 133--135
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--160
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 171--174
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 172--175
 
  []
 
-[2] [3] [4
+[3]
+Rozdzia\PlPrIeC {\l } 2.
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--212
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 215.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 215.
+ [4
 
 
-] [5] (W04_209118_2016_praca_inżynierska.aux)
+]
+
+LaTeX Warning: Reference `eq:model' on page 5 undefined on input line 280.
+
+[5] [6
+
+
+] (W04_209118_2016_praca_inżynierska.aux)
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 13189 strings out of 493634
- 250752 string characters out of 3143750
- 292642 words of memory out of 3000000
- 16288 multiletter control sequences out of 15000+200000
- 19125 words of font info for 51 fonts, out of 3000000 for 9000
+ 13229 strings out of 493634
+ 251373 string characters out of 3143750
+ 293576 words of memory out of 3000000
+ 16320 multiletter control sequences out of 15000+200000
+ 23231 words of font info for 57 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 55i,9n,54p,439b,215s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plms.enc} <C:\Users\www\AppDa
-ta\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\w
-ww\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk>{C:/
+ 55i,9n,54p,557b,221s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\www\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ec
+bx1440.pk> <C:\Users\www\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\d
+pi600\ecbx1200.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plmi.enc}{C:/
 Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plrm.enc}{C:/Program Files/MiKTeX 2
-.9/fonts/enc/dvips/pl/plmi.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/
-plme.enc} <C:\Users\www\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dp
-i600\ecti1200.pk> <C:\Users\www\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknapp
-en\ec\dpi600\ecrm1200.pk> <C:\Users\www\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
-r\jknappen\ec\dpi600\ecbx2488.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/pl/plex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmi12.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmi8.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/pl/plr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/pl/plr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plsy1
-0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb>
-Output written on W04_209118_2016_praca_inżynierska.pdf (5 pages, 122014 bytes
+.9/fonts/enc/dvips/pl/plms.enc} <C:\Users\www\AppData\Local\MiKTeX\2.9\fonts\pk
+\ljfour\jknappen\ec\dpi600\ecbx1095.pk> <C:\Users\www\AppData\Local\MiKTeX\2.9\
+fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk>{C:/Program Files/MiKTeX 2.9/fon
+ts/enc/dvips/pl/plme.enc} <C:\Users\www\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
+r\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\www\AppData\Local\MiKTeX\2.9\fonts\
+pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\www\AppData\Local\MiKTeX\2.
+9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/pl/plex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmi
+12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmi6.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/pl/plmi8.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/pl/plr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/pl/plr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr8.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/pl/plsy8.pfb>
+Output written on W04_209118_2016_praca_inżynierska.pdf (6 pages, 159003 bytes
 ).
 PDF statistics:
- 269 PDF objects out of 1000 (max. 8388607)
+ 321 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -6,14 +6,23 @@ beep off
 % ---parametry fizyczne manipulatora--- %
 % ---poczatkowa konfiguracja i predkosci--- %
 param.initCond=setInitConditions();
-u1=5;
-u2=0;
-u3=0;
-u4=0;
-u5=0;
 
-simTime=60;
-sim('Model2.slx',simTime);
+param.Kp=200;
+param.Kd=20;
+
+
+simTime=5;
+sim('Model3.slx',simTime);
+plot(k);
+ylim([-10,10])
+legend('xg','yg','xl','yl','zl')
+figure;
+plot(kp)
+legend('xpg','ypg','xpl','ypl','zpl')
+figure
+plot(kpp)
+legend('xppg','yppg','xppl','yppl','zppl')
+figure
 plot(q);
 %ylim([0,2])
 legend('x','y','theta','phi1','phi2','theta1','theta2','theta3')
