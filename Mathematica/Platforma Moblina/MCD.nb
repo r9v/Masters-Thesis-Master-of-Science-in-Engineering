@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     74200,       1973]
-NotebookOptionsPosition[     73828,       1957]
-NotebookOutlinePosition[     74203,       1973]
-CellTagsIndexPosition[     74160,       1970]
+NotebookDataLength[     74309,       1975]
+NotebookOptionsPosition[     73937,       1959]
+NotebookOutlinePosition[     74312,       1975]
+CellTagsIndexPosition[     74269,       1972]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1635,14 +1635,14 @@ Cell[BoxData[{
    RowBox[{"ToMatlab", "[", 
     RowBox[{"QQ", ",", "\"\<Q\>\""}], "]"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"matlabQ", "=", 
+  RowBox[{"matlabQQ", "=", 
    RowBox[{"StringReplace", "[", 
     RowBox[{"matlabQ", ",", "strReplaceRules2"}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"Export", "[", 
    RowBox[{
-    RowBox[{"PathStr", "<>", " ", "\"\<Q.txt\>\""}], ",", "matlabQ", ",", 
+    RowBox[{"PathStr", "<>", " ", "\"\<Q.txt\>\""}], ",", "matlabQQ", ",", 
     RowBox[{"CharacterEncoding", "\[Rule]", "\"\<UTF-8\>\""}]}], "]"}], 
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
@@ -1773,7 +1773,7 @@ Cell[BoxData[{
     RowBox[{"PathStr", "<>", " ", "\"\<invQ.txt\>\""}], ",", "matlabInvQ", 
     ",", 
     RowBox[{"CharacterEncoding", "\[Rule]", "\"\<UTF-8\>\""}]}], "]"}], 
-  "\[IndentingNewLine]", "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"QStr", "=", 
    RowBox[{"ToString", "[", 
@@ -1807,14 +1807,14 @@ Cell[BoxData[{
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-   RowBox[{"PathStr", "<>", " ", "\"\<MatricesAll.txt\>\""}], ",", 
+   RowBox[{"PathStr", "<>", " ", "\"\<AllMatrices.txt\>\""}], ",", 
    RowBox[{"(*", 
     RowBox[{"matlabqapp", "<>"}], "*)"}], 
    RowBox[{
-   "matlabQ", "<>", "matlabB", "<>", "matlabC", "<>", "matlabD", "<>", 
+   "matlabQQ", "<>", "matlabB", "<>", "matlabC", "<>", "matlabD", "<>", 
     "matlabInvQ", "<>", "matlabInvB"}], ",", 
    RowBox[{"CharacterEncoding", "\[Rule]", "\"\<UTF-8\>\""}]}], 
-  "]"}], "\[IndentingNewLine]"}], "Input",
+  "]"}]}], "Input",
  CellChangeTimes->{{3.7175976755171876`*^9, 3.7175977656763444`*^9}, {
    3.717597880850932*^9, 3.7175979205302014`*^9}, {3.717597963650668*^9, 
    3.7175980211299553`*^9}, {3.7175991740028963`*^9, 3.717599236074446*^9}, {
@@ -1953,7 +1953,9 @@ Cell[BoxData[{
    3.732271584181164*^9, {3.732281105044733*^9, 3.732281212996464*^9}, {
    3.732281267113875*^9, 3.7322814038490295`*^9}, {3.7322815590379868`*^9, 
    3.732281565753008*^9}, {3.732281629858082*^9, 3.732281855335288*^9}, {
-   3.732282251844234*^9, 3.732282282625929*^9}}]
+   3.732282251844234*^9, 3.732282282625929*^9}, {3.7322825299418945`*^9, 
+   3.732282535366911*^9}, {3.732282602679719*^9, 3.732282648958479*^9}, {
+   3.7322829152436914`*^9, 3.7322829184139023`*^9}}]
 },
 WindowSize->{784, 812},
 WindowMargins->{{Automatic, 0}, {Automatic, 0}},
@@ -1974,7 +1976,7 @@ CellTagsIndex->{}
 Notebook[{
 Cell[558, 20, 48428, 1424, 4845, "Input"],
 Cell[48989, 1446, 96, 1, 39, InheritFromParent],
-Cell[49088, 1449, 24736, 506, 3240, "Input"]
+Cell[49088, 1449, 24845, 508, 3190, "Input"]
 }
 ]
 *)
