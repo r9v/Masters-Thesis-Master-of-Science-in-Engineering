@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     73760,       1607]
-NotebookOptionsPosition[     72516,       1566]
-NotebookOutlinePosition[     72892,       1582]
-CellTagsIndexPosition[     72849,       1579]
+NotebookDataLength[     74104,       1616]
+NotebookOptionsPosition[     72924,       1579]
+NotebookOutlinePosition[     73300,       1595]
+CellTagsIndexPosition[     73257,       1592]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -46,9 +46,7 @@ Cell[BoxData[{
     RowBox[{"(", "\[NoBreak]", GridBox[{
        {"x"},
        {"y"},
-       {"\[Theta]"},
-       {"\[Phi]1"},
-       {"\[Phi]2"}
+       {"\[Theta]"}
       },
       GridBoxAlignment->{
        "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
@@ -67,9 +65,8 @@ Cell[BoxData[{
     SubscriptBox["q", "r"], "=", 
     FormBox[
      RowBox[{"(", "\[NoBreak]", GridBox[{
-        {"\[Theta]1"},
-        {"\[Theta]2"},
-        {"\[Theta]3"}
+        {"q1"},
+        {"q2"}
        },
        GridBoxAlignment->{
         "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
@@ -97,45 +94,66 @@ Cell[BoxData[{
    SubscriptBox["s", "0"], "=", 
    RowBox[{"Sin", "[", "\[Theta]", "]"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"ss1", "=", 
-   RowBox[{"Sin", "[", "\[Theta]1", "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   SubscriptBox["s", "2"], "=", 
-   RowBox[{"Sin", "[", "\[Theta]2", "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   SubscriptBox["s", "3"], "=", 
-   RowBox[{"Sin", "[", "\[Theta]3", "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{
-    SubscriptBox["s", "01"], "=", 
-    RowBox[{"Sin", "[", 
-     RowBox[{"\[Theta]", "+", "\[Theta]1"}], "]"}]}], ";"}], 
-  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
- RowBox[{
   RowBox[{
    SubscriptBox["c", "0"], "=", 
    RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"cc1", "=", 
-   RowBox[{"Cos", "[", "\[Theta]1", "]"}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{
+   SubscriptBox["s", "1"], "=", 
+   RowBox[{"Sin", "[", 
+    SubscriptBox["q", "1"], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox["s", "2"], "=", 
+   RowBox[{"Sin", "[", 
+    SubscriptBox["q", "2"], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox["s", "12"], "=", 
+   RowBox[{"Sin", "[", 
+    RowBox[{
+     SubscriptBox["q", "1"], "+", 
+     SubscriptBox["q", "2"]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox["c", "1"], "=", 
+   RowBox[{"Cos", "[", 
+    SubscriptBox["q", "1"], "]"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    SubscriptBox["c", "2"], "=", 
-   RowBox[{"Cos", "[", "\[Theta]2", "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"Cos", "[", 
+    SubscriptBox["q", "2"], "]"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
-   SubscriptBox["c", "3"], "=", 
-   RowBox[{"Cos", "[", "\[Theta]3", "]"}]}], ";"}], "\[IndentingNewLine]", 
+   SubscriptBox["c", "12"], "=", 
+   RowBox[{"Cos", "[", 
+    RowBox[{
+     SubscriptBox["q", "1"], "+", 
+     SubscriptBox["q", "2"]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox["c", "t1"], "=", 
+   RowBox[{"Cos", "[", 
+    RowBox[{"\[Theta]", "+", "q1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox["c", "t12"], "=", 
+   RowBox[{"Cos", "[", 
+    RowBox[{"\[Theta]", "+", "q1", "+", "q2"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox["s", "t1"], "=", 
+   RowBox[{"Sin", "[", 
+    RowBox[{"\[Theta]", "+", "q1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{
-    SubscriptBox["c", "01"], "=", 
-    RowBox[{"Cos", "[", 
-     RowBox[{"\[Theta]", "+", "\[Theta]1"}], "]"}]}], ";"}], 
-  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    SubscriptBox["s", "t12"], "=", 
+    RowBox[{"Sin", "[", 
+     RowBox[{"\[Theta]", "+", "q1", "+", "q2"}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]", 
   RowBox[{"(*", " ", 
    RowBox[{
     RowBox[{
@@ -590,7 +608,8 @@ Cell[BoxData[{
    3.732345065134139*^9}, {3.7323456751790314`*^9, 3.7323456800303087`*^9}, {
    3.7323458701351824`*^9, 3.7323458799817457`*^9}, {3.732346195268779*^9, 
    3.7323462011411147`*^9}, {3.7323465827139397`*^9, 
-   3.7323465836559935`*^9}, {3.7323470499026613`*^9, 3.7323470937331676`*^9}}],
+   3.7323465836559935`*^9}, {3.7323470499026613`*^9, 
+   3.7323470937331676`*^9}, {3.732720244199331*^9, 3.7327203258736987`*^9}}],
 
 Cell[BoxData[
  TagBox[
@@ -1388,8 +1407,6 @@ Cell[BoxData["\"\<{{ap0 - (qp3*s0)/5 - ((3 + 2*c3)*(qp3 + qp6)*s01)/10 - \
 2*c3)*qp6 - 2*qp8*s1*s3)/10}, \n{qp7 + (c3*qp8)/5}}\>\""], "Input",
  CellChangeTimes->{{3.7323462354570775`*^9, 3.7323462380442257`*^9}}],
 
-Cell[CellGroupData[{
-
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{
@@ -1470,16 +1487,13 @@ Platforma Moblina\\\\AllPhi.txt\"\>"], "Output",
    3.732282109478573*^9}, 3.7323376166501102`*^9, 3.73233775057377*^9, 
    3.732337852571604*^9, 3.732344946009325*^9, 3.732345909097411*^9, {
    3.7323459575741835`*^9, 3.732345978390374*^9}, {3.732346027061158*^9, 
-   3.7323460375237565`*^9}, 3.732346102171454*^9, 3.732346221841299*^9}]
-}, Open  ]],
+   3.7323460375237565`*^9}, 3.732346102171454*^9, 3.732346221841299*^9}],
 
 Cell[BoxData["\"\<{{ap0 - (qp3*s0)/5 - ((3 + 2*c3)*(qp3 + qp6)*s01)/10 - \
 (c01*qp8*s3)/5},\n {bp0 + (c0*qp3)/5 + (c01*(3 + 2*c3)*(qp3 + qp6))/10 - \
 (qp8*s01*s3)/5}, \n{(-((3 + 2*c3)*qp6*s1) - 2*c1*qp8*s3)/10}, \n{(c1*(3 + \
 2*c3)*qp6 - 2*qp8*s1*s3)}, \n{qp7 + (c3*qp8)/5}}\>\""], "Input",
  CellChangeTimes->{{3.7323461247217436`*^9, 3.732346161054822*^9}}],
-
-Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -1562,7 +1576,6 @@ Platforma Moblina\\\\AllPhi.txt\"\>"], "Output",
    3.732337852571604*^9, 3.732344946009325*^9, 3.732345909097411*^9, {
    3.7323459575741835`*^9, 3.732345978390374*^9}, {3.732346027061158*^9, 
    3.7323460375237565`*^9}, 3.7323461023894663`*^9}]
-}, Open  ]]
 },
 WindowSize->{1260, 812},
 WindowMargins->{{Automatic, 0}, {Automatic, 0}},
@@ -1582,33 +1595,29 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 26411, 570, 1830, "Input"],
-Cell[26994, 594, 3200, 78, 194, "Output"],
-Cell[30197, 674, 5069, 123, 192, "Output"]
+Cell[580, 22, 26887, 589, 1751, "Input"],
+Cell[27470, 613, 3200, 78, 176, "Output"],
+Cell[30673, 693, 5069, 123, 174, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[35303, 802, 23622, 434, 1890, "Input"],
-Cell[58928, 1238, 599, 9, 39, "Output"],
-Cell[59530, 1249, 602, 9, 39, "Output"],
-Cell[60135, 1260, 597, 9, 39, "Output"],
-Cell[60735, 1271, 604, 9, 39, "Output"],
-Cell[61342, 1282, 768, 11, 90, "Output"],
-Cell[62113, 1295, 2244, 64, 95, "Output"],
-Cell[64360, 1361, 598, 9, 39, "Output"],
-Cell[64961, 1372, 604, 9, 39, "Output"]
+Cell[35779, 821, 23622, 434, 1890, "Input"],
+Cell[59404, 1257, 599, 9, 50, "Output"],
+Cell[60006, 1268, 602, 9, 50, "Output"],
+Cell[60611, 1279, 597, 9, 50, "Output"],
+Cell[61211, 1290, 604, 9, 50, "Output"],
+Cell[61818, 1301, 768, 11, 117, "Output"],
+Cell[62589, 1314, 2244, 64, 123, "Output"],
+Cell[64836, 1380, 598, 9, 50, "Output"],
+Cell[65437, 1391, 604, 9, 50, "Output"]
 }, Open  ]],
-Cell[65580, 1384, 359, 4, 115, InheritFromParent],
-Cell[CellGroupData[{
-Cell[65964, 1392, 1963, 60, 208, InheritFromParent],
-Cell[67930, 1454, 570, 8, 39, "Output"],
-Cell[68503, 1464, 574, 8, 39, "Output"]
-}, Open  ]],
-Cell[69092, 1475, 358, 4, 140, InheritFromParent],
-Cell[CellGroupData[{
-Cell[69475, 1483, 1915, 60, 233, InheritFromParent],
-Cell[71393, 1545, 550, 8, 39, "Output"],
-Cell[71946, 1555, 554, 8, 39, "Output"]
-}, Open  ]]
+Cell[66056, 1403, 359, 4, 149, InheritFromParent],
+Cell[66418, 1409, 1963, 60, 270, InheritFromParent],
+Cell[68384, 1471, 570, 8, 50, "Output"],
+Cell[68957, 1481, 574, 8, 50, "Output"],
+Cell[69534, 1491, 358, 4, 182, InheritFromParent],
+Cell[69895, 1497, 1915, 60, 302, InheritFromParent],
+Cell[71813, 1559, 550, 8, 50, "Output"],
+Cell[72366, 1569, 554, 8, 50, "Output"]
 }
 ]
 *)

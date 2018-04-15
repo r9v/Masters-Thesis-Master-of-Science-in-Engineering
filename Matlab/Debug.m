@@ -14,14 +14,3 @@ sim('ZiemskiAlgorytmRozszerzony.slx',simTime);
 
 plot(e);
 legend('ey1','ey2','ey3','ey4','ey5')
-
-q.data(:,:,end)
-
-    1.3124
-    0.4130
-    0.2239
-   19.2942
-   17.5031
-   -0.8355
-   -3.3755
-    0.9945

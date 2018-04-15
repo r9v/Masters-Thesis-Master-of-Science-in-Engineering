@@ -20,8 +20,34 @@
 \usepackage{float}
 \usepackage{tikz}
 \usepackage{enumitem} 
+\usepackage{graphicx}       
+\usepackage{rotating}       % pakiet umożliwiający obracanie rysunków
+\usepackage{subfigure}      % pakiet umożliwiający tworzenie podrysunków
+\usepackage{epic}           % pakiet umożliwiający rysowanie w środowisku latex
+\usepackage{listings}       % pakiet dedykowany zrodlom programow
+\usepackage{verbatim}       % pakiet dedykowany rozmaitym wydrukom tekstowym
+\usepackage{amssymb}        % pakiet z rozmaitymi symbolami matematycznymi
+\usepackage{amsmath}        % pakiet z rozmaitymi środowiskami matematycznymi
+\usepackage[polish]{babel}  % pakiet lokalizujący dokument w języku polskim
+\usepackage[OT4]{fontenc}
+\usepackage[utf8]{inputenc}
 \usepackage{bm}
-
+\usepackage{gensymb}
+\usepackage{booktabs}
+\usepackage{epstopdf}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphics}
+\usepackage[]{algorithmic} %pseudocode
+\usepackage[]{algorithm2e} %pseudocode
+\usepackage{float}
+\usepackage{csquotes}
+\usepackage{epsfig}
+%\usepackage{hyperref}
+\usepackage{wrapfig} 
 \reviewer{dypl}{0.2}{0.2}{0.67}
 \reviewer{prof}{0.2}{0.6}{0.2}
 \def\bp{\begin{review}[prof]}
@@ -207,7 +233,7 @@ gdzie:
  D^*&=G^TD,\\
  B^*&=G^TB.
 \end{align*}
-\chapter{Odsprzęganie wejściowo-wyjściowe}
+\chapter{Odsprzęganie wejściowo-wyjściowe dla manipulatora mobilnego}
 Algorytm odsprzęgania wejściowo-wyjściowego jest wykorzystywany do sterowania manipulatorów mobilnych. Rozwiązuje on zadanie śledzenia zadanej trajektorii efektora $y_d(t)$ w przestrzeni zewnętrznej. Polega on na zastosowaniu dwóch pętli sprzężenia zwrotnego, aby sprowadzić równania manipulatora mobilnego do liniowej postaci $\ddot{y}(t)=\zeta$, gdzie $\zeta$ jest nowym sterowaniem. Algorytm odpsprzęgania wejściowo-wyjściowego wymaga pełnej znajomości modelu manipulatora mobilnego.\\ 
 
  \noindent Istnieją dwie wersje tego algorytmu dla manipulatorów mobilnych (\textit{nh},\textit{h}):
@@ -224,7 +250,7 @@ y_2(q_r)\\
 \end{array}
 \right),
 \end{equation}
-gdzie $y_1(q_m,q_r)$ jest wektorem wybranych współrzędnych efektora w podstawowym układzie odniesienia ($X_0$,$Y_0$), a $y_2(q_r)$ to wektor wybranych współrzędnych efektora w lokalnym układzie odniesienia ($X_P$,$Y_P$) związanym ze środkiem masy\cite{1}.\\
+gdzie $y_1(q_m,q_r)$ jest wektorem wybranych współrzędnych efektora w podstawowym układzie odniesienia ($X_0$,$Y_0$), a $y_2(q_r)$ to wektor wybranych współrzędnych efektora w lokalnym układzie odniesienia ($X_P$,$Y_P$) związanym ze środkiem masy platformy\cite{1}.\\
 Algorytm odsprzęgania wejściowo-wyjściowego dla manipulatorów mobilnych złożony jest z dwóch pętli sprzeżeń zwrotnych\cite{1}:
 \begin{itemize}[noitemsep,topsep=0pt]
 \item wewnętrznej pętli linearyzującej transformację wejście-stan
@@ -290,12 +316,91 @@ Aby zapewnić linearyzację wejściowo-wyjściową należy więc użyć wejścia
 \begin{equation}
 v=\Phi ^{-1}[-\Phi z+\zeta].
 \end{equation}
+Po zastosowaniu algorytmu otrzymuje się więc funkcje wyjściowe w liniowej postaci:
+\begin{equation}
+\ddot{y}=\zeta.
+\end{equation}
 \subsection{Warunki działania algorytmu}
 Wyżej przedstawiony algorytm wymaga odwracalności macierzy $\Phi$. Warunek jaki trzeba spełnić aby algorytm funkcjonował jest więc następujący:
 \begin{equation}
 \text{det}(\Phi)=\text{det}(\Phi_m)\text{det}(\Phi_r)\neq0
 \end{equation}
-\section{Badania symulacyjne}
+\section{Badania symulacyjne dla manipulatora mobilnego}
+Rozważany monocykl posiada dwa wejścia (sterowania obu kół), można więc odsprząc dwie współrzędne efektora. Podczas badań postanowiono odsprząc współrzędne $x$ i $y$ efektora w podstawowym układzie odniesienia ($X_0$,$Y_0$). Funckja wyjściowa $y_1(q_m,q_r)$ ma więc postać\\
+\begin{center}
+$y_1(q_m,q_r)=
+\left(
+\begin{array}{c}
+    x + ac_0 + l_2c_{01} + l_3c_{01}c_3 \\
+    y + as_0 + l_2s_{01} + l_3s_{01}c_3\\
+\end{array}
+\right).$
+\end{center}
+Funkcja $y_2(q_r)$ to wektor współrzędnych $x$, $y$ i $z$ efektora w układzie środka masy platformy ($X_P$,$Y_P$)\\
+\begin{center}
+$y_2(q_r)=
+\left(
+\begin{array}{c}
+     a + l_2c_{1} + l_3c_{1}c_3 \\
+     l_2s_{1} + l_3s_{1}c_3\\
+     s_3l_3+q_2
+\end{array}
+\right).$
+\end{center}
+Początkowe położenie platformy było równe $q_m(0)=(x(0),y(0),\theta(0),\phi_1(0),\phi_2(0))=(0,0,0,0,0)$, a początkowa konfiguracja manipulatora była równa $q_r(0)=(q_1(0),q_2(0),q_3(0))=(\frac{\pi}{2},0.2,-\frac{\pi}{2})$. Prędkości początkowe $\dot{q}(0)$ były równe zeru.  \\
+Parametry geometryczne ustalono jako: $l_2=0.3$m, $l_3=0.2$m, $a=0.2$m.\\
+Funkcje wyjściowe miały więc następujące wartości początkowe 
+\begin{center}
+$y(q_m(0),q_r(0))=
+\left(
+\begin{array}{c}
+    0.2 \\
+     0.3 \\
+      0.2 \\
+     0.3 \\
+     0 \\
+\end{array}
+\right).$
+\end{center}
+Wektor pochodnych $\dot{y}$ równy był wektorowi zer.\\
+Wybrano  następujące trajektorie zadane $y_d(t)$ 
+\begin{center}
+$y_d(t)=
+\left(
+\begin{array}{c}
+    2t\\
+    -0.3\cos{(2t)}\\
+    0.5\\
+    -0.3\\
+    0.2\\
+\end{array}
+\right).$
+\end{center}
+Błąd początkowy i jego pochodna były więc równe
+\begin{center}
+$e(0)=
+\left(
+\begin{array}{c}
+   -0.2\\
+    -0.6\\
+    0.3\\
+    -0.6\\
+    0.2\\
+\end{array}
+\right), \hspace{1.5cm}
+\dot{e}(0)=
+\left(
+\begin{array}{c}
+    2\\
+    0\\
+    0\\
+    0\\
+    0\\
+\end{array}
+\right).$
+\end{center}
+W badaniach wykorzystano środowisko Matlab/Simulink. \\
+
 \begin{thebibliography}{99}
 \bibitem{1} Mazur A. \textit{New approach to designing input-output decoupling controllers for mobile manipulators}. Bull. of the Polish Academy of sciences Tech. Sci. 53(1):31-37, (2005)
 
