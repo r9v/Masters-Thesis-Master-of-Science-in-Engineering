@@ -106,9 +106,11 @@
 
 % te ozdobniki dodaje się dopiero na końcu 
 %\maketitle
-%\tableofcontents
+\tableofcontents
 
-
+\chapter{Wstęp}
+\section{Cel pracy}
+\section{Zawartość pracy}
 \chapter{Model manipulatora mobilnego}
 Manipulator mobilny to platforma mobilna z zamontowanym na niej manipulatorem. Biorąc pod uwagę typ ograniczeń nałożonych kolejno na platformę i manipulator można wydzielić 4 typy manipulatorów mobilnych:
 \begin{enumerate}
@@ -234,14 +236,30 @@ gdzie:
  B^*&=G^TB.
 \end{align*}
 \chapter{Odsprzęganie wejściowo-wyjściowe dla manipulatora mobilnego}
-Algorytm odsprzęgania wejściowo-wyjściowego jest wykorzystywany do sterowania manipulatorów mobilnych. Rozwiązuje on zadanie śledzenia zadanej trajektorii efektora $y_d(t)$ w przestrzeni zewnętrznej. Polega on na zastosowaniu dwóch pętli sprzężenia zwrotnego, aby sprowadzić równania manipulatora mobilnego do liniowej postaci $\ddot{y}(t)=\zeta$, gdzie $\zeta$ jest nowym sterowaniem. Algorytm odpsprzęgania wejściowo-wyjściowego wymaga pełnej znajomości modelu manipulatora mobilnego.\\ 
+Algorytm odsprzęgania wejściowo-wyjściowego jest wykorzystywany do sterowania manipulatorów mobilnych. Rozwiązuje on zadanie śledzenia zadanej trajektorii efektora $y_d(t)$ w przestrzeni zewnętrznej. Algorytm odpsprzęgania wejściowo-wyjściowego wymaga pełnej znajomości modelu manipulatora mobilnego.\\ 
 
  \noindent Istnieją dwie wersje tego algorytmu dla manipulatorów mobilnych (\textit{nh},\textit{h}):
 \begin{itemize}[noitemsep,topsep=0pt]
 \item oryginalny algorytm Yamamoto i Yuna \cite{2}\cite{3}
 \item algorytm z rozszerzonymi funkcjami wyjściowymi\cite{1}
 \end{itemize}\vspace{0.2cm}
-W tej pracy użyto algorytmu z rozszerzonymi funkcjami wyjściowymi. Funkcje wyjściowe mają wtedy postacie\cite{1}:
+\section{Struktura układu sterowania}
+Obie wersje algorytmu mają identyczną strukturę układu sterowania.
+Składa się ona z dwóch pętli sprzężenia zwrotnego, które mają sprowadzić równania manipulatora mobilnego do liniowej postaci $\ddot{y}(t)=\zeta$, gdzie $\zeta$ jest nowym sterowaniem.
+\begin{itemize}
+\item pętla wewnętrzna - przekształca układ do postaci liniowej typu "podwójny integrator"
+\item pętla zewnętrzna - zapewnia realizację zadania tj. śledzenia trajektori w uzyskanym układzie liniowym
+\end{itemize}
+\section{Odprzęganie według Yamamoto i Yuna}
+\subsection{Specyfikacja podejścia}
+Yamamoto i Yun założyli, że manipulator ma ustawić się w stałej konfiguracji o maksymalnej manipulowalności, natomiast zadanie jest realizowane głównie przez ruch platformy
+\subsection{Algorytm sterowania}
+\subsection{Badania symulacyjne}
+\section{Odprzęganie z rozszerzonymi funkcjami wyjściowymi}
+\subsection{Specyfikacja podejścia}
+Odmiennie od podejścia Yamamoto i Yun'a  w tym podejściu nie jest wymagany bezruch manipulatora. Może on czynnie uczestniczyć w realizacji zadania.
+\subsection{Algorytm sterowania}
+Funkcje wyjściowe mają wtedy postacie\cite{1}:
 \begin{equation}
 y(q)=\left(
 \begin{array}{c}
@@ -320,12 +338,17 @@ Po zastosowaniu algorytmu otrzymuje się więc funkcje wyjściowe w liniowej pos
 \begin{equation}
 \ddot{y}=\zeta.
 \end{equation}
-\subsection{Warunki działania algorytmu}
-Wyżej przedstawiony algorytm wymaga odwracalności macierzy $\Phi$. Warunek jaki trzeba spełnić aby algorytm funkcjonował jest więc następujący:
+System taki można sterować, na przykład za pomocą regulatora PD z korektą
+\begin{equation}
+\zeta=\ddot{y}_d(t)-K_d\dot{e}(t)-K_pe(t),
+\end{equation}
+gdzie $\ddot{y}_d(t)$ - druga pochodna zadanej funckji wejściowej,\\ $e(t)=y_d(t)-y(t)$, $\dot{e}(t)=\dot{y}_d(t)-\dot{y}(t)$ - błąd i jego pochodna,\\ $K_d>0$, $K_p>0$ - nastawy regulacji.
+\paragraph{Warunki działania algorytmu}
+\par Wyżej przedstawiony algorytm wymaga odwracalności macierzy $\Phi$. Warunek jaki trzeba spełnić aby algorytm funkcjonował jest więc następujący:
 \begin{equation}
 \text{det}(\Phi)=\text{det}(\Phi_m)\text{det}(\Phi_r)\neq0
 \end{equation}
-\section{Badania symulacyjne dla manipulatora mobilnego}
+\subsection{Badania symulacyjne}
 Rozważany monocykl posiada dwa wejścia (sterowania obu kół), można więc odsprząc dwie współrzędne efektora. Podczas badań postanowiono odsprząc współrzędne $x$ i $y$ efektora w podstawowym układzie odniesienia ($X_0$,$Y_0$). Funckja wyjściowa $y_1(q_m,q_r)$ ma więc postać\\
 \begin{center}
 $y_1(q_m,q_r)=
@@ -376,7 +399,7 @@ $y_d(t)=
 \end{array}
 \right).$
 \end{center}
-Błąd początkowy i jego pochodna były więc równe
+Błąd początkowy $e(t)=y_d(t)-y(t)$ i jego pochodna były więc równe
 \begin{center}
 $e(0)=
 \left(
@@ -400,7 +423,8 @@ $e(0)=
 \right).$
 \end{center}
 W badaniach wykorzystano środowisko Matlab/Simulink. \\
-
+\chapter{Model satelity typu free-floating}
+\chapter{Odsprzęganie wejściowo-wyjściowe dla satelity typu free-floating}
 \begin{thebibliography}{99}
 \bibitem{1} Mazur A. \textit{New approach to designing input-output decoupling controllers for mobile manipulators}. Bull. of the Polish Academy of sciences Tech. Sci. 53(1):31-37, (2005)
 
