@@ -87,7 +87,12 @@
 }
 {]
 }
-
+%%%%%%%%%chapter no new page%
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+\makeatother
+%%%%%%%%%%%%%
 \title{Planowanie ruchu bramkarza sportowego jako kinematyczne zadanie robotyczne}
 \engtitle{Planning a goalkeeper's motion as a kinematic task of robotics}
 
@@ -174,7 +179,7 @@ A(q)=\begin{bmatrix}
 \end{bmatrix}
 \in R^{l\times(n+p)}.
 \end{equation}
-Z \cite{5} wiemy, że siła więzów nieholonomicznych równa jest $F_{nh}=A(q)^T\lambda$, gdzie $\lambda$ to wektor mnożników Lagrange'a. Równanie (\ref{lagrange3}) można więc teraz zapisać jako
+Z \cite{6} wiemy, że siła więzów nieholonomicznych równa jest $F_{nh}=A(q)^T\lambda$, gdzie $\lambda$ to wektor mnożników Lagrange'a. Równanie (\ref{lagrange3}) można więc teraz zapisać jako
 \begin{equation}
 \label{lagrange4}
 Q(q)\ddot{q}+C(q,\dot{q})\dot{q}+D(q)=B(q)u+A(q)^T\lambda .
@@ -447,7 +452,7 @@ W badaniach wykorzystano środowisko Matlab/Simulink. \\
 
 \bibitem{5} Tchoń K, Jakubiak J. \textit{Acceleration-Driven Kinematics of Mobile Manipulators: An Endogenous Configuration Space Approach}, pp.(469-476),  (2004)
 
-\bibitem{5} M. R. Flannery. \textit{The Enigma of Nonholonomic Constraints.} American Association of Physics Teachers, 73(3):265–272, 2005.
+\bibitem{6} M. R. Flannery. \textit{The Enigma of Nonholonomic Constraints.} American Association of Physics Teachers, 73(3):265–272, 2005.
 \end{thebibliography}
 
 %\include{bibl}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.12)  16 APR 2018 10:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.12)  16 APR 2018 11:06
 entering extended mode
 **./W04_209118_2018_praca_magisterska.tex
 (W04_209118_2018_praca_magisterska.tex
@@ -757,31 +757,28 @@ Package csquotes Info: Adjusting default style.
 
 
 Package csquotes Warning: No style for language 'polish'.
-(csquotes)                Using fallback style on input line 104.
+(csquotes)                Using fallback style on input line 109.
 
 Package csquotes Info: Redefining alias 'default' -> 'fallback'.
-(W04_209118_2018_praca_magisterska.aux
-
-LaTeX Warning: Label `5' multiply defined.
-
-)
+(W04_209118_2018_praca_magisterska.aux)
 \openout1 = `W04_209118_2018_praca_magisterska.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
- ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count154
 \scratchdimen=\dimen160
@@ -796,15 +793,15 @@ LaTeX Font Info:    ... okay on input line 104.
 \everyMPtoPDFconversion=\toks34
 )
 \c@lstlisting=\count160
-LaTeX Info: Redefining \celsius on input line 104.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 104
+LaTeX Info: Redefining \celsius on input line 109.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 109
 .
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 104.
-Package gensymb Info: Using \Omega for \ohm on input line 104.
+LaTeX Info: Redefining \ohm on input line 109.
+Package gensymb Info: Using \Omega for \ohm on input line 109.
 
 Package gensymb Warning: Not defining \micro.
 
@@ -843,61 +840,50 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write4
 \openout4 = `W04_209118_2018_praca_magisterska.toc'.
 
- [1
+
+Rozdzia\l  1.
+Rozdzia\l  2.
+[1
 Non-PDF special ignored!
 
-
-
-{C:/Users/www/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Rozdzia\l  1.
-[2
-
-
-]
-Rozdzia\l  2.
-
-Overfull \hbox (6.65253pt too wide) in paragraph at lines 136--137
+{C:/Users/www/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
+Overfull \hbox (6.65253pt too wide) in paragraph at lines 141--142
 \OT4/cmr/m/n/12 Do wy-pro-wa-dze-nia rów-na« ma-ni-pu-la-tora mo-bil-nego wy-ko
 -rzy-stamy me-cha-nik¦ Lan-grange'¡. 
  []
 
-[3
 
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 183--184
+Underfull \hbox (badness 10000) in paragraph at lines 188--189
 
  []
 
-[4] [5]
+[3]
 Rozdzia\l  3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 250--251
+Underfull \hbox (badness 10000) in paragraph at lines 255--256
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 254.
+[4]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 259.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 254.
- [6
-
-
-] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 363--364
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 259.
+ [5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 368--369
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 373--374
+Underfull \hbox (badness 10000) in paragraph at lines 378--379
 
  []
 
 
-Overfull \hbox (22.9168pt too wide) in paragraph at lines 384--387
+Overfull \hbox (22.9168pt too wide) in paragraph at lines 389--392
 \OT4/cmr/m/n/12 (0\OML/plm/m/it/12 ; \OT4/cmr/m/n/12 0\OML/plm/m/it/12 ; \OT4/c
 mr/m/n/12 0\OML/plm/m/it/12 ; \OT4/cmr/m/n/12 0\OML/plm/m/it/12 ; \OT4/cmr/m/n/
 12 0)$, a po-cz¡t-kowa kon-fi-gu-ra-cja ma-ni-pu-la-tora byªa równa $\OML/plm/m
@@ -905,55 +891,37 @@ mr/m/n/12 0\OML/plm/m/it/12 ; \OT4/cmr/m/n/12 0\OML/plm/m/it/12 ; \OT4/cmr/m/n/
 m/m/it/12 ; q[]\OT4/cmr/m/n/12 (0)\OML/plm/m/it/12 ; q[]\OT4/cmr/m/n/12 (0)) =
  []
 
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 436--437
-
- []
-
-[9]
+[7]
 Rozdzia\l  4.
-[10
-
-
-]
 Rozdzia\l  5.
-[11
-
-
-] [12
-
-
-] (W04_209118_2018_praca_magisterska.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+[8] [9] (W04_209118_2018_praca_magisterska.aux) ) 
 Here is how much of TeX's memory you used:
- 8111 strings out of 493634
- 109734 string characters out of 3143750
- 213892 words of memory out of 3000000
- 11291 multiletter control sequences out of 15000+200000
+ 8112 strings out of 493634
+ 109737 string characters out of 3143750
+ 213866 words of memory out of 3000000
+ 11292 multiletter control sequences out of 15000+200000
  18594 words of font info for 54 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  42i,9n,32p,843b,259s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plmi.enc}{C:/Program Files/Mi
-KTeX 2.9/fonts/enc/dvips/pl/plrm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvi
-ps/pl/plms.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plme.enc}{C:/Pro
-gram Files/MiKTeX 2.9/fonts/enc/dvips/pl/plit.enc}<C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/pl/plbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plb
-x12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plex10.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/pl/plmi12.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/pl/plmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/pl/plmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr12.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr6.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/pl/plr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/pl/plsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plsy8
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb>
-Output written on W04_209118_2018_praca_magisterska.pdf (12 pages, 125705 bytes
-).
+{C:/Program Files/MiKTeX 2.9/f
+onts/enc/dvips/pl/plmi.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plrm
+.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plms.enc}{C:/Program Files
+/MiKTeX 2.9/fonts/enc/dvips/pl/plme.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/
+dvips/pl/plit.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+msy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plbx10.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/pl/plbx12.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/pl/plex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/pl/plmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmi6.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmi8.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/pl/plr12.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/pl/plr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/p
+lr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/pl/plti12.pfb>
+Output written on W04_209118_2018_praca_magisterska.pdf (9 pages, 124973 bytes)
+.
 PDF statistics:
- 98 PDF objects out of 1000 (max. 8388607)
+ 89 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
