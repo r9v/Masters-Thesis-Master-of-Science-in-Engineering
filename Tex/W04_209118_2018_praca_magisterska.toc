@@ -4,7 +4,7 @@
 \contentsline {section}{\numberline {1.2}Zawarto\IeC {\'s}\IeC {\'c} pracy}{2}
 \contentsline {chapter}{\numberline {2}Model manipulatora mobilnego}{3}
 \contentsline {section}{\numberline {2.1}Model we wsp\IeC {\'o}\IeC {\l }rz\IeC {\k e}dnych uog\IeC {\'o}lnionych}{3}
-\contentsline {section}{\numberline {2.2}Ograniczenia nieholonomiczne dla platformy}{4}
+\contentsline {section}{\numberline {2.2}Ograniczenia nieholonomiczne}{4}
 \contentsline {section}{\numberline {2.3}Model w pr\IeC {\k e}dko\IeC {\'s}ciach pomocniczych}{4}
 \contentsline {chapter}{\numberline {3}Odsprz\IeC {\k e}ganie wej\IeC {\'s}ciowo-wyj\IeC {\'s}ciowe dla manipulatora mobilnego}{6}
 \contentsline {section}{\numberline {3.1}Struktura uk\IeC {\l }adu sterowania}{6}
