@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.12)  16 APR 2018 11:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.12)  18 APR 2018 13:52
 entering extended mode
 **./W04_209118_2018_praca_magisterska.tex
 (W04_209118_2018_praca_magisterska.tex
@@ -853,37 +853,51 @@ Overfull \hbox (6.65253pt too wide) in paragraph at lines 141--142
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 188--189
+Underfull \hbox (badness 10000) in paragraph at lines 170--171
 
  []
 
 [3]
-Rozdzia\l  3.
-
-Underfull \hbox (badness 10000) in paragraph at lines 255--256
+Underfull \hbox (badness 10000) in paragraph at lines 189--190
 
  []
 
 [4]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 259.
+Rozdzia\l  3.
 
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+Underfull \hbox (badness 10000) in paragraph at lines 256--257
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 260.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 259.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 260.
  [5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 368--369
+Overfull \hbox (6.25168pt too wide) in paragraph at lines 336--336
+[]\OT4/cmr/bx/n/17.28 Algorytm z roz-sze-rzo-nymi funk-cjami wyj-±cio-wymi 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 348--351
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 427--428
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 378--379
+Underfull \hbox (badness 10000) in paragraph at lines 437--438
 
  []
 
 
-Overfull \hbox (22.9168pt too wide) in paragraph at lines 389--392
+Overfull \hbox (22.9168pt too wide) in paragraph at lines 448--451
 \OT4/cmr/m/n/12 (0\OML/plm/m/it/12 ; \OT4/cmr/m/n/12 0\OML/plm/m/it/12 ; \OT4/c
 mr/m/n/12 0\OML/plm/m/it/12 ; \OT4/cmr/m/n/12 0\OML/plm/m/it/12 ; \OT4/cmr/m/n/
 12 0)$, a po-cz¡t-kowa kon-fi-gu-ra-cja ma-ni-pu-la-tora byªa równa $\OML/plm/m
@@ -891,37 +905,37 @@ mr/m/n/12 0\OML/plm/m/it/12 ; \OT4/cmr/m/n/12 0\OML/plm/m/it/12 ; \OT4/cmr/m/n/
 m/m/it/12 ; q[]\OT4/cmr/m/n/12 (0)\OML/plm/m/it/12 ; q[]\OT4/cmr/m/n/12 (0)) =
  []
 
-[7]
+[8]
 Rozdzia\l  4.
 Rozdzia\l  5.
-[8] [9] (W04_209118_2018_praca_magisterska.aux) ) 
+[9] [10] [11] (W04_209118_2018_praca_magisterska.aux) ) 
 Here is how much of TeX's memory you used:
- 8112 strings out of 493634
- 109737 string characters out of 3143750
- 213866 words of memory out of 3000000
- 11292 multiletter control sequences out of 15000+200000
+ 8121 strings out of 493634
+ 109801 string characters out of 3143750
+ 214824 words of memory out of 3000000
+ 11301 multiletter control sequences out of 15000+200000
  18594 words of font info for 54 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 42i,9n,32p,843b,259s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/f
-onts/enc/dvips/pl/plmi.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plrm
-.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plms.enc}{C:/Program Files
-/MiKTeX 2.9/fonts/enc/dvips/pl/plme.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/
-dvips/pl/plit.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-msy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plbx10.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/pl/plbx12.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/pl/plex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/pl/plmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmi6.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmi8.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/pl/plr12.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/pl/plr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/p
-lr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/pl/plti12.pfb>
-Output written on W04_209118_2018_praca_magisterska.pdf (9 pages, 124973 bytes)
-.
+ 42i,9n,32p,843b,301s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX
+ 2.9/fonts/enc/dvips/pl/plmi.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/p
+l/plrm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plms.enc}{C:/Program
+ Files/MiKTeX 2.9/fonts/enc/dvips/pl/plme.enc}{C:/Program Files/MiKTeX 2.9/font
+s/enc/dvips/pl/plit.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plbx10.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plbx12.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/pl/plex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/pl/plmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/p
+lmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmi8.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/pl/plr12.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/pl/plr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/pl/plr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/pl/plti12.pfb>
+Output written on W04_209118_2018_praca_magisterska.pdf (11 pages, 132927 bytes
+).
 PDF statistics:
- 89 PDF objects out of 1000 (max. 8388607)
+ 95 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -23,7 +23,7 @@
 \usepackage{graphicx}       
 \usepackage{rotating}       % pakiet umożliwiający obracanie rysunków
 \usepackage{subfigure}      % pakiet umożliwiający tworzenie podrysunków
-\usepackage{epic}           % pakiet umożliwiający rysowanie w środowisku latex
+\usepackage{epic}           
 \usepackage{listings}       % pakiet dedykowany zrodlom programow
 \usepackage{verbatim}       % pakiet dedykowany rozmaitym wydrukom tekstowym
 \usepackage{amssymb}        % pakiet z rozmaitymi symbolami matematycznymi
@@ -93,11 +93,11 @@
 \patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
 \makeatother
 %%%%%%%%%%%%%
-\title{Planowanie ruchu bramkarza sportowego jako kinematyczne zadanie robotyczne}
-\engtitle{Planning a goalkeeper's motion as a kinematic task of robotics}
+\title{?}
+\engtitle{?}
 
-\author{Bernard Malec}
-\supervisor{Prof.\ dr hab.\ inż.\ Ignacy Dulęba}
+\author{inż. Bernard Malec}
+\supervisor{Prof.\ dr hab.\ inż.\ Alicja Mazur}
 
 
 \field{Automatyka i Robotyka (AIR)}
@@ -127,7 +127,7 @@ Manipulator mobilny to platforma mobilna z zamontowanym na niej manipulatorem. B
 
 W tym rozdziale zostanie przedstawiony model manipulatora mobilnego typu (\textit{nh,h}). W szczególności w rozważanym manipulatorze platformą będzie monocykl, czyli robot mobilny klasy (2,0). Za manipulator natomiast posłuży manipulator RTR. Rozważany manipulator mobilny przedstawiono na rys 1.
 
-Przyjmy następujący wektor współrzędnych uogólnionych manipulatora mobilnego:
+Przyjmijmy następujący wektor współrzędnych uogólnionych manipulatora mobilnego:
 \begin{equation}
 q=\left(
 \begin{array}{c}
@@ -166,13 +166,14 @@ $B(q)=\begin{bmatrix}
     B(q_m)  &0\\
     0  &I_p \\
 \end{bmatrix} \in R^{(n+p)\times(n+p-l)} $ nazywana jest macierzą wejściową. \\$l$ jest liczbą ograniczeń nieholonomicznych.\\ Łatwo zauważyć, że jeśli obecne jest chociaż jedno ograniczenie nieholonomiczne macierz $B(q)$ nie jest macierzą kwadratową, przez co nie można jej odwrócić. 
-\section{Ograniczenia nieholonomiczne}
-W naszym przypadku platformą manipulatora mobilnego jest monocykl. W założeniu ma poruszać się ona bez poślizgu wzdłużnego i poprzecznego kół. Ograniczenia te są z natury nieholonomiczne i można je przedstawić w postaci Pfaffa
+\subsection{Ograniczenia nieholonomiczne}
+W naszym przypadku platformą manipulatora mobilnego jest monocykl. W założeniu ma poruszać się on bez poślizgu wzdłużnego i poprzecznego kół. Aby zapewnić spełnienie tych założeń należy nałożyć trzy ograniczenia. Można pokazać, że jedynie dwa z nich to ograniczenia nieholonomiczne, a ostatnie można zcałkować do ograniczenia holonomicznego i w rezultacie wyeliminować jedną współrzędną z $q_m$ \cite{7}. Aby jednak pokazać możliwość algorytmu w działaniu przy w obecności ograniczeń holonomicznych i niehololonomicznych potraktujmy wszystkie trzy jednakowo i nie całkujmy żadnego z nich.\\
+\par Przedstawmy ograniczenia w postaci Pfaffa
 \begin{equation}
 \label{pfaff}
 A(q)\dot{q}=0,
 \end{equation}
-Jako, że ograniczenia nieholonomiczne dotyczą tylko platformy zapiszmy $A(q)$ następująco 
+Jako, że ograniczenia te dotyczą tylko platformy zapiszmy $A(q)$ następująco 
 \begin{equation}
 A(q)=\begin{bmatrix}
    A(q_m)&0\\
@@ -187,16 +188,16 @@ Q(q)\ddot{q}+C(q,\dot{q})\dot{q}+D(q)=B(q)u+A(q)^T\lambda .
 \section{Model w prędkościach pomocniczych}
 Model postaci (\ref{lagrange4}) posiada pewne wady: jak wspomniano w (\ref{model1s}) macierz $B(q)$ nie daje się odwrócić z powodu obecności ograniczeń nieholonomicznych. W jawnej postaci występują również mnożniki Lagrange'a odpowiadające siłom tarcia statycznego zależnego od $u$, $q$, $\dot{q}$, $t$. Aby pozbyć się tych wad można przekształcić (\ref{lagrange4}) do modelu wyrażonego w prędkościach pomocniczych.\\
 \par Zauważmy najpierw, że ograniczenia (\ref{pfaff}) wymagają aby prędkość $\dot{q}$ należała do jądra macierzy $A(q)$. \\
-Niech baza jądra $A(q_m)$ będzie zbiorem wektorów $\{g_1(q_m), g_2(q_m),..., g_m(q_m)\}$. Zapiszmy prędkość $\dot{q}_m$ w następujący sposób 
+Niech baza jądra $A(q_m)$ będzie zbiorem wektorów $\{g_1(q_m), g_2(q_m),..., g_{n-l}(q_m)\}$. Zapiszmy prędkość $\dot{q}_m$ w następujący sposób 
 \begin{equation}
-\dot{q}_m=\sum_{k=1}^{n} g_k(q_m)\eta_k=\begin{bmatrix}
-   g_1(q_m)& g_2(q_m)&...& g_m(q_m)\\
+\dot{q}_m=\sum_{k=1}^{n-l} g_k(q_m)\eta_k=\begin{bmatrix}
+   g_1(q_m)& g_2(q_m)&...& g_{n-l}(q_m)\\
 \end{bmatrix}
 \left(
 \begin{array}{c}
 \eta_1\\
 \vdots\\
-\eta_m
+\eta_{n-l}
 \end{array}\right)
 =G_m(q_m)\eta.
 \end{equation}
@@ -209,12 +210,12 @@ Zauważmy, że prędkość
 gdzie $G(q)=\begin{bmatrix}
     G_m(q_m)  &0\\
     0  &I_p \\
-\end{bmatrix}$ i $z=\left(
+\end{bmatrix}\in R^{(n+p)\times(n+p-l)}$ i $z=\left(
 \begin{array}{c}
 \eta\\
 \dot{q}_r\\
 \end{array}
-\right)$ należy do jądra macierzy $A(q)$ i tym samym spełnia ograniczenia (\ref{pfaff}).
+\right)\in R^{(n+p-l)}$ należy do jądra macierzy $A(q)$ i tym samym spełnia ograniczenia (\ref{pfaff}).
 \par Możemy więc zapisać, że
 \begin{equation}
 \label{AG}
@@ -254,28 +255,89 @@ gdzie:
 \chapter{Odsprzęganie wejściowo-wyjściowe dla manipulatora mobilnego}
 Algorytm odsprzęgania wejściowo-wyjściowego jest wykorzystywany do sterowania manipulatorów mobilnych. Rozwiązuje on zadanie śledzenia zadanej trajektorii efektora $y_d(t)$ w przestrzeni zewnętrznej. Algorytm odpsprzęgania wejściowo-wyjściowego wymaga pełnej znajomości modelu manipulatora mobilnego.\\ 
 
- \noindent Istnieją dwie wersje tego algorytmu dla manipulatorów mobilnych (\textit{nh},\textit{h}):
+ \noindent Istnieją dwie wersje tego algorytmu:
 \begin{itemize}[noitemsep,topsep=0pt]
-\item oryginalny algorytm Yamamoto i Yuna \cite{2}\cite{3}
+\item podstawowy algorytm Yamamoto i Yun'a \cite{2}\cite{3}
 \item algorytm z rozszerzonymi funkcjami wyjściowymi\cite{1}
 \end{itemize}\vspace{0.2cm}
-\section{Struktura układu sterowania}
-Obie wersje algorytmu mają identyczną strukturę układu sterowania.
-Składa się ona z dwóch pętli sprzężenia zwrotnego, które mają sprowadzić równania manipulatora mobilnego do liniowej postaci $\ddot{y}(t)=\zeta$, gdzie $\zeta$ jest nowym sterowaniem.
-\begin{itemize}
-\item pętla wewnętrzna - przekształca układ do postaci liniowej typu "podwójny integrator"
-\item pętla zewnętrzna - zapewnia realizację zadania tj. śledzenia trajektori w uzyskanym układzie liniowym
-\end{itemize}
-\section{Odprzęganie według Yamamoto i Yuna}
+
+Różnią się one wyborem funkcji wyjściowych $y(\cdot)$. Yamamoto i Yun założyli, że funkcje te będą zależne tylko od konfiguracji platformy $q_m$, natomiast Mazur pozwala aby funkcje wyjścia zależne był również od konfiguracji samego manipulatora $q_r$. Rozdział ten poświęcony jest opisowi obu podejść.
+%\section{Struktura układu sterowania}
+%Obie wersje algorytmu mają identyczną strukturę układu sterowania.
+%Składa się ona z dwóch pętli sprzężenia zwrotnego, które mają sprowadzić równania manipulatora mobilnego do liniowej postaci $\ddot{y}(t)=\zeta$, gdzie $\zeta$ jest nowym sterowaniem.
+%\begin{itemize}
+%\item pętla wewnętrzna - 
+%\item pętla zewnętrzna - 
+%\end{itemize}
+\section{Podstawowy algorytm Yamamoto i Yun'a}
 \subsection{Specyfikacja podejścia}
-Yamamoto i Yun założyli, że manipulator ma ustawić się w stałej konfiguracji o maksymalnej manipulowalności, natomiast zadanie jest realizowane głównie przez ruch platformy
+Yamamoto i Yun założyli, że manipulator ma ustawić się w stałej konfiguracji o maksymalnej manipulowalności, a zadanie jest realizowane jedynie przez ruch platformy. Podejście takie traktuje cały manipulator mobilny bardziej jako samą platformę do której przymocowany jest unieruchomiony manipulator, niż pełen system, gdzie platforma i manipulator działają równocześnie. 
+\subsection{Funkcje wyjścia}
+Przypomnijmy, że algorytm podstawowy wymaga aby funkcje wyjścia były zależne jedynie od konfiguracji platformy tj. $y(q_m)$. Wybór tych funkcji należy podporządkować rodzajowi zadania od zrealizowania. Do śledzenia trajektorii dwuwymiarowej $(x_r,y_r)$
+\subsection{Wybór konfiguracji manipulatora}
+Ponieważ manipulator pozostaje przez czas działania algorytmu nieruchomy i nie uczestniczy czynnie w realizacji zadania należy ustawić go w takiej konfigurację, aby ułatwić platformie realizację zadania. Za przykładmem Yamamoto i Yun'a wybierzmy konfigurację maksymalizującą manipulowalność. Manipulowalność manipulatora zdefiniowana jest jako \cite{7}
+\begin{equation}
+\label{manipulowa}
+w=\sqrt{\det(J(q_r)J^T(q_r))},
+\end{equation} 
+gdzie $J(q_r)$ to jakobian manipulatora. Jeśli manipulator jest redundantny manipulowalność (\ref{manipulowa}) można zredukować do
+ \begin{equation}
+w=|\det(J(q_r))|.
+\end{equation} 
 \subsection{Algorytm sterowania}
+Odprzęganie i linearyzacja realizowane jest dzięki zastosowaniu do modelu (\ref{modelpp}) dwóch pętli sprzężenia zwrotnego. Pierwsza pętla - pętla wewnętrzna - przekształca układ do postaci liniowej typu "podwójny integrator", zaś druga - zewnętrzna - zapewnia realizację zadania tj. śledzenia trajektori w uzyskanym układzie liniowym. \\
+Prawo sterowania pierwszej pętli to prawo z rodziny algorytmów 'obliczanych momentów'
+\begin{equation}
+\label{comTor}
+u=B^{*-1}[C^*z+D^*+Q^*v].
+\end{equation}
+Prawo drugiej pętli to
+\begin{equation}
+\label{eq:petla22}
+v=\Phi^{-1}[-\dot{\Phi} z+\zeta].
+\end{equation}
+Macierz $\Phi$ jest równa
+\[
+\Phi(q_m)= \dot{y}(q_m)=\frac{dy}{dq_m}G_m.
+\]
+Sprawdźmy teraz poprawność algorytmu. Zastosujmy najpierw pierwszą pętlę (\ref{comTor}) do modelu (\ref{modelpp}). W wyniku otrzymamy 
+\begin{equation}
+\label{eq:22}
+\dot{z}=v,
+\end{equation}
+gdzie $v$ jest nowym wejściem.
+Teraz zróżniczkujmy $y(q_m)$ dwukrotnie po czasie
+\begin{equation}
+\label{ydot}
+\dot{y}(q_m)=\frac{dy}{dq_m}\dot{q}_m=\frac{dy}{dq_m}G_mz=\Phi(q)z,
+\end{equation}
+\begin{equation}
+\label{ypp}
+\ddot{y}(q_m)=\dot{\Phi}z+\Phi \dot{z}=\dot{\Phi}z+\Phi v.
+\end{equation} 
+Łatwo sprawdzić, że po zastosowaniu prawa (\ref{eq:petla22}) do (\ref{ypp}) otrzymamy 
+\begin{equation}
+\label{testtssts}
+\ddot{y}=\zeta.
+\end{equation} 
+Wynikowy system (\ref{testtssts}) łatwo wysterować, na przykład za pomocą regulatora PD z korektą
+\begin{equation}
+\label{PD}
+\zeta=\ddot{y}_d(t)-K_d\dot{e}(t)-K_pe(t),
+\end{equation}
+gdzie $\ddot{y}_d(t)$ - druga pochodna zadanej funckji wejściowej,\\ $e(t)=y_d(t)-y(t)$, $\dot{e}(t)=\dot{y}_d(t)-\dot{y}(t)$ - błąd i jego pochodna,\\ $K_d>0$, $K_p>0$ - nastawy regulacji.
+\paragraph{Warunki działania algorytmu}
+\par Ponieważ algorytm wykorzystuje odwrotność macierzy $\Phi$ należy  zapewnić, aby
+\begin{equation}
+\det(\Phi)\neq0
+\end{equation}
+
 \subsection{Badania symulacyjne}
-\section{Odprzęganie z rozszerzonymi funkcjami wyjściowymi}
+\section{Algorytm z rozszerzonymi funkcjami wyjściowymi}
 \subsection{Specyfikacja podejścia}
-Odmiennie od podejścia Yamamoto i Yun'a  w tym podejściu nie jest wymagany bezruch manipulatora. Może on czynnie uczestniczyć w realizacji zadania.
-\subsection{Algorytm sterowania}
-Funkcje wyjściowe mają wtedy postacie\cite{1}:
+Odmiennie od założeń Yamamoto i Yun'a rozszerzony algorytm nie wymaga bezruchu manipulatora. Dzięki temu platforma i manipulator mogą działać równolegle w sposób skoordynowany. Sterowanie platformy nie odbywa się w sposób bezpośredni, lecz działa w reakcji na dryf systemu.
+\subsection{Funkcje wyjścia}
+Funkcje wyjściowe mogą zależeć teraz od konfiguracji całego robota tj. i platformy i manipulatora. Przyjmują one postacie\cite{1}:
 \begin{equation}
 y(q)=\left(
 \begin{array}{c}
@@ -284,24 +346,26 @@ y_2(q_r)\\
 \end{array}
 \right),
 \end{equation}
-gdzie $y_1(q_m,q_r)$ jest wektorem wybranych współrzędnych efektora w podstawowym układzie odniesienia ($X_0$,$Y_0$), a $y_2(q_r)$ to wektor wybranych współrzędnych efektora w lokalnym układzie odniesienia ($X_P$,$Y_P$) związanym ze środkiem masy platformy\cite{1}.\\
-Algorytm odsprzęgania wejściowo-wyjściowego dla manipulatorów mobilnych złożony jest z dwóch pętli sprzeżeń zwrotnych\cite{1}:
+gdzie $y_1(q_m,q_r)$ jest wektorem wybranych współrzędnych efektora w podstawowym układzie odniesienia ($X_0$,$Y_0$), a $y_2(q_r)$ to wektor wybranych współrzędnych efektora w lokalnym układzie odniesienia ($X_P$,$Y_P$) związanym ze środkiem masy platformy.\\
+Liczba współrzędnych efektora w układzie ($X_0$,$Y_0$), które można odpsprząc zależy od liczby sterowań platformą. W przypadku platformy klasy $(2,0)$ możemy śledzić dwie współrzędne.\\
+\subsection{Algorytm sterowania}
+\par Identycznie jak w przypadku algorytmu podstawowego, algorytm z rozszerzonymi funkcjami wyjściowymi złożony jest z dwóch pętli sprzeżeń zwrotnych\cite{1}
 \begin{itemize}[noitemsep,topsep=0pt]
 \item wewnętrznej pętli linearyzującej transformację wejście-stan
 \item zewnętrzej pętli linearyzującej transformację wejście-wyjście
 \end{itemize}
-Wewnętrzna pętla realizuje linearyzacje transformacji wejście-stan i wykorzystuje w tym celu prawo sterowania z rodziny algorytmów 'obliczanych momentów'\cite{1}:
+Tak jak poprzednio wewnętrzna pętla wykorzystuje prawo sterowania z rodziny algorytmów 'obliczanych momentów'
 \begin{equation}
 \label{eq:petla1}
 u=B^{*-1}[C^*z+D^*+Q^*v].
 \end{equation}
-Zewnętrza pętla zapewnia linearyzacje transformacji wejście-wyjście i jest realizowana za pomocą prawa sterowania\cite{1}:
+Zewnętrza pętla ma także postać identyczną jak w przypadku algorytmu podstawowego
 \begin{equation}
 \label{eq:petla2}
-v=\Phi^{-1}[-\Phi z+\zeta].
+v=\Phi^{-1}[-\dot{\Phi} z+\zeta].
 \end{equation}
-Macierz $\Phi(q)$ jest następująca \[
-\Phi=
+Macierz $\Phi$ różni się jednak od poprzedniczki. Zależy ona od całej konfiguracji $q$, a nie tylko $q_m$ \[
+\Phi(q)=
 \begin{bmatrix}
     \Phi_m       & \Phi_{mr} \\
     0       & \Phi_r  \\
@@ -311,8 +375,8 @@ Macierz $\Phi(q)$ jest następująca \[
     0       & \frac{\partial y_2}{\partial q_r} \\
 \end{bmatrix}.
 \]
-Prawo sterowania zewnętrznej pętli (\ref{eq:petla2}) wyprowadza się w następujący sposób:\\
-Oblicza się pochodną funkcji wyjściowej $y(q)$ po czasie:
+Prawo sterowania zewnętrznej pętli (\ref{eq:petla2}) wyprowadza się tak jak poprzednio.\\
+Oblicza się pochodną funkcji wyjściowej $y(q)$ po czasie
 \begin{equation}
 \dot{y}(q)=
 \left(
@@ -348,19 +412,14 @@ Po podstawieniu zależności (\ref{eq:2}) do równania (\ref{eq:1}) uzyskamy:
 \end{equation} 
 Aby zapewnić linearyzację wejściowo-wyjściową należy więc użyć wejścia:
 \begin{equation}
-v=\Phi ^{-1}[-\Phi z+\zeta].
+v=\Phi ^{-1}[-\dot{\Phi} z+\zeta].
 \end{equation}
 Po zastosowaniu algorytmu otrzymuje się więc funkcje wyjściowe w liniowej postaci:
 \begin{equation}
 \ddot{y}=\zeta.
 \end{equation}
-System taki można sterować, na przykład za pomocą regulatora PD z korektą
-\begin{equation}
-\zeta=\ddot{y}_d(t)-K_d\dot{e}(t)-K_pe(t),
-\end{equation}
-gdzie $\ddot{y}_d(t)$ - druga pochodna zadanej funckji wejściowej,\\ $e(t)=y_d(t)-y(t)$, $\dot{e}(t)=\dot{y}_d(t)-\dot{y}(t)$ - błąd i jego pochodna,\\ $K_d>0$, $K_p>0$ - nastawy regulacji.
-\paragraph{Warunki działania algorytmu}
-\par Wyżej przedstawiony algorytm wymaga odwracalności macierzy $\Phi$. Warunek jaki trzeba spełnić aby algorytm funkcjonował jest więc następujący:
+Otrzymany system jest identyczny jak ten otrzymany po zastosowaniu algorytmu Yamamoto i Yun'a i również można nim sterować używając regulatora PD z korektą(\ref{PD}).
+\paragraph{Warunki działania algorytmu} Tak jak w przypadku podstawowego algorytmu Yamamoto i Yun'a należy zapewnić odwracalość macierzy $\Phi$. Warunek jaki trzeba spełnić aby algorytm funkcjonował jest więc następujący
 \begin{equation}
 \text{det}(\Phi)=\text{det}(\Phi_m)\text{det}(\Phi_r)\neq0
 \end{equation}
@@ -452,7 +511,9 @@ W badaniach wykorzystano środowisko Matlab/Simulink. \\
 
 \bibitem{5} Tchoń K, Jakubiak J. \textit{Acceleration-Driven Kinematics of Mobile Manipulators: An Endogenous Configuration Space Approach}, pp.(469-476),  (2004)
 
-\bibitem{6} M. R. Flannery. \textit{The Enigma of Nonholonomic Constraints.} American Association of Physics Teachers, 73(3):265–272, 2005.
+\bibitem{6} M. R. Flannery. \textit{The Enigma of Nonholonomic Constraints.} American Association of Physics Teachers, 73(3):265–272, (2005).
+
+\bibitem{7} Yamamoto Y, Yun X. \textit{Coordinating locomotion and manipulation of a mobile manipulator.} In Proceedings of 31st IEEE Conference on Decision and Control, pp.(2643-2648), (1992)
 \end{thebibliography}
 
 %\include{bibl}
