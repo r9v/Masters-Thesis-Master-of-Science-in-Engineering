@@ -13,4 +13,4 @@ simTime=20;
 sim('FFAlgorytmRozszerzony.slx',simTime);
 
 plot(e);
-legend('ey1','ey2','ey3','ey4','ey5')
+legend('ey1','ey2');
