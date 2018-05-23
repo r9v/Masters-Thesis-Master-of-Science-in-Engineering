@@ -3,8 +3,7 @@ close all
 clc
 beep off
 
-param.initCond=setInitConditionsFFRata();
-%param.initCond=setInitConditionsFF();
+param.initCond=setInitConditionsFF();
 
 param.Kp=10;
 param.Kd=200;

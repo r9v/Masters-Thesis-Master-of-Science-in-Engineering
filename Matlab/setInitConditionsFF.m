@@ -4,19 +4,15 @@ function [ initCond ] = setInitConditionsFF(  )
 xb=0; %
 yb=0; %
 initCond.theta0=0;%
-initCond.q10=pi;%
-initCond.q20=pi;%
-
+initCond.q10=0;%
+initCond.q20=-pi/2;%
 q3=initCond.theta0;
 q4=initCond.q10;
 q5=initCond.q20;
-c0=cos(initCond.theta0);
-s0=sin(initCond.theta0);
+q=[0,0,q3,q4,q5];
 
-initCond.x0=xb+(1/7).*((1/10).*c0+(-1/5).*s0+(1/10).*cos(q4+q3))+(1/7).*(( ...
-  1/10).*c0+(-1/5).*s0+(1/5).*cos(q4+q3)+(3/20).*cos(q4+q5+q3));
-initCond.y0=yb+(1/7).*((1/5).*c0+(1/10).*s0+(1/10).*sin(q4+q3))+(1/7).*((1/5) ...
-  .*c0+(1/10).*s0+(1/5).*sin(q4+q3)+(3/20).*sin(q4+q5+q3));
+initCond.x0=xb+(3/10).*cos(q(4)+q(3))+(1/5).*cos(q(4)+q(5)+q(3));
+initCond.y0=yb+(3/10).*sin(q(4)+q(3))+(1/5).*sin(q(4)+q(5)+q(3));
 
 
 initCond.q0=[
@@ -26,7 +22,7 @@ initCond.q0=[
     initCond.q10;
     initCond.q20];
 
-
+%----- predkosci -----%
 initCond.xp0=0;
 initCond.yp0=0;
 initCond.thetap0=0;%WELP xp,yp,thetap depend on each other
@@ -38,8 +34,6 @@ initCond.qp0=[
     initCond.thetap0;
     initCond.qp10;
     initCond.qp20];
-
-
 
 
 
