@@ -5,15 +5,14 @@ xb=0; %
 yb=0; %
 initCond.theta0=0;%
 initCond.q10=0;%
-initCond.q20=-pi/2;%
+initCond.q20=0.1;%
 q3=initCond.theta0;
 q4=initCond.q10;
 q5=initCond.q20;
 q=[0,0,q3,q4,q5];
 
-initCond.x0=xb+(3/10).*cos(q(4)+q(3))+(1/5).*cos(q(4)+q(5)+q(3));
-
-initCond.y0=yb+(3/10).*sin(q(4)+q(3))+(1/5).*sin(q(4)+q(5)+q(3));
+initCond.x0=(1/8).*(8.*xb+3.*cos(q(4)+q(3))+cos(q(4)+q(5)+q(3)));
+initCond.y0=(1/8).*(8.*yb+3.*sin(q(4)+q(3))+sin(q(4)+q(5)+q(3)));
 
 
 initCond.q0=[
