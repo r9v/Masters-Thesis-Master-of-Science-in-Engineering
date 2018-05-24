@@ -12,6 +12,7 @@ q5=initCond.q20;
 q=[0,0,q3,q4,q5];
 
 initCond.x0=xb+(3/10).*cos(q(4)+q(3))+(1/5).*cos(q(4)+q(5)+q(3));
+
 initCond.y0=yb+(3/10).*sin(q(4)+q(3))+(1/5).*sin(q(4)+q(5)+q(3));
 
 

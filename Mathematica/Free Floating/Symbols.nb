@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     13542,        352]
-NotebookOptionsPosition[     13224,        337]
-NotebookOutlinePosition[     13599,        353]
-CellTagsIndexPosition[     13556,        350]
+NotebookDataLength[     13535,        350]
+NotebookOptionsPosition[     13259,        336]
+NotebookOutlinePosition[     13634,        352]
+CellTagsIndexPosition[     13591,        349]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -83,7 +83,7 @@ Cell[BoxData[{
             RowBox[{"{", 
              RowBox[{"0", ",", "0", ",", "0", ",", "1"}], "}"}]}], "}"}], 
           "]"}]}], "]"}], ";"}]}], "]"}]}], ";"}], 
-  "\[IndentingNewLine]"}], "\n", 
+  "\n"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{
@@ -243,50 +243,46 @@ Cell[BoxData[{
      "\[IndentingNewLine]", "}"}]}], ";"}], 
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"strRls2", "=", "\[IndentingNewLine]", 
-   RowBox[{"{", "\[IndentingNewLine]", 
-    RowBox[{
-     RowBox[{"\"\<c0r\>\"", "\[Rule]", " ", "\"\<c0\>\""}], ",", 
-     "\[IndentingNewLine]", 
-     RowBox[{"\"\<c1r\>\"", "\[Rule]", " ", "\"\<c1\>\""}], ",", 
-     "\[IndentingNewLine]", 
-     RowBox[{"\"\<c2r\>\"", "\[Rule]", " ", "\"\<c2\>\""}], ",", 
-     "\[IndentingNewLine]", 
-     RowBox[{"\"\<s0r\>\"", "\[Rule]", " ", "\"\<s0\>\""}], ",", 
-     "\[IndentingNewLine]", 
-     RowBox[{"\"\<s1r\>\"", "\[Rule]", " ", "\"\<s1\>\""}], ",", 
-     "\[IndentingNewLine]", 
-     RowBox[{"\"\<s2r\>\"", "\[Rule]", " ", "\"\<s2\>\""}], ",", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"\"\<c12r\>\"", "\[Rule]", " ", "\"\<c12\>\""}], ",", 
-     "\[IndentingNewLine]", 
-     RowBox[{"\"\<s12r\>\"", "\[Rule]", " ", "\"\<s12\>\""}], ",", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"\"\<qp1\>\"", "\[Rule]", "\"\<qp(1)\>\""}], ",", 
-     "\[IndentingNewLine]", 
-     RowBox[{"\"\<qp2\>\"", "\[Rule]", "\"\<qp(2)\>\""}], ",", 
-     "\[IndentingNewLine]", 
-     RowBox[{"\"\<qp3\>\"", "\[Rule]", "\"\<qp(3)\>\""}], ",", 
-     "\[IndentingNewLine]", 
-     RowBox[{"\"\<qp4\>\"", "\[Rule]", "\"\<qp(4)\>\""}], ",", 
-     "\[IndentingNewLine]", 
-     RowBox[{"\"\<qp5\>\"", "\[Rule]", "\"\<qp(5)\>\""}], ",", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"\"\<xbar\>\"", "\[Rule]", "\"\<q(1)\>\""}], ",", 
-     "\[IndentingNewLine]", 
-     RowBox[{"\"\<ybar\>\"", "\[Rule]", "\"\<q(2)\>\""}], ",", 
-     "\[IndentingNewLine]", 
-     RowBox[{"\"\<\[Theta]\>\"", "\[Rule]", "\"\<q(3)\>\""}], ",", 
-     "\[IndentingNewLine]", 
-     RowBox[{"\"\<q1\>\"", "\[Rule]", "\"\<q(4)\>\""}], ",", 
-     "\[IndentingNewLine]", 
-     RowBox[{"\"\<q2\>\"", "\[Rule]", "\"\<q(5)\>\""}]}], 
-    "\[IndentingNewLine]", "}"}]}], ";"}]}], "Input",
- CellChangeTimes->{{3.736098170579636*^9, 3.736098173638444*^9}, {
-  3.7360994410867596`*^9, 3.7360994481849785`*^9}, {3.736099913688033*^9, 
-  3.7360999140780334`*^9}, {3.7361461058217936`*^9, 3.736146117026415*^9}}],
-
-Cell[BoxData[
+  RowBox[{
+   RowBox[{"strRls2", "=", "\[IndentingNewLine]", 
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"\"\<c0r\>\"", "\[Rule]", " ", "\"\<c0\>\""}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"\"\<c1r\>\"", "\[Rule]", " ", "\"\<c1\>\""}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"\"\<c2r\>\"", "\[Rule]", " ", "\"\<c2\>\""}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"\"\<s0r\>\"", "\[Rule]", " ", "\"\<s0\>\""}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"\"\<s1r\>\"", "\[Rule]", " ", "\"\<s1\>\""}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"\"\<s2r\>\"", "\[Rule]", " ", "\"\<s2\>\""}], ",", 
+      "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      RowBox[{"\"\<c12r\>\"", "\[Rule]", " ", "\"\<c12\>\""}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"\"\<s12r\>\"", "\[Rule]", " ", "\"\<s12\>\""}], ",", 
+      "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      RowBox[{"\"\<qp1\>\"", "\[Rule]", "\"\<qp(1)\>\""}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"\"\<qp2\>\"", "\[Rule]", "\"\<qp(2)\>\""}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"\"\<qp3\>\"", "\[Rule]", "\"\<qp(3)\>\""}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"\"\<qp4\>\"", "\[Rule]", "\"\<qp(4)\>\""}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"\"\<qp5\>\"", "\[Rule]", "\"\<qp(5)\>\""}], ",", 
+      "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      RowBox[{"\"\<xbar\>\"", "\[Rule]", "\"\<q(1)\>\""}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"\"\<ybar\>\"", "\[Rule]", "\"\<q(2)\>\""}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"\"\<\[Theta]\>\"", "\[Rule]", "\"\<q(3)\>\""}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"\"\<q1\>\"", "\[Rule]", "\"\<q(4)\>\""}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"\"\<q2\>\"", "\[Rule]", "\"\<q(5)\>\""}]}], 
+     "\[IndentingNewLine]", "}"}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"Dtrls", "=", 
    RowBox[{"{", "\[IndentingNewLine]", 
@@ -332,8 +328,11 @@ Cell[BoxData[
       RowBox[{"Dt", "[", "xbarp", "]"}], "\[Rule]", " ", "xbarpp"}], ",", 
      RowBox[{
       RowBox[{"Dt", "[", "ybarp", "]"}], "\[Rule]", " ", "ybarpp"}]}], 
-    "}"}]}], ";"}]], "Input",
- CellChangeTimes->{{3.7361004226915636`*^9, 3.7361004857862816`*^9}}]
+    "}"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.736098170579636*^9, 3.736098173638444*^9}, {
+  3.7360994410867596`*^9, 3.7360994481849785`*^9}, {3.736099913688033*^9, 
+  3.7360999140780334`*^9}, {3.7361461058217936`*^9, 3.736146117026415*^9}, {
+  3.736146560312018*^9, 3.736146562057118*^9}}]
 },
 WindowSize->{784, 812},
 WindowMargins->{{Automatic, 0}, {Automatic, 0}},
@@ -352,8 +351,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 10859, 266, 2390, "Input"],
-Cell[11420, 288, 1800, 47, 215, "Input"]
+Cell[558, 20, 12697, 314, 2615, "Input"]
 }
 ]
 *)
