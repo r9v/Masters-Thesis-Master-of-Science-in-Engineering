@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.12)  26 MAY 2018 13:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.12)  27 MAY 2018 21:27
 entering extended mode
-**./W04_209118_2018_praca_magisterska.tex
-(W04_209118_2018_praca_magisterska.tex
+**"./W04_209118_2018_praca_magisterska - Kopia.tex"
+("W04_209118_2018_praca_magisterska - Kopia.tex"
 LaTeX2e <2015/10/01> patch level 2
 Babel <3.9n> and hyphenation patterns for 69 languages loaded.
 (mgr.cls
@@ -760,8 +760,8 @@ Package csquotes Warning: No style for language 'polish'.
 (csquotes)                Using fallback style on input line 109.
 
 Package csquotes Info: Redefining alias 'default' -> 'fallback'.
-(W04_209118_2018_praca_magisterska.aux)
-\openout1 = `W04_209118_2018_praca_magisterska.aux'.
+("W04_209118_2018_praca_magisterska - Kopia.aux")
+\openout1 = `"W04_209118_2018_praca_magisterska - Kopia.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 109.
 LaTeX Font Info:    ... okay on input line 109.
@@ -805,7 +805,7 @@ Package gensymb Info: Using \Omega for \ohm on input line 109.
 
 Package gensymb Warning: Not defining \micro.
 
-(W04_209118_2018_praca_magisterska.toc
+("W04_209118_2018_praca_magisterska - Kopia.toc"
 LaTeX Font Info:    Try loading font information for OML+plm on input line 3.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\polski\omlplm.fd"
@@ -838,7 +838,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 3.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
 \tf@toc=\write4
-\openout4 = `W04_209118_2018_praca_magisterska.toc'.
+\openout4 = `"W04_209118_2018_praca_magisterska - Kopia.toc"'.
 
 
 Rozdzia\l  1.
@@ -877,27 +877,27 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 260.
  [5] [6]
-Overfull \hbox (6.25168pt too wide) in paragraph at lines 336--336
+Overfull \hbox (6.25168pt too wide) in paragraph at lines 344--344
 []\OT4/cmr/bx/n/17.28 Algorytm z roz-sze-rzo-nymi funk-cjami wyj-±cio-wymi 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--351
+Underfull \hbox (badness 10000) in paragraph at lines 356--359
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 427--428
+Underfull \hbox (badness 10000) in paragraph at lines 435--436
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 437--438
+Underfull \hbox (badness 10000) in paragraph at lines 445--446
 
  []
 
-
-Overfull \hbox (22.9168pt too wide) in paragraph at lines 448--451
+[8]
+Overfull \hbox (22.9168pt too wide) in paragraph at lines 456--459
 \OT4/cmr/m/n/12 (0\OML/plm/m/it/12 ; \OT4/cmr/m/n/12 0\OML/plm/m/it/12 ; \OT4/c
 mr/m/n/12 0\OML/plm/m/it/12 ; \OT4/cmr/m/n/12 0\OML/plm/m/it/12 ; \OT4/cmr/m/n/
 12 0)$, a po-cz¡t-kowa kon-fi-gu-ra-cja ma-ni-pu-la-tora byªa równa $\OML/plm/m
@@ -905,35 +905,34 @@ mr/m/n/12 0\OML/plm/m/it/12 ; \OT4/cmr/m/n/12 0\OML/plm/m/it/12 ; \OT4/cmr/m/n/
 m/m/it/12 ; q[]\OT4/cmr/m/n/12 (0)\OML/plm/m/it/12 ; q[]\OT4/cmr/m/n/12 (0)) =
  []
 
-[8]
 Rozdzia\l  4.
 Rozdzia\l  5.
-[9] [10] [11] (W04_209118_2018_praca_magisterska.aux) ) 
+[9] [10] [11] ("W04_209118_2018_praca_magisterska - Kopia.aux") ) 
 Here is how much of TeX's memory you used:
  8121 strings out of 493634
- 109801 string characters out of 3143750
- 214824 words of memory out of 3000000
+ 109901 string characters out of 3143750
+ 213825 words of memory out of 3000000
  11301 multiletter control sequences out of 15000+200000
  18594 words of font info for 54 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 42i,9n,32p,843b,301s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX
- 2.9/fonts/enc/dvips/pl/plmi.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/p
-l/plrm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plms.enc}{C:/Program
- Files/MiKTeX 2.9/fonts/enc/dvips/pl/plme.enc}{C:/Program Files/MiKTeX 2.9/font
-s/enc/dvips/pl/plit.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plbx10.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plbx12.pfb><C:/Program Files/
-MiKTeX 2.9/fonts/type1/public/pl/plex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/pl/plmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/p
-lmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmi8.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/pl/plr12.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/pl/plr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/pl/plr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><C:
-/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/pl/plti12.pfb>
-Output written on W04_209118_2018_praca_magisterska.pdf (11 pages, 132927 bytes
-).
+ 42i,9n,32p,853b,301s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Fi
+les/MiKTeX 2.9/fonts/enc/dvips/pl/plmi.enc}{C:/Program Files/MiKTeX 2.9/fonts/e
+nc/dvips/pl/plrm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plms.enc}{
+C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plme.enc}{C:/Program Files/MiKTe
+X 2.9/fonts/enc/dvips/pl/plit.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/pl
+bx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plbx12.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/pl/plex10.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/pl/plmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/pl/plmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmi8.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr12.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/pl/plr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/pl/plr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plsy
+10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb>
+Output written on "W04_209118_2018_praca_magisterska - Kopia.pdf" (11 pages, 13
+3038 bytes).
 PDF statistics:
  95 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
