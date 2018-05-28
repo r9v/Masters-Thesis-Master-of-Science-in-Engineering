@@ -3,14 +3,14 @@ close all
 clc
 beep off
 
-param.initCond=setInitConditions();
+param.initCond=setInitConditionsRoz();
 
 param.Kp=3;
 param.Kd=2;
 
 simTime=20;
          
-sim('ZiemskiAlgorytmRozszerzony.slx',simTime);
+sim('ZiemskiAlgorytmRoz.slx',simTime);
 
 plot(e);
 legend('ey1','ey2','ey3','ey4','ey5')

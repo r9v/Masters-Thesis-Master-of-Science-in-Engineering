@@ -261,7 +261,7 @@ Algorytm odsprzęgania wejściowo-wyjściowego jest wykorzystywany do sterowania
 \item algorytm z rozszerzonymi funkcjami wyjściowymi\cite{1}
 \end{itemize}\vspace{0.2cm}
 
-Różnią się one wyborem funkcji wyjściowych $y(\cdot)$. Yamamoto i Yun założyli, że funkcje te będą zależne tylko od konfiguracji platformy $q_m$, natomiast Mazur pozwala aby funkcje wyjścia zależne był również od konfiguracji samego manipulatora $q_r$. Rozdział ten poświęcony jest opisowi obu podejść.
+Różnią się one wyborem funkcji wyjściowych $y(\cdot)$. Yamamoto i Yun założyli, że funkcje te będą zależne tylko od konfiguracji platformy $q_m$, natomiast Mazur pozwala aby funkcje wyjścia zależne był od konfiguracji platformy $q_m$, a także manipulatora $q_r$. Rozdział ten poświęcony jest opisowi obu podejść.
 %\section{Struktura układu sterowania}
 %Obie wersje algorytmu mają identyczną strukturę układu sterowania.
 %Składa się ona z dwóch pętli sprzężenia zwrotnego, które mają sprowadzić równania manipulatora mobilnego do liniowej postaci $\ddot{y}(t)=\zeta$, gdzie $\zeta$ jest nowym sterowaniem.
@@ -271,9 +271,10 @@ Różnią się one wyborem funkcji wyjściowych $y(\cdot)$. Yamamoto i Yun zało
 %\end{itemize}
 \section{Podstawowy algorytm Yamamoto i Yun'a}
 \subsection{Specyfikacja podejścia}
-Yamamoto i Yun założyli, że manipulator ma ustawić się w stałej konfiguracji o maksymalnej manipulowalności, a zadanie jest realizowane jedynie przez ruch platformy. Podejście takie traktuje cały manipulator mobilny bardziej jako samą platformę do której przymocowany jest unieruchomiony manipulator, niż pełen system, gdzie platforma i manipulator działają równocześnie. 
+Yamamoto i Yun założyli, że manipulator ma ustawić się w stałej konfiguracji o maksymalnej manipulowalności, a zadanie jest realizowane jedynie przez ruch platformy. Podejście takie traktuje cały manipulator mobilny bardziej jako samą platformę do której przymocowany jest unieruchomiony manipulator, niż pełen system, gdzie platforma i manipulator działają równocześnie.\\
+Podstawowy algorytm Yamamoto i Yun'a można stosować gdy manipulator ma pozostać nieruchomy np. .
 \subsection{Funkcje wyjścia}
-Przypomnijmy, że algorytm podstawowy wymaga aby funkcje wyjścia były zależne jedynie od konfiguracji platformy tj. $y(q_m)$. Wybór tych funkcji należy podporządkować rodzajowi zadania od zrealizowania. Do śledzenia trajektorii dwuwymiarowej $(x_r,y_r)$
+Przypomnijmy, że algorytm Yamamoto i Yun'a wymaga aby funkcje wyjścia były zależne jedynie od konfiguracji platformy tj. $y(q_m)$. Wybór tych funkcji należy podporządkować rodzajowi zadania od zrealizowania. Do śledzenia trajektorii dwuwymiarowej $(x_r,y_r)$
 \subsection{Wybór konfiguracji manipulatora}
 Ponieważ manipulator pozostaje przez czas działania algorytmu nieruchomy i nie uczestniczy czynnie w realizacji zadania należy ustawić go w takiej konfigurację, aby ułatwić platformie realizację zadania. Za przykładmem Yamamoto i Yun'a wybierzmy konfigurację maksymalizującą manipulowalność. Manipulowalność manipulatora zdefiniowana jest jako \cite{7}
 \begin{equation}
@@ -285,37 +286,45 @@ gdzie $J(q_r)$ to jakobian manipulatora. Jeśli manipulator jest redundantny man
 w=|\det(J(q_r))|.
 \end{equation} 
 \subsection{Algorytm sterowania}
-Odprzęganie i linearyzacja realizowane jest dzięki zastosowaniu do modelu (\ref{modelpp}) dwóch pętli sprzężenia zwrotnego. Pierwsza pętla - pętla wewnętrzna - przekształca układ do postaci liniowej typu "podwójny integrator", zaś druga - zewnętrzna - zapewnia realizację zadania tj. śledzenia trajektori w uzyskanym układzie liniowym. \\
+Odprzęganie i linearyzacja realizowane jest dzięki zastosowaniu do modelu (\ref{modelpp}) dwóch pętli sprzężenia zwrotnego.\\
+ Pierwsza pętla - pętla wewnętrzna - przekształca układ do postaci liniowej typu "podwójny integrator".\\
 Prawo sterowania pierwszej pętli to prawo z rodziny algorytmów 'obliczanych momentów'
 \begin{equation}
 \label{comTor}
 u=B^{*-1}[C^*z+D^*+Q^*v].
 \end{equation}
-Prawo drugiej pętli to
-\begin{equation}
-\label{eq:petla22}
-v=\Phi^{-1}[-\dot{\Phi} z+\zeta].
-\end{equation}
-Macierz $\Phi$ jest równa
-\[
-\Phi(q_m)= \dot{y}(q_m)=\frac{dy}{dq_m}G_m.
-\]
-Sprawdźmy teraz poprawność algorytmu. Zastosujmy najpierw pierwszą pętlę (\ref{comTor}) do modelu (\ref{modelpp}). W wyniku otrzymamy 
+Po jej użyciu w modelu (\ref{modelpp}) uzyskamy liniowy układ, z nowym wejściem $v$ 
 \begin{equation}
 \label{eq:22}
-\dot{z}=v,
+\dot{z}=v.
 \end{equation}
-gdzie $v$ jest nowym wejściem.
-Teraz zróżniczkujmy $y(q_m)$ dwukrotnie po czasie
+Druga pętla - zewnętrzna - zapewnia realizację zadania tj. śledzenia trajektori w uzyskanym układzie liniowym. Wprowadźmy prawo tej pętli w sposób następujący, najpierw zróżniczkujmy $y(q_m)$ dwukrotnie po czasie
 \begin{equation}
 \label{ydot}
-\dot{y}(q_m)=\frac{dy}{dq_m}\dot{q}_m=\frac{dy}{dq_m}G_mz=\Phi(q)z,
+\dot{y}(q_m)=\frac{dy(q_m)}{dq_m}\dot{q}_m=\frac{dy(q_m)}{dq_m}G_m(q_m)\eta=\Phi_m(q_m)\eta,
 \end{equation}
 \begin{equation}
 \label{ypp}
-\ddot{y}(q_m)=\dot{\Phi}z+\Phi \dot{z}=\dot{\Phi}z+\Phi v.
+\ddot{y}(q_m,\dot{q}_m)=\dot{\Phi}_m(q_m,\dot{q}_m)\eta+\Phi_m(q_m) \dot{\eta}=\dot{\Phi}_m(q_m,\dot{q}_m)\eta+\Phi_m(q_m) v_m.
 \end{equation} 
-Łatwo sprawdzić, że po zastosowaniu prawa (\ref{eq:petla22}) do (\ref{ypp}) otrzymamy 
+Macierz $\Phi_m(q_m)$ jest równa
+\[
+\Phi_m(q_m)= \frac{dy(q_m)}{dq_m}G_m(q_m).
+\]\\
+Łatwo sprawdzić, że przy użyciu następującego prawa sterowania
+\begin{equation}
+\label{eq:petla22}
+v=\left(
+\begin{array}{c}
+v_m\\
+0\\
+\end{array}
+\right),
+\end{equation}
+\begin{equation}
+v_m=\Phi_m^{-1}(q_m)[-\dot{\Phi}_m(q_m) \eta+\zeta].
+\end{equation}
+do modelu (\ref{ypp}) otrzymamy 
 \begin{equation}
 \label{testtssts}
 \ddot{y}=\zeta.
@@ -329,13 +338,14 @@ gdzie $\ddot{y}_d(t)$ - druga pochodna zadanej funckji wejściowej,\\ $e(t)=y_d(
 \paragraph{Warunki działania algorytmu}
 \par Ponieważ algorytm wykorzystuje odwrotność macierzy $\Phi$ należy  zapewnić, aby
 \begin{equation}
-\det(\Phi)\neq0
+\det(\Phi_m(q_m))\neq0
 \end{equation}
 
 \subsection{Badania symulacyjne}
 \section{Algorytm z rozszerzonymi funkcjami wyjściowymi}
 \subsection{Specyfikacja podejścia}
-Odmiennie od założeń Yamamoto i Yun'a rozszerzony algorytm nie wymaga bezruchu manipulatora. Dzięki temu platforma i manipulator mogą działać równolegle w sposób skoordynowany. Sterowanie platformy nie odbywa się w sposób bezpośredni, lecz działa w reakcji na dryf systemu.
+Odmiennie od założeń Yamamoto i Yun'a rozszerzony algorytm nie wymaga bezruchu manipulatora. Dzięki temu platforma i manipulator mogą działać równolegle w sposób skoordynowany. Sterowanie platformy nie odbywa się w sposób bezpośredni, lecz działa w reakcji na dryf systemu.\\
+Algorytm ten stosować można kiedy, np. sterowanie bazą jest niemożliwe(np. w przypadku robota free-floating).
 \subsection{Funkcje wyjścia}
 Funkcje wyjściowe mogą zależeć teraz od konfiguracji całego robota tj. i platformy i manipulatora. Przyjmują one postacie\cite{1}:
 \begin{equation}

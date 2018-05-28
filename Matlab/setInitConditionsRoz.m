@@ -1,4 +1,4 @@
-function [ initCond ] = setInitConditions(  )
+function [ initCond ] = setInitConditionsRoz(  )
 
 %----- polozenia -----%
 initCond.x0=0; %
