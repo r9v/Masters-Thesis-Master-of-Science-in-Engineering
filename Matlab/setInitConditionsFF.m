@@ -25,9 +25,9 @@ initCond.q0=[
 %----- predkosci -----%
 initCond.xp0=0;
 initCond.yp0=0;
-initCond.thetap0=0;%WELP xp,yp,thetap depend on each other
+initCond.thetap0=1;
 initCond.qp10=0;
-initCond.qp20=0;
+initCond.qp20=1;
 initCond.qp0=[
     initCond.xp0;
     initCond.yp0;

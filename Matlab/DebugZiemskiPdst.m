@@ -5,14 +5,20 @@ beep off
 
 param.initCond=setInitConditionsPdst();
 
-param.Kp=3;
-param.Kd=2;
+param.Kp=2;
+param.Kd=4;
 
-simTime=20;
+simTime=10;
          
 sim('ZiemskiAlgorytmPdst.slx',simTime);
 
 plot(e);
-legend('ey1','ey2','ey3','ey4','ey5')
+title('');
+ylabel('blad[m]')
+xlabel('czas[s]')
+legend('e_1','e_2','Interpreter','latex')
+figure();
 plot(q);
-legend('x','y','theta','phi1','phi2','q1','q2','q3')
+ylabel('konfiguracja')
+xlabel('czas[s]')
+legend('x[m]','y[m]','theta[rad]','phi1[rad]','phi2[rad]','q1[rad]','q2[rad]','q3[rad]')

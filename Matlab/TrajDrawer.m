@@ -1,6 +1,5 @@
 
-
-for tstep=1:floor(length(q.Time)/15):length(q.Time)
+for tstep=1:floor(length(q.Time)/25):length(q.Time)
 [Base,K1,K2,C1,C2,C3,C4]=coords(tstep,q);
 drawRobot(Base,K1,K2,C1,C2,C3,C4)
 pause(0.5)

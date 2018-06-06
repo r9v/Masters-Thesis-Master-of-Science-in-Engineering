@@ -5,10 +5,10 @@ beep off
 
 param.initCond=setInitConditionsRoz();
 
-param.Kp=3;
-param.Kd=2;
+param.Kp=2;
+param.Kd=4;
 
-simTime=20;
+simTime=10;
          
 sim('ZiemskiAlgorytmRoz.slx',simTime);
 

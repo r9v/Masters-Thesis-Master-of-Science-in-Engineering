@@ -7,6 +7,6 @@ param.initCond=setInitConditionsFF();
 
 param.Kp=10;
 param.Kd=20;
-simTime=100;
+simTime=10;
          
 sim('FFAlgorytmRozszerzony.slx',simTime);

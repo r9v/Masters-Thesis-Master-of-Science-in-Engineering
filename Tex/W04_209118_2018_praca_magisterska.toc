@@ -1,0 +1,24 @@
+\select@language {polish}
+\contentsline {chapter}{\numberline {1}Wst\IeC {\k e}p}{2}
+\contentsline {section}{\numberline {1.1}Cel pracy}{2}
+\contentsline {section}{\numberline {1.2}Zawarto\IeC {\'s}\IeC {\'c} pracy}{2}
+\contentsline {chapter}{\numberline {2}Model manipulatora mobilnego}{2}
+\contentsline {section}{\numberline {2.1}Model we wsp\IeC {\'o}\IeC {\l }rz\IeC {\k e}dnych uog\IeC {\'o}lnionych}{3}
+\contentsline {subsection}{\numberline {2.1.1}Ograniczenia nieholonomiczne}{3}
+\contentsline {section}{\numberline {2.2}Model w pr\IeC {\k e}dko\IeC {\'s}ciach pomocniczych}{4}
+\contentsline {chapter}{\numberline {3}Odsprz\IeC {\k e}ganie wej\IeC {\'s}ciowo-wyj\IeC {\'s}ciowe dla manipulatora mobilnego}{5}
+\contentsline {section}{\numberline {3.1}Podstawowy algorytm Yamamoto i Yun'a}{5}
+\contentsline {subsection}{\numberline {3.1.1}Specyfikacja podej\IeC {\'s}cia}{5}
+\contentsline {subsection}{\numberline {3.1.2}Funkcje wyj\IeC {\'s}cia}{6}
+\contentsline {subsection}{\numberline {3.1.3}Wyb\IeC {\'o}r konfiguracji manipulatora}{6}
+\contentsline {subsection}{\numberline {3.1.4}Algorytm sterowania}{6}
+\contentsline {paragraph}{Warunki dzia\IeC {\l }ania algorytmu}{7}
+\contentsline {subsection}{\numberline {3.1.5}Badania symulacyjne}{7}
+\contentsline {section}{\numberline {3.2}Algorytm z rozszerzonymi funkcjami wyj\IeC {\'s}ciowymi}{9}
+\contentsline {subsection}{\numberline {3.2.1}Specyfikacja podej\IeC {\'s}cia}{9}
+\contentsline {subsection}{\numberline {3.2.2}Funkcje wyj\IeC {\'s}cia}{9}
+\contentsline {subsection}{\numberline {3.2.3}Algorytm sterowania}{9}
+\contentsline {paragraph}{Warunki dzia\IeC {\l }ania algorytmu}{10}
+\contentsline {subsection}{\numberline {3.2.4}Badania symulacyjne}{10}
+\contentsline {chapter}{\numberline {4}Model satelity typu free-floating}{13}
+\contentsline {chapter}{\numberline {5}Odsprz\IeC {\k e}ganie wej\IeC {\'s}ciowo-wyj\IeC {\'s}ciowe dla satelity typu free-floating}{13}

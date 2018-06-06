@@ -1,0 +1,274 @@
+\documentclass[eng,printmode,oneside]{mgr}
+\usepackage[MeX]{polski}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc} 
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{psfrag}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%\usepackage{supertabular}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{hhline}
+\usepackage{rev}
+%\usepackage{framed}
+\usepackage{color}
+\usepackage{url}
+%\usepackage[notref]{showkeys}
+%\usepackage{showlabels}
+\usepackage{float}
+%\usepackage{tikz}
+\usepackage{enumitem} 
+\usepackage{graphicx}       
+\usepackage{rotating}       % pakiet umożliwiający obracanie rysunków
+\usepackage{subfigure}      % pakiet umożliwiający tworzenie podrysunków
+\usepackage{epic}           
+\usepackage{listings}       % pakiet dedykowany zrodlom programow
+\usepackage{verbatim}       % pakiet dedykowany rozmaitym wydrukom tekstowym
+\usepackage{amssymb}        % pakiet z rozmaitymi symbolami matematycznymi
+\usepackage{amsmath}        % pakiet z rozmaitymi środowiskami matematycznymi
+\usepackage[polish]{babel}  % pakiet lokalizujący dokument w języku polskim
+\usepackage[OT4]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{bm}
+\usepackage{gensymb}
+\usepackage{booktabs}
+\usepackage{epstopdf}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphics}
+\usepackage[]{algorithmic} %pseudocode
+\usepackage[]{algorithm2e} %pseudocode
+\usepackage{float}
+\usepackage{csquotes}
+\usepackage{epsfig}
+%\usepackage{hyperref}
+\usepackage{wrapfig} 
+\reviewer{dypl}{0.2}{0.2}{0.67}
+\reviewer{prof}{0.2}{0.6}{0.2}
+\def\bp{\begin{review}[prof]}
+\def\ep{\end{review}}
+\def\bdypl{\begin{review}[dypl]}
+\def\edypl{\end{review}}
+\newcommand{\R}{I\!\!R} 
+\newtheorem{theorem}{Twierdzenie}[section] 
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+\newenvironment{myitemize}%
+ { \begin{list}{\labelitemi}%
+   {
+      \setlength{\itemsep}{0mm}%
+      \setlength{\topsep}{6pt}%
+      \setlength{\leftmargin}{5mm}%
+     \setlength{\parsep}{1mm}%
+    }
+  }
+{\end{list}
+}
+\newcounter{mycount}
+\newenvironment{MYenumerate}%
+ {\begin{list}{\arabic{mycount}.}%
+   {\usecounter{mycount}%
+%      \setlength{\topsep}{12pt}%
+      \setlength{\topsep}{6pt}%
+      \setlength{\itemsep}{0mm}%
+      \setlength{\leftmargin}{7mm}%
+     \setlength{\parsep}{1mm}%
+    }%
+ }%
+{\end{list}}
+\newenvironment{todo}
+{
+\label{todo}
+\color{red} [
+}
+{]
+}
+%%%%%%%%%chapter no new page%
+\usepackage{etoolbox}
+
+\makeatletter
+\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+\makeatother
+%%%%%%%%%%%%%
+\title{?}
+\engtitle{?}
+
+\author{inż. Bernard Malec}
+\supervisor{Prof.\ dr hab.\ inż.\ Alicja Mazur}
+
+
+\field{Automatyka i Robotyka (AIR)}
+\specialisation{Robotyka (ARR)}
+
+%\includeonly{mch0,mch1,mch2,mch3,mch4,bibl}
+%\includeonly{mch3}
+
+\begin{document}
+\bibliographystyle{plabbrv} %BibTeX polski styl bibliografii 
+
+% te ozdobniki dodaje się dopiero na końcu 
+%\maketitle
+
+\chapter{Model satelity typu free-floating}
+Równania dynamiki robota free-floating z manipulatorem można zapisać jako\\
+\begin{equation}
+\label{wrsdad}
+H\ddot{q}+C\dot{q}=
+H\ddot{q}+c=
+\begin{bmatrix}
+    H_b  &H_{bm}\\
+    H_{bm}^T  &H_m \\
+\end{bmatrix}
+\left(
+\begin{array}{c}
+\ddot{q_b}\\
+\ddot{q_m}\\
+\end{array}
+\right)
++
+\left(
+\begin{array}{c}
+c_b\\
+c_m\\
+\end{array}
+\right)
+=
+\left(
+\begin{array}{c}
+0\\
+u\\
+\end{array}
+\right).
+\end{equation}\\
+\section{Model we współrzędnych barycentrycznych}
+Model dynamiki (\ref{wrsdad}) można zapisać także we współrzędnych barycentrycznych.\\
+Położenie środka masy robota free-floating z manipulatorem można wyliczyć z definicji jako
+\begin{equation}
+\left(\sum\limits^w_{i=3}m_i\right)\phi_b=\sum\limits^w_{i=3}m_ir_i,
+\end{equation}
+gdzie $r_i$ to środek masy członu $i$ robota w podstawowym układzie współrzędnych.\\
+$\phi_b$ to współrzędne barycentryczne układu, czyli
+\begin{equation}
+\phi_b=
+\left(
+\begin{array}{c}
+\bar{x}\\
+\bar{y}\\
+\theta\\
+\end{array}
+\right).
+\end{equation}
+Model we współrzędnych barycentrycznych można wyrazić jako
+\begin{equation}
+\bar{H}\ddot{\phi}+\bar{C}\dot{\phi}=
+\bar{H}\ddot{\phi}+\bar{c}
+=
+\begin{bmatrix}
+    \bar{H}_b  &\bar{H}_{bm}\\
+    \bar{H}_{bm}^T  &\bar{H}_m \\
+\end{bmatrix}
+\left(
+\begin{array}{c}
+\ddot{\phi_b}\\
+\ddot{q_m}\\
+\end{array}
+\right)
++
+\left(
+\begin{array}{c}
+\bar{c}_b\\
+\bar{c}_m\\
+\end{array}
+\right)
+=
+\left(
+\begin{array}{c}
+0\\
+u\\
+\end{array}
+\right),
+\end{equation}
+współrzędne $\phi$ mają postać
+\begin{equation}
+\phi=
+\left(
+\begin{array}{c}
+\phi_b\\
+q_m\\
+\end{array}
+\right).
+\end{equation}
+Macierz $\bar{H}$ i $\bar{C}$ uzyskuje się przez przeliczenie energii kinetycznej do układu współrzędnych barycentrycznych.
+
+\chapter{Algorytm}
+\begin{equation}
+y=k(\phi)
+\end{equation}
+\begin{equation}
+\dot{y}_i=\dfrac{dk_i(\phi)}{d\phi}\dot{\phi}=J_i\dot{\phi}
+\end{equation}
+\begin{equation}
+\ddot{y}_i=\dot{\phi}^T\dfrac{d^2k_i(\phi)}{d\phi^2}\dot{\phi}+J_i\ddot{\phi}=P_i+J_i\ddot{\phi}
+\end{equation}
+\begin{equation}
+\ddot{\phi}=\bar{H}^{-1}
+\left(
+\begin{array}{c}
+-\bar{c}_b\\
+u-\bar{c}_m\\
+\end{array}
+\right)
+\end{equation}
+\begin{equation}
+\ddot{\phi}=P+J\left(\bar{H}^{-1}\left(
+\begin{array}{c}
+-\bar{c}_b\\
+u-\bar{c}_m\\
+\end{array}
+\right)\right)
+\end{equation}
+\begin{equation}
+\ddot{\phi}=
+P-J\bar{H}^{-1}\left(
+\begin{array}{c}
+\bar{c}_b\\
+\bar{c}_m\\
+\end{array}
+\right)+
+J\bar{H}^{-1}\left(
+\begin{array}{c}
+0\\
+u\\
+\end{array}
+\right)
+\end{equation}
+\begin{equation}
+\ddot{\phi}=
+F+G\left(\begin{array}{c}
+0\\
+u\\
+\end{array}
+\right)
+\end{equation}
+\begin{equation}
+F=P-J\bar{H}^{-1}\left(
+\begin{array}{c}
+\bar{c}_b\\
+\bar{c}_m\\
+\end{array}
+\right)
+\end{equation}
+\begin{equation}
+G=J\bar{H}^{-1}
+\end{equation}
+\begin{equation}
+u=G_2^{-1}(-F+\zeta)
+\end{equation}
+\begin{equation}
+\ddot{y}=\zeta
+\end{equation}
+\end{document}
