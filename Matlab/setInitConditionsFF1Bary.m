@@ -1,4 +1,4 @@
-function [ initCond ] = setInitConditionsFF(  )
+function [ initCond ] = setInitConditionsFF1Bary(  )
 
 %----- polozenia -----%
 xb=0; %

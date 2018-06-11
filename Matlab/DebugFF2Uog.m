@@ -3,10 +3,10 @@ close all
 clc
 beep off
 
-param.initCond=setInitConditionsFF();
+param.initCond=setInitConditionsFF2Uog();
 
 param.Kp=10;
 param.Kd=20;
 simTime=10;
          
-sim('FFAlgorytmRozszerzony.slx',simTime);
+sim('FF1Uog.slx',simTime);

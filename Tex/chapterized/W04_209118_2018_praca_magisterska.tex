@@ -127,7 +127,7 @@ q=\left(
 q_b\\
 q_r\\
 \end{array}
-\right)\in R^{n+p},
+\right),
 \end{equation}
 gdzie $q_b=(x,y,\theta)^T$ - wektor współrzędnych uogólnionych bazy, $q_r=(q_1,q_2)^T$ - wektor współrzędnych przegubowych manipulatora. 
 \par Równania dynamiki we współrzędnych uogólnionych takiego robota można, ponownie korzystając z formalizmu Langrange'a, zapisać jako\\
@@ -141,7 +141,7 @@ u\\
 \end{array}
 \right).
 \end{equation}\\
-Brak wektora sił potencjalncyh $D(q)$ wynika z braku grawitacji. \par Sterowanie $u$ pojawia się tylko w dolnej części równania dynamiki (\ref{wrsdad}), ponieważ dotyczy tylko manipulatora, jako że baza jest nienapędzana.
+Brak wektora sił potencjalncyh $D(q)$ wynika z braku grawitacji. \par Sterowanie $u$ pojawia się tylko w dolnej części równania dynamiki (\ref{wrsdad}), ponieważ dotyczy jedynie manipulatora, jako że baza jest nienapędzana.
 %H\ddot{q}+c=
 %\begin{bmatrix}
 %    H_b  &H_{bm}\\
@@ -172,11 +172,12 @@ Brak wektora sił potencjalncyh $D(q)$ wynika z braku grawitacji. \par Sterowani
 Jeśli środek masy robota free-floating z manipulatorem ma pozostać nieruchomy podczas działania algorytmu, konieczne jest zamodelowanie dynamiki we współrzędnych barycentrycznych.\\
 \par Położenie środka masy robota free-floating z manipulatorem można wyliczyć z definicji jako
 \begin{equation}
-\left(\sum\limits^w_{i=3}m_i\right)\phi_b=\sum\limits^w_{i=3}m_ir_i,
+\left(\sum\limits^w_{i=1}m_i\right)\phi_b=\sum\limits^w_{i=1}m_ir_i,
 \end{equation}
-gdzie $r_i$ to środek masy członu $i$ robota w podstawowym układzie współrzędnych, a  $m_i$ to masa członu $i$.\\
+gdzie $r_i$ to środek masy członu $i$ robota w podstawowym układzie współrzędnych, a  $m_i$ to masa członu $i$. $w$ to liczba członów robota. W naszym przypadku $w$ wynosi trzy, robot posiada bowiem jedną bazę i dwa ramiona.\\
 $\phi_b$ to współrzędne barycentryczne układu, czyli
 \begin{equation}
+\label{baro}
 \phi_b=
 \left(
 \begin{array}{c}
@@ -185,7 +186,17 @@ $\phi_b$ to współrzędne barycentryczne układu, czyli
 \theta\\
 \end{array}
 \right)=
-\frac{\sum\limits^w_{i=3}m_ir_i}{\sum\limits^w_{i=3}m_i}.
+\frac{\sum\limits^w_{i=1}m_ir_i}{\sum\limits^w_{i=1}m_i}.
+\end{equation}
+całkowite współrzędne barycentryczne $\phi$ mają postać
+\begin{equation}
+\phi=
+\left(
+\begin{array}{c}
+\phi_b\\
+q_r\\
+\end{array}
+\right).
 \end{equation}
 Model we współrzędnych barycentrycznych można wyrazić jako
 \begin{equation}
@@ -225,17 +236,8 @@ u\\
 %\end{array}
 %\right),
 %\end{equation}
-współrzędne $\phi$ mają postać
-\begin{equation}
-\phi=
-\left(
-\begin{array}{c}
-\phi_b\\
-q_r\\
-\end{array}
-\right).
-\end{equation}
-Macierz $\bar{H}$ i $\bar{C}$ uzyskuje się przez przeliczenie energii kinetycznej do układu współrzędnych barycentrycznych.\\
+
+Macierze $\bar{H}$ i $\bar{C}$ uzyskuje się przez przeliczenie energii kinetycznej do układu współrzędnych barycentrycznych i wykorzystanie formalizmu Lagrang'e dla nowej energii kinetycznej.\\
 
 \chapter{Odsprzęganie wejściowo-wyjściowe dla robota free-floating z manipulatorem}
 
@@ -369,5 +371,176 @@ Po wykorzystaniu sterowania (\ref{ulol}) w (\ref{helloasdasda}) otrzymamy układ
 \label{helloasdasdaasdasdasd}
 \ddot{y}=\zeta.
 \end{equation}
-Za wysterowanie liniowym układem (\ref{helloasdasdaasdasdasd}) odpowiada druga pętla. Zrealizujmy ją jako regulator PD z korekcją (\ref{PD}).
+Za wysterowanie liniowym układem (\ref{helloasdasdaasdasdasd}) odpowiada druga pętla. Zrealizować ją, można jako regulator PD z korekcją (\ref{PD}).
+
+\subsection{Badania symulacyjne}
+Podrozdział ten poświęcony jest symulacji algorytmu odsprzęgania wejściowo-wyjściowego dla robota free-floating z manipulatorem.\\
+\par Algorytm zbadano na obu przedstawionych w pracy modelach dynamiki. W badaniach użyto identyczne konfiguracje początkowe $q_b(0),q_r(0)$ i tą samą trajektorię zadaną $y_d(t)$ , w celu porównania obu modeli.\\
+Parametry geometryczne i masowe ustalono jako: $l_1$=1m, $l_2$=1m, $m_0=$20kg, $m_1$=$m_2$=10kg.\\
+Początkowa konfiguracja bazy $q_b(0)$ we współrzędnych uogólnionych była równa
+\begin{center}
+$q_b(0)=
+\left(
+\begin{array}{c}
+   x(0) \\
+    y(0) \\
+    \theta(0)\\
+\end{array}
+\right)=
+\left(
+\begin{array}{c}
+    ? \\
+     ? \\
+\end{array}
+\right).$
+\end{center}
+We współrzędnych barycentrycznych konfigurację bazy $\phi_b(0)$ możemy zapisać jako
+\begin{center}
+$\phi_b(0)=
+\left(
+\begin{array}{c}
+   \bar{x}(0) \\
+   \bar{y}(0) \\
+    \theta(0)\\
+\end{array}
+\right)=
+\left(
+\begin{array}{c}
+    ? \\
+     ? \\
+\end{array}
+\right),$
+\end{center}
+co wynika to z przekształcenia (\ref{baro}). W naszym wypadku $\bar{x}$ i $\bar{y}$ będą równe
+\begin{center}$
+\begin{array}{c}
+\bar{x}= \dfrac{{m_2} \left({l_1}
+   c_{01}+\dfrac{1}{2} {l_2} c_{012}\right)}{{m_1}+{m_2}+{m_0}}+\dfrac{{l_1} {m_1} c_{01}}{2   ({m_1}+{m_2}+{m_0})}+x,\\
+   \bar{y}= \dfrac{{m_2} \left({l_1} s_{01}+\dfrac{1}{2} {l_2} s_{012}\right)}{{m_1}+{m_2}+{m_0}}+\dfrac{{l_1} {m_1} s_{01}}{2
+   ({m_1}+{m_2}+{m_0})}+y.
+   \end{array}
+$\end{center}
+Początkowa konfiguracja manipulatora była równa 
+\begin{center}
+$q_r(0)=
+\left(
+\begin{array}{c}
+   q_1(0) \\
+    q_2(0) \\
+\end{array}
+\right)=
+\left(
+\begin{array}{c}
+    ? \\
+     ? \\
+\end{array}
+\right).$
+\end{center}
+Prędkości początkowe $\dot{q}(0)$ były równe zeru.  \\
+Podczas badań odsprzęgnięto współrzędne $x$ i $y$ efektora w podstawowym układzie odniesienia ($X_0$,$Y_0$).\\
+Funkcja wyjścia we współrzędnych uogólnionych $y(q_b,q_r)$ ma postać\\
+\begin{center}
+$y(q_b,q_r)=
+\left(
+\begin{array}{c}
+    x + l_1c_{01} + l_2c_{012}\\
+    y + l_1s_{01} + l_2s_{012}\\
+\end{array}
+\right).$
+\end{center}
+Po przekształceniu $q_b$ do $\phi_b$ otrzymamy funkcję wyjścia we współrzędnych barycentrycznych
+\begin{center}
+$y(\phi_b,q_r)=
+\left(
+\begin{array}{c}
+   \dfrac{{l_1} ({m_1}+2  {m_0}) c_{01}+ {l_2} (2
+    {m_1}+ {m_2}+2  {m_0}) c_{012}+2  \bar{x}
+   ( {m_1}+ {m_2}+ {m_0})}{2( {m_1}+ {m_2}+ {m_0})}\\
+   \dfrac{ {l_1}   ( {m_1}+2  {m_0}) s_{01}+ {l_2} (2  {m_1}+ {m_2}+2
+    {m_0}) s_{012}+2    \bar{y} ( {m_1}+ {m_2}+ {m_0})}{2
+   ( {m_1}+ {m_2}+ {m_0})}
+\end{array}
+\right).$
+\end{center}
+Funkcje wyjścia miały następujące wartości początkowe 
+\begin{center}
+$y(q_b(0),q_r(0))=
+\left(
+\begin{array}{c}
+    ? \\
+     ? \\
+\end{array}
+\right).$
+\end{center}
+\begin{center}
+$y(\phi_b(0),q_r(0))=
+\left(
+\begin{array}{c}
+    ? \\
+     ? \\
+\end{array}
+\right).$
+\end{center}
+Wektor pochodnych $\dot{y}$ był zerowy.\\
+
+Wybrano następujące trajektorie zadane $y_d(t)$ 
+\begin{center}
+$y_d(t)=
+\left(
+\begin{array}{c}
+    ?\\
+    ?\\
+\end{array}
+\right).$
+\end{center}
+Błąd początkowy $e(t)=y_d(t)-y(t)$ i jego pochodna były równe
+\begin{center}
+$e(0)=
+\left(
+\begin{array}{c}
+   ?\\
+    ?\\
+   \end{array}
+\right), \hspace{1.5cm}
+\dot{e}(0)=
+\left(
+\begin{array}{c}
+    ?\\
+    ?\\
+\end{array}
+\right).$
+\end{center}
+Do sterowania układem liniowym użyto regulator PD z korektą (\ref{PD}) z nastawami $K_d=4$, $K_p=2$.
+W badaniach wykorzystano środowisko Matlab/Simulink. \\
+Rezultaty badań przedstawiono poniżej.
+\subsection{Wyniki dla modelu we współrzędnych uogólnionych}
+Sterować można tylko dwoma przegubami manipulatora, a więc odsprząc dwie współrzędne efektora.\\
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.6\linewidth]{pics/ZRe}
+\caption{Przebieg błędu}
+\label{fig:regnad}
+\end{figure}
+
+\begin{figure}[H]
+\centering 
+\begin{minipage}{.5\textwidth}
+  	\centering
+  	\includegraphics[width=.99\linewidth]{pics/ZRx}
+  	
+  	\label{fig:sub1}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+ 	\centering
+    \includegraphics[width=.99\linewidth]{pics/ZRq}
+ 	
+  	\label{fig:sub1}
+\end{minipage}%
+\caption{Przebieg konfiguracji bazy i manipulatora}
+\label{fig:regnad}
+\end{figure}
+
+
 \end{document}

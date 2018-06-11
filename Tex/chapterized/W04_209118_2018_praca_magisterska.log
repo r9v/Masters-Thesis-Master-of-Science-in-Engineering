@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.12)  7 JUN 2018 14:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.12)  11 JUN 2018 11:36
 entering extended mode
 **./W04_209118_2018_praca_magisterska.tex
 (W04_209118_2018_praca_magisterska.tex
@@ -760,7 +760,14 @@ Package csquotes Warning: No style for language 'polish'.
 (csquotes)                Using fallback style on input line 110.
 
 Package csquotes Info: Redefining alias 'default' -> 'fallback'.
-(W04_209118_2018_praca_magisterska.aux)
+(W04_209118_2018_praca_magisterska.aux
+
+LaTeX Warning: Label `fig:sub1' multiply defined.
+
+
+LaTeX Warning: Label `fig:regnad' multiply defined.
+
+)
 \openout1 = `W04_209118_2018_praca_magisterska.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 110.
@@ -777,8 +784,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 110.
 LaTeX Font Info:    ... okay on input line 110.
 LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 110.
 LaTeX Font Info:    ... okay on input line 110.
-
-("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+ ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count154
 \scratchdimen=\dimen160
@@ -852,28 +858,114 @@ Underfull \hbox (badness 10000) in paragraph at lines 172--173
 Non-PDF special ignored!
 
 {C:/Users/www/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 237--239
+Underfull \hbox (badness 10000) in paragraph at lines 240--241
 
  []
 
 Rozdzia\l  2.
 [2] [3]
 
-LaTeX Warning: Reference `PD' on page 4 undefined on input line 372.
+LaTeX Warning: Reference `PD' on page 4 undefined on input line 374.
 
-[4] (W04_209118_2018_praca_magisterska.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 377--378
+
+ []
+
+
+Overfull \hbox (4.89056pt too wide) in paragraph at lines 378--381
+\OT4/cmr/m/n/12 Parametry geo-me-tryczne i ma-sowe usta-lono jako: $\OML/plm/m/
+it/12 l[]$\OT4/cmr/m/n/12 =1m, $\OML/plm/m/it/12 l[]$\OT4/cmr/m/n/12 =1m, $\OML
+/plm/m/it/12 m[] \OT4/cmr/m/n/12 =$20kg, $\OML/plm/m/it/12 m[]$\OT4/cmr/m/n/12 
+=$\OML/plm/m/it/12 m[]$\OT4/cmr/m/n/12 =10kg. 
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 439--442
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 484--485
+
+ []
+
+
+LaTeX Warning: Reference `PD' on page 5 undefined on input line 513.
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 517--518
+
+ []
+
+Package epstopdf Info: Source file: <pics/ZRe.eps>
+(epstopdf)                    date: 2018-05-28 20:43:50
+(epstopdf)                    size: 38737 bytes
+(epstopdf)             Output file: <pics/ZRe-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-05-28 20:46:38
+(epstopdf)                    size: 8882 bytes
+(epstopdf)             Command: <epstopdf --outfile=pics/ZRe-eps-converted-to.p
+df pics/ZRe.eps>
+(epstopdf)             \includegraphics on input line 522.
+Package epstopdf Info: Output file is already uptodate.
+<pics/ZRe-eps-converted-to.pdf, id=26, 421.575pt x 316.18124pt>
+File: pics/ZRe-eps-converted-to.pdf Graphic file (type pdf)
+
+<use pics/ZRe-eps-converted-to.pdf>
+Package pdftex.def Info: pics/ZRe-eps-converted-to.pdf used on input line 522.
+(pdftex.def)             Requested size: 273.14922pt x 204.86406pt.
+Package epstopdf Info: Source file: <pics/ZRx.eps>
+(epstopdf)                    date: 2018-05-28 20:44:10
+(epstopdf)                    size: 26556 bytes
+(epstopdf)             Output file: <pics/ZRx-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-05-28 20:46:40
+(epstopdf)                    size: 6484 bytes
+(epstopdf)             Command: <epstopdf --outfile=pics/ZRx-eps-converted-to.p
+df pics/ZRx.eps>
+(epstopdf)             \includegraphics on input line 531.
+Package epstopdf Info: Output file is already uptodate.
+
+<pics/ZRx-eps-converted-to.pdf, id=27, 421.575pt x 316.18124pt>
+File: pics/ZRx-eps-converted-to.pdf Graphic file (type pdf)
+
+<use pics/ZRx-eps-converted-to.pdf>
+Package pdftex.def Info: pics/ZRx-eps-converted-to.pdf used on input line 531.
+(pdftex.def)             Requested size: 225.34706pt x 169.01297pt.
+Package epstopdf Info: Source file: <pics/ZRq.eps>
+(epstopdf)                    date: 2018-05-28 20:44:28
+(epstopdf)                    size: 36445 bytes
+(epstopdf)             Output file: <pics/ZRq-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-05-28 20:46:41
+(epstopdf)                    size: 9561 bytes
+(epstopdf)             Command: <epstopdf --outfile=pics/ZRq-eps-converted-to.p
+df pics/ZRq.eps>
+(epstopdf)             \includegraphics on input line 537.
+Package epstopdf Info: Output file is already uptodate.
+
+<pics/ZRq-eps-converted-to.pdf, id=28, 421.575pt x 316.18124pt>
+File: pics/ZRq-eps-converted-to.pdf Graphic file (type pdf)
+
+<use pics/ZRq-eps-converted-to.pdf>
+Package pdftex.def Info: pics/ZRq-eps-converted-to.pdf used on input line 537.
+(pdftex.def)             Requested size: 225.34706pt x 169.01297pt.
+ [6 <./pics/ZRe-eps-converted-to.pdf> <./pics/ZRx-eps-converted-to.pdf> <./pics
+/ZRq-eps-converted-to.pdf>]
+(W04_209118_2018_praca_magisterska.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 8057 strings out of 493634
- 108930 string characters out of 3143750
- 212610 words of memory out of 3000000
- 11244 multiletter control sequences out of 15000+200000
- 16800 words of font info for 50 fonts, out of 3000000 for 9000
+ 8099 strings out of 493634
+ 109574 string characters out of 3143750
+ 215681 words of memory out of 3000000
+ 11269 multiletter control sequences out of 15000+200000
+ 17799 words of font info for 52 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 42i,9n,32p,843b,226s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,11n,32p,843b,303s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plms.enc}{C:/Program Files/Mi
 KTeX 2.9/fonts/enc/dvips/pl/plrm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvi
 ps/pl/plmi.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plme.enc}<C:/Pro
@@ -884,10 +976,10 @@ pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmi8.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/pl/plr12.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/public/pl/plr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/
 plsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb>
-Output written on W04_209118_2018_praca_magisterska.pdf (4 pages, 75550 bytes).
-
+Output written on W04_209118_2018_praca_magisterska.pdf (6 pages, 103285 bytes)
+.
 PDF statistics:
- 55 PDF objects out of 1000 (max. 8388607)
+ 75 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

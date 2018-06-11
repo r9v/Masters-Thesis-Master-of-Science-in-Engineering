@@ -1,4 +1,4 @@
-function [ initCond ] = setInitConditionsFFTest2(  )
+function [ initCond ] = setInitConditionsFF2Uog(  )
 
 %----- polozenia -----%
 initCond.x0=0; %
