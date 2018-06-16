@@ -169,7 +169,7 @@ Brak wektora sił potencjalncyh $D(q)$ wynika z braku grawitacji. \par Sterowani
 %\right).
 %\end{equation}\\
 \section{Model we współrzędnych barycentrycznych}
-Jeśli środek masy robota free-floating z manipulatorem ma pozostać nieruchomy podczas działania algorytmu, konieczne jest zamodelowanie dynamiki we współrzędnych barycentrycznych.\\
+Jeśli środek masy robota free-floating z manipulatorem ma pozostać nieruchomy (lub poruszać się ze stałą prędkością), konieczne jest zamodelowanie dynamiki we współrzędnych barycentrycznych.\\
 \par Położenie środka masy robota free-floating z manipulatorem można wyliczyć z definicji jako
 \begin{equation}
 \left(\sum\limits^w_{i=1}m_i\right)\phi_b=\sum\limits^w_{i=1}m_ir_i,
@@ -375,9 +375,19 @@ Za wysterowanie liniowym układem (\ref{helloasdasdaasdasdasd}) odpowiada druga 
 
 \subsection{Badania symulacyjne}
 Podrozdział ten poświęcony jest symulacji algorytmu odsprzęgania wejściowo-wyjściowego dla robota free-floating z manipulatorem.\\
-\par Algorytm zbadano na obu przedstawionych w pracy modelach dynamiki. W badaniach użyto identyczne konfiguracje początkowe $q_b(0),q_r(0)$ i tą samą trajektorię zadaną $y_d(t)$ , w celu porównania obu modeli.\\
-Parametry geometryczne i masowe ustalono jako: $l_1$=1m, $l_2$=1m, $m_0=$20kg, $m_1$=$m_2$=10kg.\\
-Początkowa konfiguracja bazy $q_b(0)$ we współrzędnych uogólnionych była równa
+\par Algorytm zbadano na obu przedstawionych w pracy modelach dynamiki: we współrzędnych uogólnionych i barycentrycznych. W badaniach użyto identyczne konfiguracje początkowe manipulatora $q_r(0)$, odpowiadające sobie konfiguracje  początkowe bazy $q_b(0)$ i $\phi_b(0)$ i tą samą trajektorię zadaną $y_d(t)$ , w celu porównania zachowania algorytmu dla obu modeli.\\
+\par Parametry geometryczne i masowe ustalono jako: $l_1$=1m, $l_2$=1m, $m_0=$20kg, $m_1$=$m_2$=10kg.\\
+Początkowa konfiguracja manipulatora była równa 
+\begin{center}
+$q_r(0)=
+\left(
+\begin{array}{c}
+   0 \\
+    0.1 \\
+\end{array}
+\right).$
+\end{center}
+Początkową konfigurację bazy $q_b(0)$ we współrzędnych uogólnionych ustalono jako
 \begin{center}
 $q_b(0)=
 \left(
@@ -389,12 +399,13 @@ $q_b(0)=
 \right)=
 \left(
 \begin{array}{c}
-    ? \\
-     ? \\
+    0 \\
+     0 \\
+     0 \\
 \end{array}
-\right).$
+\right),$
 \end{center}
-We współrzędnych barycentrycznych konfigurację bazy $\phi_b(0)$ możemy zapisać jako
+co odpowiada następującej konfiguracji początkowej bazy we współrzędnych barycentrycznych
 \begin{center}
 $\phi_b(0)=
 \left(
@@ -406,12 +417,13 @@ $\phi_b(0)=
 \right)=
 \left(
 \begin{array}{c}
-    ? \\
-     ? \\
+    0.4994 \\
+     0.0125 \\
+     0\\
 \end{array}
-\right),$
+\right).$
 \end{center}
-co wynika to z przekształcenia (\ref{baro}). W naszym wypadku $\bar{x}$ i $\bar{y}$ będą równe
+Wynika to z przekształcenia (\ref{baro}). W naszym wypadku $\bar{x}$ i $\bar{y}$ będą równe
 \begin{center}$
 \begin{array}{c}
 \bar{x}= \dfrac{{m_2} \left({l_1}
@@ -420,38 +432,47 @@ co wynika to z przekształcenia (\ref{baro}). W naszym wypadku $\bar{x}$ i $\bar
    ({m_1}+{m_2}+{m_0})}+y.
    \end{array}
 $\end{center}
-Początkowa konfiguracja manipulatora była równa 
+Prędkości początkowe były równe
 \begin{center}
-$q_r(0)=
+$\dot{q}_r(0)=
 \left(
 \begin{array}{c}
-   q_1(0) \\
-    q_2(0) \\
+    0 \\
+     0.1\\
 \end{array}
-\right)=
-\left(
-\begin{array}{c}
-    ? \\
-     ? \\
-\end{array}
-\right).$
+\right),$
 \end{center}
-Prędkości początkowe $\dot{q}(0)$ były równe zeru.  \\
-Podczas badań odsprzęgnięto współrzędne $x$ i $y$ efektora w podstawowym układzie odniesienia ($X_0$,$Y_0$).\\
-Funkcja wyjścia we współrzędnych uogólnionych $y(q_b,q_r)$ ma postać\\
 \begin{center}
-$y(q_b,q_r)=
+$\dot{q}_b(0)=
+\left(
+\begin{array}{c}
+    0 \\
+     0 \\
+     0.2\\
+\end{array}
+\right),$
+\end{center}
+\begin{center}
+$\dot{\phi}_b(0)=
+\left(
+\begin{array}{c}
+    -0.0012 \\
+     0.0874 \\
+     0.2\\
+\end{array}
+\right),$
+\end{center}
+\par Sterować można dwoma przegubami manipulatora, a więc możliwe jest odsprzęgnięcie dwóch współrzędnych efektora. Wybrano współrzędne $x$ i $y$ efektora w podstawowym układzie odniesienia ($X_0$,$Y_0$).\\
+Funkcja wyjścia $y$ ma postać
+\begin{center}
+$y(t)=y(q_b,q_r)=y(\phi_b,q_r)=
 \left(
 \begin{array}{c}
     x + l_1c_{01} + l_2c_{012}\\
     y + l_1s_{01} + l_2s_{012}\\
 \end{array}
-\right).$
-\end{center}
-Po przekształceniu $q_b$ do $\phi_b$ otrzymamy funkcję wyjścia we współrzędnych barycentrycznych
-\begin{center}
-$y(\phi_b,q_r)=
-\left(
+\right)=$
+$=\left(
 \begin{array}{c}
    \dfrac{{l_1} ({m_1}+2  {m_0}) c_{01}+ {l_2} (2
     {m_1}+ {m_2}+2  {m_0}) c_{012}+2  \bar{x}
@@ -464,32 +485,31 @@ $y(\phi_b,q_r)=
 \end{center}
 Funkcje wyjścia miały następujące wartości początkowe 
 \begin{center}
-$y(q_b(0),q_r(0))=
+$y(0)=y(q_b(0),q_r(0))=y(\phi_b(0),q_r(0))=
 \left(
 \begin{array}{c}
-    ? \\
-     ? \\
+     1.9950 \\
+     0.0998 \\
 \end{array}
 \right).$
 \end{center}
+Pochodne funkcji wyjścia w chwili 0 miały wartości
 \begin{center}
-$y(\phi_b(0),q_r(0))=
+$\dot{y}(0)=
 \left(
 \begin{array}{c}
-    ? \\
-     ? \\
+    -0.0100 \\
+     0.2995 \\
 \end{array}
 \right).$
 \end{center}
-Wektor pochodnych $\dot{y}$ był zerowy.\\
-
 Wybrano następujące trajektorie zadane $y_d(t)$ 
 \begin{center}
 $y_d(t)=
 \left(
 \begin{array}{c}
-    ?\\
-    ?\\
+    0.2\sin(0.2t)\\
+   1+0.01\ln(30(t+1))\\
 \end{array}
 \right).$
 \end{center}
@@ -498,49 +518,160 @@ Błąd początkowy $e(t)=y_d(t)-y(t)$ i jego pochodna były równe
 $e(0)=
 \left(
 \begin{array}{c}
-   ?\\
-    ?\\
+   -1.9950\\
+    0.9342\\
    \end{array}
 \right), \hspace{1.5cm}
 \dot{e}(0)=
 \left(
 \begin{array}{c}
-    ?\\
-    ?\\
+    0.0500\\
+    -0.2895\\
 \end{array}
 \right).$
 \end{center}
-Do sterowania układem liniowym użyto regulator PD z korektą (\ref{PD}) z nastawami $K_d=4$, $K_p=2$.
-W badaniach wykorzystano środowisko Matlab/Simulink. \\
+Do sterowania układem liniowym użyto regulator PD z korekcją (\ref{PD}) z nastawami $K_d=4$, $K_p=2$.
+W badaniach raz jeszcze wykorzystano środowisko Matlab/Simulink. \\
 Rezultaty badań przedstawiono poniżej.
-\subsection{Wyniki dla modelu we współrzędnych uogólnionych}
-Sterować można tylko dwoma przegubami manipulatora, a więc odsprząc dwie współrzędne efektora.\\
-
+\subsection{Wyniki dla modelu we współrzędnych barycentrycznych}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=.6\linewidth]{pics/ZRe}
-\caption{Przebieg błędu}
-\label{fig:regnad}
+\includegraphics[width=.6\linewidth]{pics/FF1BaryDrawing}
+\caption{Robot free-floating z manipulatorem w kolejnych chwilach czasu}
+\label{fig:FF1Drawing}
 \end{figure}
 
+Przebiegi błędów śledzenia trajektorii chwytaka pokazano na rys. \ref{fig:FF1Barye}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.6\linewidth]{pics/FF1Barye}
+\caption{Przebiegi błędów śledzenia trajektorii chwytaka}
+\label{fig:FF1Barye}
+\end{figure}
+
+Przebiegi współrzędnych uogólnionych $q_b$ i $q_r$ pokazano na rys. \ref{fig:FF1BaryQ}
 \begin{figure}[H]
 \centering 
 \begin{minipage}{.5\textwidth}
   	\centering
-  	\includegraphics[width=.99\linewidth]{pics/ZRx}
-  	
-  	\label{fig:sub1}
+  	\includegraphics[width=.99\linewidth]{pics/FF1BaryX}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
  	\centering
-    \includegraphics[width=.99\linewidth]{pics/ZRq}
- 	
-  	\label{fig:sub1}
+    \includegraphics[width=.99\linewidth]{pics/FF1BaryQ}
 \end{minipage}%
-\caption{Przebieg konfiguracji bazy i manipulatora}
-\label{fig:regnad}
+\caption{Przebiegi współrzędnych uogólnionych $q_b$ i $q_r$}
+\label{fig:FF1BaryQ}
 \end{figure}
 
+Przebiegi współrzędnych barycentrycznych $\bar{x}$ i $\bar{y}$ i ich prędkości pokazano na rys. \ref{fig:FF1BaryXBAR}
+\begin{figure}[H]
+\centering 
+\begin{minipage}{.5\textwidth}
+  	\centering
+  	\includegraphics[width=.99\linewidth]{pics/FF1BaryXBAR}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+ 	\centering
+    \includegraphics[width=.99\linewidth]{pics/FF1BaryXBARP}
+\end{minipage}%
+\caption{Przebiegi współrzędnych barycentrycznych $\bar{x}$ i $\bar{y}$ i ich prędkości}
+\label{fig:FF1BaryXBAR}
+\end{figure}
+
+\subsection{Wyniki dla modelu we współrzędnych uogólnionych}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.6\linewidth]{pics/FF1BaryDrawing}
+\caption{Robot free-floating z manipulatorem w kolejnych chwilach czasu}
+\label{fig:FF1Drawing}
+\end{figure}
+
+Przebiegi błędów śledzenia trajektorii chwytaka pokazano na rys. \ref{fig:FF1Barye}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.6\linewidth]{pics/FF1Barye}
+\caption{Przebiegi błędów śledzenia trajektorii chwytaka}
+\label{fig:FF1Barye}
+\end{figure}
+
+Przebiegi współrzędnych uogólnionych $q_b$ i $q_r$ pokazano na rys. \ref{fig:FF1BaryQ}
+\begin{figure}[H]
+\centering 
+\begin{minipage}{.5\textwidth}
+  	\centering
+  	\includegraphics[width=.99\linewidth]{pics/FF1BaryX}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+ 	\centering
+    \includegraphics[width=.99\linewidth]{pics/FF1BaryQ}
+\end{minipage}%
+\caption{Przebiegi współrzędnych uogólnionych $q_b$ i $q_r$}
+\label{fig:FF1BaryQ}
+\end{figure}
+
+Przebiegi współrzędnych barycentrycznych $\bar{x}$ i $\bar{y}$ i ich prędkości pokazano na rys. \ref{fig:FF1BaryXBAR}
+\begin{figure}[H]
+\centering 
+\begin{minipage}{.5\textwidth}
+  	\centering
+  	\includegraphics[width=.99\linewidth]{pics/FF1BaryXBAR}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+ 	\centering
+    \includegraphics[width=.99\linewidth]{pics/FF1BaryXBARP}
+\end{minipage}%
+\caption{Przebiegi współrzędnych barycentrycznych $\bar{x}$ i $\bar{y}$ i ich prędkości}
+\label{fig:FF1BaryXBAR}
+\end{figure}
+
+
+\subsection{Wyniki dla modelu we współrzędnych uogólnionych}
+
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=.6\linewidth]{pics/FF2Drawing}
+%\caption{Robot free-floating z manipulatorem w kolejnych chwilach czasu}
+%\label{fig:FF2Drawing}
+%\end{figure}
+%
+%Przebiegi błędów śledzenia trajektorii chwytaka pokazano na rys. \ref{fig:FF2e}
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=.6\linewidth]{pics/FF2e}
+%\caption{Przebiegi błędów śledzenia trajektorii chwytaka}
+%\label{fig:FF2e}
+%\end{figure}
+%
+%Przebiegi współrzędnych uogólnionych $q_b$ i $q_r$ pokazano na rys. \ref{fig:FF2Q}
+%\begin{figure}[H]
+%\centering 
+%\begin{minipage}{.5\textwidth}
+%  	\centering
+%  	\includegraphics[width=.99\linewidth]{pics/FF2X}
+%\end{minipage}%
+%\begin{minipage}{.5\textwidth}
+% 	\centering
+%    \includegraphics[width=.99\linewidth]{pics/FF2Q}
+%\end{minipage}%
+%\caption{Przebiegi współrzędnych uogólnionych $q_b$ i $q_r$}
+%\label{fig:FF2Q}
+%\end{figure}
+%
+%Przebiegi współrzędnych barycentrycznych $\bar{x}$ i $\bar{y}$ i ich prędkości pokazano na rys. \ref{fig:FF2XBAR}
+%\begin{figure}[H]
+%\centering 
+%\begin{minipage}{.5\textwidth}
+%  	\centering
+%  	\includegraphics[width=.99\linewidth]{pics/FF2XBAR}
+%\end{minipage}%
+%\begin{minipage}{.5\textwidth}
+% 	\centering
+%    \includegraphics[width=.99\linewidth]{pics/FF2XBARP}
+%\end{minipage}%
+%\caption{Przebiegi współrzędnych barycentrycznych $\bar{x}$ i $\bar{y}$ i ich prędkości}
+%\label{fig:FF2XBAR}
+%\end{figure}
 
 \end{document}
