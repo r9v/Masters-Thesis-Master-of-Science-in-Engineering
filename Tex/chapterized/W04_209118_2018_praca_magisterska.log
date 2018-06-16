@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.12)  11 JUN 2018 17:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.12)  16 JUN 2018 16:04
 entering extended mode
 **./W04_209118_2018_praca_magisterska.tex
 (W04_209118_2018_praca_magisterska.tex
@@ -760,20 +760,7 @@ Package csquotes Warning: No style for language 'polish'.
 (csquotes)                Using fallback style on input line 110.
 
 Package csquotes Info: Redefining alias 'default' -> 'fallback'.
-(W04_209118_2018_praca_magisterska.aux
-
-LaTeX Warning: Label `fig:FF1Drawing' multiply defined.
-
-
-LaTeX Warning: Label `fig:FF1Barye' multiply defined.
-
-
-LaTeX Warning: Label `fig:FF1BaryQ' multiply defined.
-
-
-LaTeX Warning: Label `fig:FF1BaryXBAR' multiply defined.
-
-)
+(W04_209118_2018_praca_magisterska.aux)
 \openout1 = `W04_209118_2018_praca_magisterska.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 110.
@@ -790,7 +777,8 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 110.
 LaTeX Font Info:    ... okay on input line 110.
 LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 110.
 LaTeX Font Info:    ... okay on input line 110.
- ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count154
 \scratchdimen=\dimen160
@@ -818,45 +806,45 @@ Package gensymb Info: Using \Omega for \ohm on input line 110.
 Package gensymb Warning: Not defining \micro.
 
 Rozdzia\l  1.
-LaTeX Font Info:    Try loading font information for OML+plm on input line 124.
+LaTeX Font Info:    Try loading font information for OML+plm on input line 123.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\polski\omlplm.fd"
 File: omlplm.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMS+plsy on input line 124
+LaTeX Font Info:    Try loading font information for OMS+plsy on input line 123
 .
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\polski\omsplsy.fd"
 File: omsplsy.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMX+plex on input line 124
+LaTeX Font Info:    Try loading font information for OMX+plex on input line 123
 .
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\polski\omxplex.fd"
 File: omxplex.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <12> on input line 124.
+(Font)              <12> on input line 123.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <8> on input line 124.
+(Font)              <8> on input line 123.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <6> on input line 124.
-LaTeX Font Info:    Try loading font information for U+msa on input line 124.
+(Font)              <6> on input line 123.
+LaTeX Font Info:    Try loading font information for U+msa on input line 123.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 124.
+LaTeX Font Info:    Try loading font information for U+msb on input line 123.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 133--134
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--173
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
 
  []
 
@@ -864,27 +852,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 172--173
 Non-PDF special ignored!
 
 {C:/Users/www/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 240--241
+Underfull \hbox (badness 10000) in paragraph at lines 215--216
 
  []
 
 Rozdzia\l  2.
 [2] [3]
 
-LaTeX Warning: Reference `PD' on page 4 undefined on input line 374.
+LaTeX Warning: Reference `PD' on page 4 undefined on input line 352.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 377--378
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 378--379
+Underfull \hbox (badness 10000) in paragraph at lines 355--356
 
  []
 
 
-Overfull \hbox (22.51538pt too wide) in paragraph at lines 379--381
+Underfull \hbox (badness 10000) in paragraph at lines 356--357
+
+ []
+
+
+Overfull \hbox (22.51538pt too wide) in paragraph at lines 357--359
 []\OT4/cmr/m/n/12 Parametry geo-me-tryczne i ma-sowe usta-lono jako: $\OML/plm/
 m/it/12 l[]$\OT4/cmr/m/n/12 =1m, $\OML/plm/m/it/12 l[]$\OT4/cmr/m/n/12 =1m, $\O
 ML/plm/m/it/12 m[] \OT4/cmr/m/n/12 =$20kg, $\OML/plm/m/it/12 m[]$\OT4/cmr/m/n/1
@@ -893,34 +881,34 @@ ML/plm/m/it/12 m[] \OT4/cmr/m/n/12 =$20kg, $\OML/plm/m/it/12 m[]$\OT4/cmr/m/n/1
 
 [4] [5]
 
-LaTeX Warning: Reference `PD' on page 6 undefined on input line 533.
+LaTeX Warning: Reference `PD' on page 6 undefined on input line 511.
 
 Package epstopdf Info: Source file: <pics/FF1BaryDrawing.eps>
-(epstopdf)                    date: 2018-06-11 16:53:24
-(epstopdf)                    size: 25540 bytes
+(epstopdf)                    date: 2018-06-16 15:57:52
+(epstopdf)                    size: 18926 bytes
 (epstopdf)             Output file: <pics/FF1BaryDrawing-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-06-11 16:53:29
-(epstopdf)                    size: 4966 bytes
+(epstopdf)                    date: 2018-06-16 15:58:25
+(epstopdf)                    size: 3894 bytes
 (epstopdf)             Command: <epstopdf --outfile=pics/FF1BaryDrawing-eps-con
 verted-to.pdf pics/FF1BaryDrawing.eps>
-(epstopdf)             \includegraphics on input line 540.
+(epstopdf)             \includegraphics on input line 517.
 Package epstopdf Info: Output file is already uptodate.
 <pics/FF1BaryDrawing-eps-converted-to.pdf, id=26, 421.575pt x 316.18124pt>
 File: pics/FF1BaryDrawing-eps-converted-to.pdf Graphic file (type pdf)
 
 <use pics/FF1BaryDrawing-eps-converted-to.pdf>
 Package pdftex.def Info: pics/FF1BaryDrawing-eps-converted-to.pdf used on input
- line 540.
-(pdftex.def)             Requested size: 273.14922pt x 204.86406pt.
+ line 517.
+(pdftex.def)             Requested size: 364.19664pt x 273.15047pt.
 Package epstopdf Info: Source file: <pics/FF1Barye.eps>
-(epstopdf)                    date: 2018-06-11 15:31:06
-(epstopdf)                    size: 26687 bytes
+(epstopdf)                    date: 2018-06-16 15:18:55
+(epstopdf)                    size: 28263 bytes
 (epstopdf)             Output file: <pics/FF1Barye-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-06-11 15:56:34
-(epstopdf)                    size: 6884 bytes
+(epstopdf)                    date: 2018-06-16 15:21:31
+(epstopdf)                    size: 6964 bytes
 (epstopdf)             Command: <epstopdf --outfile=pics/FF1Barye-eps-converted
 -to.pdf pics/FF1Barye.eps>
-(epstopdf)             \includegraphics on input line 548.
+(epstopdf)             \includegraphics on input line 525.
 Package epstopdf Info: Output file is already uptodate.
 
 <pics/FF1Barye-eps-converted-to.pdf, id=27, 421.575pt x 316.18124pt>
@@ -928,18 +916,18 @@ File: pics/FF1Barye-eps-converted-to.pdf Graphic file (type pdf)
 
 <use pics/FF1Barye-eps-converted-to.pdf>
 Package pdftex.def Info: pics/FF1Barye-eps-converted-to.pdf used on input line 
-548.
+525.
 (pdftex.def)             Requested size: 273.14922pt x 204.86406pt.
  [6 <./pics/FF1BaryDrawing-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <pics/FF1BaryX.eps>
-(epstopdf)                    date: 2018-06-11 16:09:29
-(epstopdf)                    size: 30123 bytes
+(epstopdf)                    date: 2018-06-16 15:18:40
+(epstopdf)                    size: 31879 bytes
 (epstopdf)             Output file: <pics/FF1BaryX-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-06-11 16:09:52
-(epstopdf)                    size: 8828 bytes
+(epstopdf)                    date: 2018-06-16 15:21:32
+(epstopdf)                    size: 8924 bytes
 (epstopdf)             Command: <epstopdf --outfile=pics/FF1BaryX-eps-converted
 -to.pdf pics/FF1BaryX.eps>
-(epstopdf)             \includegraphics on input line 558.
+(epstopdf)             \includegraphics on input line 535.
 Package epstopdf Info: Output file is already uptodate.
 
 <pics/FF1BaryX-eps-converted-to.pdf, id=34, 421.575pt x 316.18124pt>
@@ -947,17 +935,17 @@ File: pics/FF1BaryX-eps-converted-to.pdf Graphic file (type pdf)
 
 <use pics/FF1BaryX-eps-converted-to.pdf>
 Package pdftex.def Info: pics/FF1BaryX-eps-converted-to.pdf used on input line 
-558.
+535.
 (pdftex.def)             Requested size: 225.34706pt x 169.01297pt.
 Package epstopdf Info: Source file: <pics/FF1BaryQ.eps>
-(epstopdf)                    date: 2018-06-11 15:52:35
-(epstopdf)                    size: 33603 bytes
+(epstopdf)                    date: 2018-06-16 15:17:39
+(epstopdf)                    size: 35459 bytes
 (epstopdf)             Output file: <pics/FF1BaryQ-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-06-11 15:56:37
-(epstopdf)                    size: 9298 bytes
+(epstopdf)                    date: 2018-06-16 15:21:32
+(epstopdf)                    size: 9391 bytes
 (epstopdf)             Command: <epstopdf --outfile=pics/FF1BaryQ-eps-converted
 -to.pdf pics/FF1BaryQ.eps>
-(epstopdf)             \includegraphics on input line 562.
+(epstopdf)             \includegraphics on input line 539.
 Package epstopdf Info: Output file is already uptodate.
 
 <pics/FF1BaryQ-eps-converted-to.pdf, id=35, 421.575pt x 316.18124pt>
@@ -965,17 +953,17 @@ File: pics/FF1BaryQ-eps-converted-to.pdf Graphic file (type pdf)
 
 <use pics/FF1BaryQ-eps-converted-to.pdf>
 Package pdftex.def Info: pics/FF1BaryQ-eps-converted-to.pdf used on input line 
-562.
+539.
 (pdftex.def)             Requested size: 225.34706pt x 169.01297pt.
 Package epstopdf Info: Source file: <pics/FF1BaryXBAR.eps>
-(epstopdf)                    date: 2018-06-11 15:43:52
-(epstopdf)                    size: 30948 bytes
+(epstopdf)                    date: 2018-06-16 15:18:19
+(epstopdf)                    size: 32790 bytes
 (epstopdf)             Output file: <pics/FF1BaryXBAR-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-06-11 15:56:36
-(epstopdf)                    size: 8713 bytes
+(epstopdf)                    date: 2018-06-16 15:21:33
+(epstopdf)                    size: 8812 bytes
 (epstopdf)             Command: <epstopdf --outfile=pics/FF1BaryXBAR-eps-conver
 ted-to.pdf pics/FF1BaryXBAR.eps>
-(epstopdf)             \includegraphics on input line 573.
+(epstopdf)             \includegraphics on input line 550.
 Package epstopdf Info: Output file is already uptodate.
 
 <pics/FF1BaryXBAR-eps-converted-to.pdf, id=36, 421.575pt x 316.18124pt>
@@ -983,17 +971,17 @@ File: pics/FF1BaryXBAR-eps-converted-to.pdf Graphic file (type pdf)
 
 <use pics/FF1BaryXBAR-eps-converted-to.pdf>
 Package pdftex.def Info: pics/FF1BaryXBAR-eps-converted-to.pdf used on input li
-ne 573.
+ne 550.
 (pdftex.def)             Requested size: 225.34706pt x 169.01297pt.
 Package epstopdf Info: Source file: <pics/FF1BaryXBARP.eps>
-(epstopdf)                    date: 2018-06-11 15:50:43
-(epstopdf)                    size: 31451 bytes
+(epstopdf)                    date: 2018-06-16 15:17:57
+(epstopdf)                    size: 33361 bytes
 (epstopdf)             Output file: <pics/FF1BaryXBARP-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-06-11 15:56:38
-(epstopdf)                    size: 5919 bytes
+(epstopdf)                    date: 2018-06-16 15:21:35
+(epstopdf)                    size: 6009 bytes
 (epstopdf)             Command: <epstopdf --outfile=pics/FF1BaryXBARP-eps-conve
 rted-to.pdf pics/FF1BaryXBARP.eps>
-(epstopdf)             \includegraphics on input line 577.
+(epstopdf)             \includegraphics on input line 554.
 Package epstopdf Info: Output file is already uptodate.
 
 <pics/FF1BaryXBARP-eps-converted-to.pdf, id=37, 421.575pt x 316.18124pt>
@@ -1001,121 +989,21 @@ File: pics/FF1BaryXBARP-eps-converted-to.pdf Graphic file (type pdf)
 
 <use pics/FF1BaryXBARP-eps-converted-to.pdf>
 Package pdftex.def Info: pics/FF1BaryXBARP-eps-converted-to.pdf used on input l
-ine 577.
+ine 554.
 (pdftex.def)             Requested size: 225.34706pt x 169.01297pt.
-Package epstopdf Info: Source file: <pics/FF1BaryDrawing.eps>
-(epstopdf)                    date: 2018-06-11 16:53:24
-(epstopdf)                    size: 25540 bytes
-(epstopdf)             Output file: <pics/FF1BaryDrawing-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-06-11 16:53:29
-(epstopdf)                    size: 4966 bytes
-(epstopdf)             Command: <epstopdf --outfile=pics/FF1BaryDrawing-eps-con
-verted-to.pdf pics/FF1BaryDrawing.eps>
-(epstopdf)             \includegraphics on input line 586.
-Package epstopdf Info: Output file is already uptodate.
-File: pics/FF1BaryDrawing-eps-converted-to.pdf Graphic file (type pdf)
-
-<use pics/FF1BaryDrawing-eps-converted-to.pdf>
-Package pdftex.def Info: pics/FF1BaryDrawing-eps-converted-to.pdf used on input
- line 586.
-(pdftex.def)             Requested size: 273.14922pt x 204.86406pt.
  [7 <./pics/FF1Barye-eps-converted-to.pdf> <./pics/FF1BaryX-eps-converted-to.pd
 f> <./pics/FF1BaryQ-eps-converted-to.pdf> <./pics/FF1BaryXBAR-eps-converted-to.
-pdf> <./pics/FF1BaryXBARP-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <pics/FF1Barye.eps>
-(epstopdf)                    date: 2018-06-11 15:31:06
-(epstopdf)                    size: 26687 bytes
-(epstopdf)             Output file: <pics/FF1Barye-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-06-11 15:56:34
-(epstopdf)                    size: 6884 bytes
-(epstopdf)             Command: <epstopdf --outfile=pics/FF1Barye-eps-converted
--to.pdf pics/FF1Barye.eps>
-(epstopdf)             \includegraphics on input line 594.
-Package epstopdf Info: Output file is already uptodate.
-File: pics/FF1Barye-eps-converted-to.pdf Graphic file (type pdf)
- <use pics/FF1Barye-eps-converted-to.pdf>
-Package pdftex.def Info: pics/FF1Barye-eps-converted-to.pdf used on input line 
-594.
-(pdftex.def)             Requested size: 273.14922pt x 204.86406pt.
-Package epstopdf Info: Source file: <pics/FF1BaryX.eps>
-(epstopdf)                    date: 2018-06-11 16:09:29
-(epstopdf)                    size: 30123 bytes
-(epstopdf)             Output file: <pics/FF1BaryX-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-06-11 16:09:52
-(epstopdf)                    size: 8828 bytes
-(epstopdf)             Command: <epstopdf --outfile=pics/FF1BaryX-eps-converted
--to.pdf pics/FF1BaryX.eps>
-(epstopdf)             \includegraphics on input line 604.
-Package epstopdf Info: Output file is already uptodate.
-File: pics/FF1BaryX-eps-converted-to.pdf Graphic file (type pdf)
-
-<use pics/FF1BaryX-eps-converted-to.pdf>
-Package pdftex.def Info: pics/FF1BaryX-eps-converted-to.pdf used on input line 
-604.
-(pdftex.def)             Requested size: 225.34706pt x 169.01297pt.
-Package epstopdf Info: Source file: <pics/FF1BaryQ.eps>
-(epstopdf)                    date: 2018-06-11 15:52:35
-(epstopdf)                    size: 33603 bytes
-(epstopdf)             Output file: <pics/FF1BaryQ-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-06-11 15:56:37
-(epstopdf)                    size: 9298 bytes
-(epstopdf)             Command: <epstopdf --outfile=pics/FF1BaryQ-eps-converted
--to.pdf pics/FF1BaryQ.eps>
-(epstopdf)             \includegraphics on input line 608.
-Package epstopdf Info: Output file is already uptodate.
-File: pics/FF1BaryQ-eps-converted-to.pdf Graphic file (type pdf)
-
-<use pics/FF1BaryQ-eps-converted-to.pdf>
-Package pdftex.def Info: pics/FF1BaryQ-eps-converted-to.pdf used on input line 
-608.
-(pdftex.def)             Requested size: 225.34706pt x 169.01297pt.
- [8]
-Package epstopdf Info: Source file: <pics/FF1BaryXBAR.eps>
-(epstopdf)                    date: 2018-06-11 15:43:52
-(epstopdf)                    size: 30948 bytes
-(epstopdf)             Output file: <pics/FF1BaryXBAR-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-06-11 15:56:36
-(epstopdf)                    size: 8713 bytes
-(epstopdf)             Command: <epstopdf --outfile=pics/FF1BaryXBAR-eps-conver
-ted-to.pdf pics/FF1BaryXBAR.eps>
-(epstopdf)             \includegraphics on input line 619.
-Package epstopdf Info: Output file is already uptodate.
-File: pics/FF1BaryXBAR-eps-converted-to.pdf Graphic file (type pdf)
-
-<use pics/FF1BaryXBAR-eps-converted-to.pdf>
-Package pdftex.def Info: pics/FF1BaryXBAR-eps-converted-to.pdf used on input li
-ne 619.
-(pdftex.def)             Requested size: 225.34706pt x 169.01297pt.
-Package epstopdf Info: Source file: <pics/FF1BaryXBARP.eps>
-(epstopdf)                    date: 2018-06-11 15:50:43
-(epstopdf)                    size: 31451 bytes
-(epstopdf)             Output file: <pics/FF1BaryXBARP-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-06-11 15:56:38
-(epstopdf)                    size: 5919 bytes
-(epstopdf)             Command: <epstopdf --outfile=pics/FF1BaryXBARP-eps-conve
-rted-to.pdf pics/FF1BaryXBARP.eps>
-(epstopdf)             \includegraphics on input line 623.
-Package epstopdf Info: Output file is already uptodate.
-File: pics/FF1BaryXBARP-eps-converted-to.pdf Graphic file (type pdf)
-
-<use pics/FF1BaryXBARP-eps-converted-to.pdf>
-Package pdftex.def Info: pics/FF1BaryXBARP-eps-converted-to.pdf used on input l
-ine 623.
-(pdftex.def)             Requested size: 225.34706pt x 169.01297pt.
- [9]
-(W04_209118_2018_praca_magisterska.aux)
+pdf> <./pics/FF1BaryXBARP-eps-converted-to.pdf>] (W04_209118_2018_praca_magiste
+rska.aux)
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 8116 strings out of 493634
- 110254 string characters out of 3143750
- 215699 words of memory out of 3000000
- 11283 multiletter control sequences out of 15000+200000
+ 8117 strings out of 493634
+ 110268 string characters out of 3143750
+ 215660 words of memory out of 3000000
+ 11284 multiletter control sequences out of 15000+200000
  17799 words of font info for 52 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  42i,11n,32p,843b,303s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1129,10 +1017,10 @@ pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmi8.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/pl/plr12.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/public/pl/plr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/
 plsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb>
-Output written on W04_209118_2018_praca_magisterska.pdf (9 pages, 121811 bytes)
+Output written on W04_209118_2018_praca_magisterska.pdf (7 pages, 119007 bytes)
 .
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
+ 94 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

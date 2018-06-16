@@ -115,10 +115,9 @@
 
 \chapter{Model satelity typu free-floating}
 \section{Model we współrzędnych uogólnionych}
-Robot free-floating z manipulatorem to nienapędzana platforma(baza) z zamontowanym na niej napędzanym manipulatorem. Robot taki znajdująca się w przestrzeni kosmicznej w stanie mikrograwitacji(nieważkości).
-\par W szczególności w rozważanym robocie platformą będzie jednolita prostokątna płyta, a za manipulator posłuży manipulator RR.
-\par Rozważanego robota free-floating z manipulatorem przedstawiono na rys 1. \par Robot taki jest przyjemny ze względów praktycznych. Do badań eksperymentalnych bowiem, można wykorzystać płaską granitową płytę, po której baza może ślizgać się bez tarcia. %, a siły grawitacji nie mają wpływu na dynamikę.
-Dzięki temu testy można przeprowadzać na ziemi, a nie w warunkach mikrograwitacji.
+Robot free-floating z manipulatorem to nienapędzana platforma (baza) z zamontowanym na niej napędzanym manipulatorem. Robot taki znajduje się w przestrzeni kosmicznej w stanie mikrograwitacji (nieważkości).
+\par W rozważanym robocie platformą będzie jednolita prostokątna płyta, a za manipulator posłuży manipulator RR. Rozważanego robota free-floating z manipulatorem przedstawiono na rys 1. \par Robot taki jest użyteczny ze względów praktycznych. Do badań eksperymentalnych bowiem, można wykorzystać płaską granitową płytę, po której baza może ślizgać się bez tarcia. %, a siły grawitacji nie mają wpływu na dynamikę.
+Dzięki temu testy można przeprowadzać na Ziemi, a nie w warunkach mikrograwitacji.
 
 \par Do wyprowadzenia modelu we współrzędnych uogólnionych weźmy następujące współrzędne
 \begin{equation}
@@ -129,7 +128,7 @@ q_r\\
 \end{array}
 \right),
 \end{equation}
-gdzie $q_b=(x,y,\theta)^T$ - wektor współrzędnych uogólnionych bazy, $q_r=(q_1,q_2)^T$ - wektor współrzędnych przegubowych manipulatora. 
+gdzie $q_b=(x,y,\theta)^T$ -- wektor współrzędnych uogólnionych bazy, $q_r=(q_1,q_2)^T$ -- wektor współrzędnych przegubowych manipulatora. 
 \par Równania dynamiki we współrzędnych uogólnionych takiego robota można, ponownie korzystając z formalizmu Langrange'a, zapisać jako\\
 \begin{equation}
 \label{wrsdad}
@@ -141,32 +140,8 @@ u\\
 \end{array}
 \right).
 \end{equation}\\
-Brak wektora sił potencjalncyh $D(q)$ wynika z braku grawitacji. \par Sterowanie $u$ pojawia się tylko w dolnej części równania dynamiki (\ref{wrsdad}), ponieważ dotyczy jedynie manipulatora, jako że baza jest nienapędzana.
-%H\ddot{q}+c=
-%\begin{bmatrix}
-%    H_b  &H_{bm}\\
-%    H_{bm}^T  &H_m \\
-%\end{bmatrix}
-%\left(
-%\begin{array}{c}
-%\ddot{q_b}\\
-%\ddot{q_m}\\
-%\end{array}
-%\right)
-%+
-%\left(
-%\begin{array}{c}
-%c_b\\
-%c_m\\
-%\end{array}
-%\right)
-%=
-%\left(
-%\begin{array}{c}
-%0\\
-%u\\
-%\end{array}
-%\right).
+Brak wektora sił potencjalncyh $D(q)$ wynika z braku grawitacji. \par Sterowanie $u$ pojawia się tylko w dolnej części równania dynamiki (\ref{wrsdad}), ponieważ dotyczy jedynie manipulatora, jako że baza jest nienapędzana (free-floating).
+
 %\end{equation}\\
 \section{Model we współrzędnych barycentrycznych}
 Jeśli środek masy robota free-floating z manipulatorem ma pozostać nieruchomy (lub poruszać się ze stałą prędkością), konieczne jest zamodelowanie dynamiki we współrzędnych barycentrycznych.\\
@@ -174,7 +149,7 @@ Jeśli środek masy robota free-floating z manipulatorem ma pozostać nieruchomy
 \begin{equation}
 \left(\sum\limits^w_{i=1}m_i\right)\phi_b=\sum\limits^w_{i=1}m_ir_i,
 \end{equation}
-gdzie $r_i$ to środek masy członu $i$ robota w podstawowym układzie współrzędnych, a  $m_i$ to masa członu $i$. $w$ to liczba członów robota. W naszym przypadku $w$ wynosi trzy, robot posiada bowiem jedną bazę i dwa ramiona.\\
+gdzie $r_i$ to środek masy $i$-tego członu robota w podstawowym układzie współrzędnych, a  $m_i$ to masa $i$-tego członu. Z kolei $w$ to liczba członów robota. W naszym przypadku $w$ wynosi trzy, robot posiada bowiem jedną bazę i dwa ramiona.\\
 $\phi_b$ to współrzędne barycentryczne układu, czyli
 \begin{equation}
 \label{baro}
@@ -188,7 +163,7 @@ $\phi_b$ to współrzędne barycentryczne układu, czyli
 \right)=
 \frac{\sum\limits^w_{i=1}m_ir_i}{\sum\limits^w_{i=1}m_i}.
 \end{equation}
-całkowite współrzędne barycentryczne $\phi$ mają postać
+Kompletne współrzędne barycentryczne satelity wraz z manipulatorem $\phi$ mają postać
 \begin{equation}
 \phi=
 \left(
@@ -198,7 +173,7 @@ q_r\\
 \end{array}
 \right).
 \end{equation}
-Model we współrzędnych barycentrycznych można wyrazić jako
+Model we współrzędnych barycentrycznych można więc wyrazić jako
 \begin{equation}
 \bar{H}\ddot{\phi}+\bar{C}\dot{\phi}
 =
@@ -237,25 +212,26 @@ u\\
 %\right),
 %\end{equation}
 
-Macierze $\bar{H}$ i $\bar{C}$ uzyskuje się przez przeliczenie energii kinetycznej do układu współrzędnych barycentrycznych i wykorzystanie formalizmu Lagrang'e dla nowej energii kinetycznej.\\
+Macierze $\bar{H}$ i $\bar{C}$ uzyskuje się przez przeliczenie energii kinetycznej do układu współrzędnych barycentrycznych i wykorzystanie formalizmu Lagrange'a dla nowej energii kinetycznej.\\
 
 \chapter{Odsprzęganie wejściowo-wyjściowe dla robota free-floating z manipulatorem}
 
-Ponieważ baza robota free-floating z manipulatorem nie jest napędzana, do odsprzęgania wejściowo-wyjściowego nie można zastosować podstawowego algorytmu Yamamoto i Yun'a. Do realizacji zadania śledzenia trajektorii w przestrzeni zadaniowej wykorzystamy więc algorytm z rozszerzonymi funkcjami wyjściowymi.
-\par Algorytm ten stosować można zarówno dla modelu robota free-floating z manipulatorem we współrzędnych uogólnionych jak i we współrzędnych barycentrycznych. Wybór modelu należy podporządkować rodzajowi zadania jakie ma zostać wykonane. Jeśli środek masy ma pozostać nieruchomy wykorzystać należy model we współrzędnych barycentrycznych, natomiast gdy środek masy ma się przemieszczać należy użyć modelu we współrzędnych uogólnionych.
-\par Przy wyprowadzaniu algorytmu wykorzystamy model dynamiki we współrzędnych uogólnionych. Algorytmu dla modelu we współrzędnych barycentrycznych wyprowadza się analogicznie, podstawiając jedynie za współrzędne uogólnione $q$ i macierze  $H$ i $C$ ich odpowiedniki w modelu we współrzędnych barycentrycznych, tj.  współrzędne barycentryczne $\phi$ i macierze $\bar{H}$ i $\bar{C}$.
+Ponieważ baza robota free-floating z manipulatorem nie jest napędzana, do odsprzęgania wejściowo-wyjściowego nie można zastosować podstawowego algorytmu Yamamoto i Yuna. Do realizacji zadania śledzenia trajektorii w przestrzeni zadaniowej wykorzystamy więc algorytm z rozszerzonymi funkcjami wyjściowymi.
+\par Algorytm ten można stosować zarówno dla modelu robota free-floating z manipulatorem we współrzędnych uogólnionych, jak i we współrzędnych barycentrycznych. Wybór modelu należy podporządkować rodzajowi zadania, jakie ma zostać wykonane. Jeśli środek masy ma pozostać nieruchomy wykorzystać należy model we współrzędnych barycentrycznych, natomiast gdy środek masy ma się przemieszczać, to można użyć modelu we współrzędnych uogólnionych.
+\par Przy wyprowadzaniu algorytmu wykorzystamy model dynamiki we współrzędnych uogólnionych. Algorytm dla modelu we współrzędnych barycentrycznych wyprowadza się analogicznie, podstawiając jedynie za współrzędne uogólnione $q$ i macierze  $H$ i $C$ oraz ich odpowiedniki w modelu we współrzędnych barycentrycznych, tj.  współrzędne barycentryczne $\phi$ i macierze $\bar{H}$ i $\bar{C}$.
 
-\par Korzystamy z algorytmu z rozszerzonymi funckjami wyjściowymi, więc postać funkcji wyjściowej będzie zależeć więc od całej konfiguracji $q$.
+\par Korzystamy z algorytmu z rozszerzonymi funkcjami wyjściowymi, więc postać funkcji wyjściowej będzie zależeć od całej konfiguracji $q$:
 \begin{equation}
-y=k(q)
+y=k(q).
 \end{equation}
-\section{Algorytm}
+\section{Algorytm odsprzęgania wejściowo-wyjściowego}
 Przy wyprowadzaniu algorytmów odsprzęgania wejściowo-wyjściowego dla manipulatora mobilnego linearyzowaliśmy jego dynamikę w celu ułatwienia obliczeń. W przypadku robota free-floating z manipulatorem linearyzacja taka jest kłopotliwa, ponieważ tylko manipulator jest napędzany. Aby nie utrudniać sobie zadania i pokazać, że linearyzacja dynamiki nie jest konieczna, nie zastosujemy jej przy wyprowadzaniu algorytmu odsprzęgania wejściowo-wyjściowego dla robota free-floating z manipulatorem.
 \par Struktura algorytmu nie zmienia się i nadal składa się z dwóch pętli sprzężenia zwrotnego: pierwsza przekształca układ do postaci liniowej typu "podwójny integrator", druga steruje uzyskanym układem liniowym.
-\par Prawo sterowania pierwszej pętli wyprowadza się analogicznie jak w przypadku manipulatorów mobilnych.
+\par Prawo sterowania pierwszej pętli wyprowadza się analogicznie, jak w przypadku manipulatorów mobilnych.
+Niech $y_i=k_i(q)$ oznacza $i$-tą współrzędną chwytaka satelity, wyrażoną względem układu podstawowego. Oczywiste jest, że $i=1,...,p$, gdzie $p\leq6$.
 \par Zróżniczkujmy wszystkie elementy wektora $y(q)$ dwukrotnie po czasie
 \begin{equation}
-\dot{y}_i=\dfrac{\partial k_i(q)}{\partial q}\dot{q}=J_i\dot{q},
+\dot{y}_i=\dfrac{d}{dt}\left(k_i(q)\right)=\dfrac{\partial k_i(q)}{\partial q}\dot{q}=J_i\dot{q},
 \end{equation}
 \begin{equation}
 \ddot{y}_i=\dot{q}^T\dfrac{\partial^2k_i(q)}{\partial q^2}\dot{q}+J_i\ddot{q}=P_i+J_i\ddot{q},
@@ -283,7 +259,7 @@ P=
 P_1\\
 P_2\\
 \vdots\\
-P_m\\
+P_p\\
 \end{array}
 \right),
 \end{equation}
@@ -294,12 +270,12 @@ J=
 J_1\\
 J_2\\
 \vdots\\
-J_m\\
+J_p\\
 \end{array}
 \right),
 \end{equation}
-$m$ jest liczbą sterowań, $m=\dim(u)=\dim(q_r)$.
-\par Korzystając z dynamiki we współrzędnych uogólnionych (\ref{wrsdad}) zapiszmy $\ddot{q}$  jako
+$p$ jest liczbą zmiennych wyjściowych $y$.
+\par Korzystając z dynamiki we współrzędnych uogólnionych (\ref{wrsdad}), zapiszmy $\ddot{q}$  jako
 \begin{equation}
 \label{qpplol}
 \ddot{q}=H^{-1}
@@ -327,7 +303,7 @@ u\\
 -C\dot{q}
 \right],
 \end{equation}
-więc
+a otrzymamy równanie o postaci
 \begin{equation}
 \ddot{y}=
 P-JH^{-1}C\dot{q}
@@ -355,27 +331,29 @@ F=P-JH^{-1}C\dot{q},
 \begin{equation}
 G=JH^{-1}.
 \end{equation}
-macierz $G$ zapiszmy jako $G=[G_1|G_2]$. Macierz $G_2$ jest rozmiaru $m\times m$.\\
+macierz $G$ zapiszmy jako $G=[G_1|G_2]$. Macierz $G_2$ jest rozmiaru $p\times p$.\\
 Wektor $\ddot{y}$ można zapisać wtedy jako
 \begin{equation}
 \label{helloasdasda}
 \ddot{y}=F+G_2u.
 \end{equation}
-Prawo sterowania pętli linearyzującej jest więc następujące
+Prawo sterowania pętli linearyzującej jest następujące
 \begin{equation}
 \label{ulol}
-u=G_2^{-1}(-F+\zeta).
+u=G_2^{-1}(-F+\zeta),
 \end{equation}
-Po wykorzystaniu sterowania (\ref{ulol}) w (\ref{helloasdasda}) otrzymamy układ liniowy
+przy czym symbolem $\zeta$ oznaczono nowe wejście do układu.
+Podstawiając (\ref{ulol}) do (\ref{helloasdasda}) otrzymujemy równanie układu z zamkniętą pętlą sprzężenia zwrotnego
 \begin{equation}
 \label{helloasdasdaasdasdasd}
 \ddot{y}=\zeta.
 \end{equation}
-Za wysterowanie liniowym układem (\ref{helloasdasdaasdasdasd}) odpowiada druga pętla. Zrealizować ją, można jako regulator PD z korekcją (\ref{PD}).
+Jak widać, jest to układ liniowy typu "podwójny integrator".
+Za wysterowanie go odpowiada druga pętla. Zrealizować ją, można np. jako regulator PD z korekcją (\ref{PD}).
 
 \subsection{Badania symulacyjne}
-Podrozdział ten poświęcony jest symulacji algorytmu odsprzęgania wejściowo-wyjściowego dla robota free-floating z manipulatorem.\\
-\par Algorytm zbadano na obu przedstawionych w pracy modelach dynamiki: we współrzędnych uogólnionych i barycentrycznych. W badaniach użyto identyczne konfiguracje początkowe manipulatora $q_r(0)$, odpowiadające sobie konfiguracje  początkowe bazy $q_b(0)$ i $\phi_b(0)$ i tą samą trajektorię zadaną $y_d(t)$ , w celu porównania zachowania algorytmu dla obu modeli.\\
+Podrozdział ten jest poświęcony symulacji algorytmu odsprzęgania wejściowo-wyjściowego dla robota free-floating z manipulatorem.\\
+\par Algorytm zbadano na przedstawionym w pracy modelu dynamiki we współrzędnych barycentrycznych. \\
 \par Parametry geometryczne i masowe ustalono jako: $l_1$=1m, $l_2$=1m, $m_0=$20kg, $m_1$=$m_2$=10kg.\\
 Początkowa konfiguracja manipulatora była równa 
 \begin{center}
@@ -423,7 +401,7 @@ $\phi_b(0)=
 \end{array}
 \right).$
 \end{center}
-Wynika to z przekształcenia (\ref{baro}). W naszym wypadku $\bar{x}$ i $\bar{y}$ będą równe
+Wynika to z przekształcenia (\ref{baro}). W naszym wypadku $\bar{x}$ i $\bar{y}$ są równe
 \begin{center}$
 \begin{array}{c}
 \bar{x}= \dfrac{{m_2} \left({l_1}
@@ -438,7 +416,7 @@ $\dot{q}_r(0)=
 \left(
 \begin{array}{c}
     0 \\
-     0.1\\
+     -0.1\\
 \end{array}
 \right),$
 \end{center}
@@ -462,7 +440,7 @@ $\dot{\phi}_b(0)=
 \end{array}
 \right),$
 \end{center}
-\par Sterować można dwoma przegubami manipulatora, a więc możliwe jest odsprzęgnięcie dwóch współrzędnych efektora. Wybrano współrzędne $x$ i $y$ efektora w podstawowym układzie odniesienia ($X_0$,$Y_0$).\\
+\par Konieczne jest, aby liczba sterowań była równa liczbie wyjść. Wówczas sterować można dwoma przegubami manipulatora, a więc możliwe jest odsprzęgnięcie dwóch współrzędnych efektora. Wybrano współrzędne $x$ i $y$ efektora w podstawowym układzie odniesienia ($X_0$,$Y_0$).\\
 Funkcja wyjścia $y$ ma postać
 \begin{center}
 $y(t)=y(q_b,q_r)=y(\phi_b,q_r)=
@@ -476,7 +454,7 @@ $=\left(
 \begin{array}{c}
    \dfrac{{l_1} ({m_1}+2  {m_0}) c_{01}+ {l_2} (2
     {m_1}+ {m_2}+2  {m_0}) c_{012}+2  \bar{x}
-   ( {m_1}+ {m_2}+ {m_0})}{2( {m_1}+ {m_2}+ {m_0})}\\
+   ( {m_1}+ {m_2}+ {m_0})}{2( {m_1}+ {m_2}+ {m_0})}\\\\
    \dfrac{ {l_1}   ( {m_1}+2  {m_0}) s_{01}+ {l_2} (2  {m_1}+ {m_2}+2
     {m_0}) s_{012}+2    \bar{y} ( {m_1}+ {m_2}+ {m_0})}{2
    ( {m_1}+ {m_2}+ {m_0})}
@@ -493,7 +471,7 @@ $y(0)=y(q_b(0),q_r(0))=y(\phi_b(0),q_r(0))=
 \end{array}
 \right).$
 \end{center}
-Pochodne funkcji wyjścia w chwili 0 miały wartości
+Prędkości chwytaka w chwili początkowej były równe
 \begin{center}
 $\dot{y}(0)=
 \left(
@@ -530,14 +508,13 @@ $e(0)=
 \end{array}
 \right).$
 \end{center}
-Do sterowania układem liniowym użyto regulator PD z korekcją (\ref{PD}) z nastawami $K_d=4$, $K_p=2$.
+Do sterowania układem liniowym użyto regulatora PD z korekcją (\ref{PD}) z nastawami $K_d=4$, $K_p=2$.
 W badaniach raz jeszcze wykorzystano środowisko Matlab/Simulink. \\
 Rezultaty badań przedstawiono poniżej.
-\subsection{Wyniki dla modelu we współrzędnych barycentrycznych}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=.6\linewidth]{pics/FF1BaryDrawing}
+\includegraphics[width=.8\linewidth]{pics/FF1BaryDrawing}
 \caption{Robot free-floating z manipulatorem w kolejnych chwilach czasu}
 \label{fig:FF1Drawing}
 \end{figure}
@@ -579,99 +556,5 @@ Przebiegi współrzędnych barycentrycznych $\bar{x}$ i $\bar{y}$ i ich prędko�
 \caption{Przebiegi współrzędnych barycentrycznych $\bar{x}$ i $\bar{y}$ i ich prędkości}
 \label{fig:FF1BaryXBAR}
 \end{figure}
-
-\subsection{Wyniki dla modelu we współrzędnych uogólnionych}
-\begin{figure}[H]
-\centering
-\includegraphics[width=.6\linewidth]{pics/FF1BaryDrawing}
-\caption{Robot free-floating z manipulatorem w kolejnych chwilach czasu}
-\label{fig:FF1Drawing}
-\end{figure}
-
-Przebiegi błędów śledzenia trajektorii chwytaka pokazano na rys. \ref{fig:FF1Barye}
-\begin{figure}[H]
-\centering
-\includegraphics[width=.6\linewidth]{pics/FF1Barye}
-\caption{Przebiegi błędów śledzenia trajektorii chwytaka}
-\label{fig:FF1Barye}
-\end{figure}
-
-Przebiegi współrzędnych uogólnionych $q_b$ i $q_r$ pokazano na rys. \ref{fig:FF1BaryQ}
-\begin{figure}[H]
-\centering 
-\begin{minipage}{.5\textwidth}
-  	\centering
-  	\includegraphics[width=.99\linewidth]{pics/FF1BaryX}
-\end{minipage}%
-\begin{minipage}{.5\textwidth}
- 	\centering
-    \includegraphics[width=.99\linewidth]{pics/FF1BaryQ}
-\end{minipage}%
-\caption{Przebiegi współrzędnych uogólnionych $q_b$ i $q_r$}
-\label{fig:FF1BaryQ}
-\end{figure}
-
-Przebiegi współrzędnych barycentrycznych $\bar{x}$ i $\bar{y}$ i ich prędkości pokazano na rys. \ref{fig:FF1BaryXBAR}
-\begin{figure}[H]
-\centering 
-\begin{minipage}{.5\textwidth}
-  	\centering
-  	\includegraphics[width=.99\linewidth]{pics/FF1BaryXBAR}
-\end{minipage}%
-\begin{minipage}{.5\textwidth}
- 	\centering
-    \includegraphics[width=.99\linewidth]{pics/FF1BaryXBARP}
-\end{minipage}%
-\caption{Przebiegi współrzędnych barycentrycznych $\bar{x}$ i $\bar{y}$ i ich prędkości}
-\label{fig:FF1BaryXBAR}
-\end{figure}
-
-
-\subsection{Wyniki dla modelu we współrzędnych uogólnionych}
-
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width=.6\linewidth]{pics/FF2Drawing}
-%\caption{Robot free-floating z manipulatorem w kolejnych chwilach czasu}
-%\label{fig:FF2Drawing}
-%\end{figure}
-%
-%Przebiegi błędów śledzenia trajektorii chwytaka pokazano na rys. \ref{fig:FF2e}
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width=.6\linewidth]{pics/FF2e}
-%\caption{Przebiegi błędów śledzenia trajektorii chwytaka}
-%\label{fig:FF2e}
-%\end{figure}
-%
-%Przebiegi współrzędnych uogólnionych $q_b$ i $q_r$ pokazano na rys. \ref{fig:FF2Q}
-%\begin{figure}[H]
-%\centering 
-%\begin{minipage}{.5\textwidth}
-%  	\centering
-%  	\includegraphics[width=.99\linewidth]{pics/FF2X}
-%\end{minipage}%
-%\begin{minipage}{.5\textwidth}
-% 	\centering
-%    \includegraphics[width=.99\linewidth]{pics/FF2Q}
-%\end{minipage}%
-%\caption{Przebiegi współrzędnych uogólnionych $q_b$ i $q_r$}
-%\label{fig:FF2Q}
-%\end{figure}
-%
-%Przebiegi współrzędnych barycentrycznych $\bar{x}$ i $\bar{y}$ i ich prędkości pokazano na rys. \ref{fig:FF2XBAR}
-%\begin{figure}[H]
-%\centering 
-%\begin{minipage}{.5\textwidth}
-%  	\centering
-%  	\includegraphics[width=.99\linewidth]{pics/FF2XBAR}
-%\end{minipage}%
-%\begin{minipage}{.5\textwidth}
-% 	\centering
-%    \includegraphics[width=.99\linewidth]{pics/FF2XBARP}
-%\end{minipage}%
-%\caption{Przebiegi współrzędnych barycentrycznych $\bar{x}$ i $\bar{y}$ i ich prędkości}
-%\label{fig:FF2XBAR}
-%\end{figure}
 
 \end{document}
