@@ -1,0 +1,40 @@
+\DeclareOption{final}{\def\nreviewmod}
+\ProcessOptions\relax
+
+%begin: definition of review commands (best to put it into another file)
+\ifx\nreviewmod\undefined
+\newcounter{rem} 
+\newcommand{\reviewer}[4]{\definecolor{#1}{rgb}{#2,#3,#4} \newcounter{#1} }
+\newenvironment{review}[1][red]{%
+  \stepcounter{#1}\marginpar{\textsc{\color{red}%
+      \rule{1ex}{1ex}\hspace{\stretch{1}}Rem~{\color{#1}\arabic{#1}}%
+      \\{\color{#1}#1}}}\color{#1}}{({lno:\color{red}\the\inputlineno})}
+\newcommand{\remcount}[1]{\marginpar{\textsc{\color{#1}%
+      {\color{red}#1\\} \rule{1ex}{1ex}\hspace{\stretch{1}}%
+      !~\arabic{#1}~!\hspace{\stretch{1}}\rule{1ex}{1ex}}}}
+\newenvironment{rev}{\color{red}}{}
+\else
+\newcommand{\reviewer}[4]{}
+\newenvironment{review}[1][red]{}{}
+\newcommand{\remcount}{}
+\newenvironment{rev}{}{}
+\fi
+%end: definition of review commands
+
+%\\{\color{red}\the\inputlineno}\\
+
+%define reviewers: name RED GREEN BLUE (0-1)
+% \reviewer{me}{0.2}{0.2}{0.67}    
+% \reviewer{prof}{0.2}{0.6}{0.2}
+%usage:
+% \begin{review}[name_of_reviewer] text to add \end{review}
+%
+% if used with newlines may cause extra space:
+% \begin{review}[name]
+%  text
+% \end{review}
+%
+% if used without [name] default color is set as red
+
+% command: \remcount prints on margin number of comments (up to this
+% point). Put it at the end of document.
