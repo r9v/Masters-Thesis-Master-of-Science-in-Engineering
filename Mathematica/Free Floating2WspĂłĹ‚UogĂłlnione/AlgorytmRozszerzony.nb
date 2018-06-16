@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     48225,       1042]
-NotebookOptionsPosition[     47790,       1023]
-NotebookOutlinePosition[     48166,       1039]
-CellTagsIndexPosition[     48123,       1036]
+NotebookDataLength[     48390,       1048]
+NotebookOptionsPosition[     47955,       1029]
+NotebookOutlinePosition[     48331,       1045]
+CellTagsIndexPosition[     48288,       1042]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -43,7 +43,14 @@ Cell[BoxData[{
       RowBox[{
        RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
        "\"\<AllMatrices.nb\>\""}], ",", "\"\<Input\>\""}], "]"}], "]"}], 
-   ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+   ";"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"id", "=", "\"\<1\>\""}], ";"}], 
+  RowBox[{"(*", 
+   RowBox[{"EDIT", " ", "THIS", " ", "ONLY"}], "*)"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"Ib", "=", "10"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
@@ -881,8 +888,7 @@ Cell[BoxData[{
    3.7361458987691774`*^9}, {3.736147731975373*^9, 3.7361477507504463`*^9}, {
    3.7369446007095904`*^9, 3.7369446114352036`*^9}, {3.7369446454421487`*^9, 
    3.7369446614010615`*^9}, {3.736944719630392*^9, 3.7369447211464787`*^9}, {
-   3.736945534255986*^9, 3.73694557086508*^9}, {3.7377199395932283`*^9, 
-   3.73771994065603*^9}}],
+   3.736945534255986*^9, 3.73694557086508*^9}}],
 
 Cell[CellGroupData[{
 
@@ -966,7 +972,7 @@ Cell[BoxData[{
    RowBox[{"matlabY", "=", 
     RowBox[{"matlabFile", "[", 
      RowBox[{"k", ",", "\"\<y\>\"", ",", "strRls1", ",", "strRls2"}], "]"}]}],
-    ";"}], "\[IndentingNewLine]"}], "\n", 
+    ";"}], "\n"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"PathStr", "=", 
    RowBox[{"NotebookDirectory", "[", "]"}]}], ";"}], "\[IndentingNewLine]", 
@@ -1038,12 +1044,12 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 41714, 864, 1483, "Input"],
+Cell[558, 20, 41879, 870, 1558, "Input"],
 Cell[CellGroupData[{
-Cell[42297, 888, 3675, 96, 615, "Input"],
-Cell[45975, 986, 1097, 15, 39, "Output"]
+Cell[42462, 894, 3675, 96, 615, "Input"],
+Cell[46140, 992, 1097, 15, 39, "Output"]
 }, Open  ]],
-Cell[47087, 1004, 699, 17, 90, "Input"]
+Cell[47252, 1010, 699, 17, 90, "Input"]
 }
 ]
 *)

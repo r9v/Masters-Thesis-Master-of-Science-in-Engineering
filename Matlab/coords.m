@@ -1,10 +1,12 @@
-function [Base,K1,K2,C1,C2,C3,C4]=UogCoords(q)
-xb=q(1);
-yb=q(2);
-q0=q(3);
-q1=q(4);
-q2=q(5);
+function [Base,K1,K2,C1,C2,C3,C4]=coords(tstep,q);
+xbar=q.Data(tstep,1);
+ybar=q.Data(tstep,2);
+q0=q.Data(tstep,3);
+q1=q.Data(tstep,4);
+q2=q.Data(tstep,5);
 
+xb=xbar+(-3/8).*cos(q1+q0)+(-1/8).*cos(q1+q2+q0);
+yb=ybar+(-3/8).*sin(q1+q0)+(-1/8).*sin(q1+q2+q0);
 c0=cos(q0);
 s0=sin(q0);
 c1=cos(q1);
