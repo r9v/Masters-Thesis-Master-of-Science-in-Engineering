@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     13829,        356]
-NotebookOptionsPosition[     13553,        342]
-NotebookOutlinePosition[     13928,        358]
-CellTagsIndexPosition[     13885,        355]
+NotebookDataLength[     12181,        324]
+NotebookOptionsPosition[     11905,        310]
+NotebookOutlinePosition[     12280,        326]
+CellTagsIndexPosition[     12237,        323]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -83,7 +83,7 @@ Cell[BoxData[{
             RowBox[{"{", 
              RowBox[{"0", ",", "0", ",", "0", ",", "1"}], "}"}]}], "}"}], 
           "]"}]}], "]"}], ";"}]}], "]"}]}], ";"}], 
-  "\n"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}], "\n", 
  RowBox[{
   RowBox[{
    RowBox[{
@@ -202,22 +202,6 @@ Cell[BoxData[{
    RowBox[{"strRls1", "=", "\[IndentingNewLine]", 
     RowBox[{"{", "\[IndentingNewLine]", 
      RowBox[{
-      RowBox[{"\"\<Cos[\[Theta]]\>\"", "\[Rule]", "\"\<c0r\>\""}], ",", 
-      "\[IndentingNewLine]", 
-      RowBox[{"\"\<Cos[q1]\>\"", "\[Rule]", "\"\<c1r\>\""}], ",", 
-      "\[IndentingNewLine]", 
-      RowBox[{"\"\<Cos[q2]\>\"", "\[Rule]", "\"\<c2r\>\""}], ",", 
-      "\[IndentingNewLine]", "\[IndentingNewLine]", 
-      RowBox[{"\"\<Sin[\[Theta]]\>\"", "\[Rule]", "\"\<s0r\>\""}], ",", 
-      "\[IndentingNewLine]", 
-      RowBox[{"\"\<Sin[q1]\>\"", "\[Rule]", "\"\<s1r\>\""}], ",", 
-      "\[IndentingNewLine]", 
-      RowBox[{"\"\<Sin[q2]\>\"", "\[Rule]", "\"\<s2r\>\""}], ",", 
-      "\[IndentingNewLine]", "\[IndentingNewLine]", 
-      RowBox[{"\"\<Sin[q1 + q2]\>\"", "\[Rule]", "\"\<s12r\>\""}], ",", 
-      "\[IndentingNewLine]", 
-      RowBox[{"\"\<Cos[q1 + q2]\>\"", "\[Rule]", "\"\<c12r\>\""}], ",", 
-      "\[IndentingNewLine]", "\[IndentingNewLine]", 
       RowBox[{"\"\<xbpp\>\"", "\[Rule]", "\"\<qpp1\>\""}], ",", 
       "\[IndentingNewLine]", 
       RowBox[{"\"\<ybpp\>\"", "\[Rule]", "\"\<qpp2\>\""}], ",", 
@@ -250,22 +234,6 @@ Cell[BoxData[{
    RowBox[{"strRls2", "=", "\[IndentingNewLine]", 
     RowBox[{"{", "\[IndentingNewLine]", 
      RowBox[{
-      RowBox[{"\"\<c0r\>\"", "\[Rule]", " ", "\"\<c0\>\""}], ",", 
-      "\[IndentingNewLine]", 
-      RowBox[{"\"\<c1r\>\"", "\[Rule]", " ", "\"\<c1\>\""}], ",", 
-      "\[IndentingNewLine]", 
-      RowBox[{"\"\<c2r\>\"", "\[Rule]", " ", "\"\<c2\>\""}], ",", 
-      "\[IndentingNewLine]", 
-      RowBox[{"\"\<s0r\>\"", "\[Rule]", " ", "\"\<s0\>\""}], ",", 
-      "\[IndentingNewLine]", 
-      RowBox[{"\"\<s1r\>\"", "\[Rule]", " ", "\"\<s1\>\""}], ",", 
-      "\[IndentingNewLine]", 
-      RowBox[{"\"\<s2r\>\"", "\[Rule]", " ", "\"\<s2\>\""}], ",", 
-      "\[IndentingNewLine]", "\[IndentingNewLine]", 
-      RowBox[{"\"\<c12r\>\"", "\[Rule]", " ", "\"\<c12\>\""}], ",", 
-      "\[IndentingNewLine]", 
-      RowBox[{"\"\<s12r\>\"", "\[Rule]", " ", "\"\<s12\>\""}], ",", 
-      "\[IndentingNewLine]", "\[IndentingNewLine]", 
       RowBox[{"\"\<qp1\>\"", "\[Rule]", "\"\<qp(1)\>\""}], ",", 
       "\[IndentingNewLine]", 
       RowBox[{"\"\<qp2\>\"", "\[Rule]", "\"\<qp(2)\>\""}], ",", 
@@ -285,7 +253,7 @@ Cell[BoxData[{
       RowBox[{"\"\<q1\>\"", "\[Rule]", "\"\<q(4)\>\""}], ",", 
       "\[IndentingNewLine]", 
       RowBox[{"\"\<q2\>\"", "\[Rule]", "\"\<q(5)\>\""}]}], 
-     "\[IndentingNewLine]", "}"}]}], ";"}], "\[IndentingNewLine]"}], "\n", 
+     "\[IndentingNewLine]", "}"}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"Dtrls", "=", 
    RowBox[{"{", "\[IndentingNewLine]", 
@@ -338,7 +306,7 @@ Cell[BoxData[{
   3.736146560312018*^9, 3.736146562057118*^9}, {3.7361478417306504`*^9, 
   3.7361478447618237`*^9}, {3.7361479930343046`*^9, 3.736148018737775*^9}, {
   3.736330364583036*^9, 3.736330391790592*^9}, {3.736945812388894*^9, 
-  3.736945826419697*^9}}]
+  3.736945826419697*^9}, {3.7380569068867965`*^9, 3.73805691187121*^9}}]
 },
 WindowSize->{929, 812},
 WindowMargins->{{Automatic, 0}, {Automatic, 0}},
@@ -357,7 +325,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 12991, 320, 2515, "Input"]
+Cell[558, 20, 11343, 288, 1990, "Input"]
 }
 ]
 *)

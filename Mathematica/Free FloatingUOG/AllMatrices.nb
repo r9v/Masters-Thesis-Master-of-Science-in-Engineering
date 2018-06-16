@@ -10,7 +10,7 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     96347,       2563]
+NotebookDataLength[     96337,       2563]
 NotebookOptionsPosition[     96012,       2548]
 NotebookOutlinePosition[     96388,       2564]
 CellTagsIndexPosition[     96345,       2561]
@@ -2564,7 +2564,7 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[558, 20, 51434, 1287, 1562, "Input"],
-Cell[51995, 1309, 44013, 1237, 2085, InheritFromParent]
+Cell[51995, 1309, 44013, 1237, 2085, "Input"]
 }
 ]
 *)

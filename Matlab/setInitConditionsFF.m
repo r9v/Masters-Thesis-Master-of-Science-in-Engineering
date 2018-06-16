@@ -1,4 +1,4 @@
-function [ initCond ] = setInitConditionsFF(str)
+function [ initCond ] = setInitConditionsFF()
 
 %----- uogolnione polozenia -----%
 uogolnione.x0=0; %
@@ -28,13 +28,8 @@ uogolnione.qp0=[
     uogolnione.qp10;
     uogolnione.qp20];
 
-if strcmp(str,'Uog')
-   initCond.q0=uogolnione.q0;
-   initCond.qp0=uogolnione.qp0;
-elseif strcmp(str,'Bary')
-    initCond=setInitConditionsFFBary(uogolnione);
-end
-    
+initCond.q0=uogolnione.q0;
+initCond.qp0=uogolnione.qp0;
 
 end
 

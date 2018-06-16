@@ -1,4 +1,4 @@
-function [Base,K1,K2,C1,C2,C3,C4]=UogCoords(q)
+function [Base,K1,K2,C1,C2,C3,C4]=robotPoints(q)
 xb=q(1);
 yb=q(2);
 q0=q(3);
