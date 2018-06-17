@@ -119,10 +119,10 @@
 \chapter{Model manipulatora mobilnego}
 Manipulator mobilny to platforma mobilna z zamontowanym na niej manipulatorem. Biorąc pod uwagę typ ograniczeń nałożonych kolejno na platformę i manipulator można wydzielić 4 typy manipulatorów mobilnych:
 \begin{enumerate}
-\item typ (\textit{h,h}) - platforma i manipulator związane są ograniczeniami holonomicznymi,
-\item typ (\textit{nh,h}) - na platformę nałożone są ograniczenia nieholonomiczne, natomiast na manipulator ograniczenia holonomiczne,
-\item typ (\textit{nh,nh}) - ograniczenia nałożone na platformę i manipulator są nieholonomiczne. Taki  rodzaj manipulatora mobilnego został przedstawiony w \cite{5},
-\item typ (\textit{h,nh}) - na manipulator  nałożone są ograniczenia nieholonomiczne, natomiast na platformę holonomiczne.
+\item typ (\textit{h,h}) -- platforma i manipulator związane są ograniczeniami holonomicznymi,
+\item typ (\textit{nh,h}) -- na platformę nałożone są ograniczenia nieholonomiczne, natomiast na manipulator ograniczenia holonomiczne,
+\item typ (\textit{nh,nh}) -- ograniczenia nałożone na platformę i manipulator są nieholonomiczne. Taki  rodzaj manipulatora mobilnego został przedstawiony w \cite{5},
+\item typ (\textit{h,nh}) -- na manipulator  nałożone są ograniczenia nieholonomiczne, natomiast na platformę holonomiczne.
 \end{enumerate} 
 
 W tym rozdziale zostanie przedstawiony model manipulatora mobilnego typu (\textit{nh,h}). W szczególności w rozważanym manipulatorze platformą będzie monocykl, czyli robot mobilny klasy (2,0). Za manipulator natomiast posłuży manipulator RTR. Rozważany manipulator mobilny przedstawiono na rys 1.
@@ -136,7 +136,7 @@ q_r\\
 \end{array}
 \right)\in R^{n+p},
 \end{equation}
-gdzie $q_m=(x,y,\theta, \phi_1, \phi_2)^T \in R^n$ - wektor współrzędnych uogólnionych platformy mobilnej, $q_r=(q_1,q_2,q_3)^T \in R^p$ - wektor współrzędnych przegubowych manipulatora. Rozmiary przestrzeni wyniosą więc $n=5$, $p=3$.
+gdzie $q_m=(x,y,\theta, \phi_1, \phi_2)^T \in R^n$ -- wektor współrzędnych uogólnionych platformy mobilnej, $q_r=(q_1,q_2,q_3)^T \in R^p$ -- wektor współrzędnych przegubowych manipulatora. Rozmiary przestrzeni wyniosą więc $n=5$, $p=3$.
 \section{Model we współrzędnych uogólnionych} \label{model1s}
 Do wyprowadzenia równań manipulatora mobilnego wykorzystamy formalizm Langrange'a.\\ Lagranżjan L jest zdefiniowany jako różnica pomiędzy energią kinetyczną, a potencjalną układu
 \begin{equation}
@@ -157,7 +157,7 @@ Przy obecności sił zewnętrznych równanie \eqref{lagrange} wygląda następuj
 \label{lagrange3}
 Q(q)\ddot{q}+C(q,\dot{q})\dot{q}+D(q)=F_e.
 \end{equation}
-W naszym przypadku siły zewnętrze $F_e$ są sumą 2 składowych: $F_e=B(q)u+F_{nh}$, gdzie $B(q)u$ to uogólnione siły wejściowe(tj. wywierane na system przez elementy wykonawcze), a $F_{nh}$ to siły więzów nieholonomicznych(tj. siły zapewniające spełnienie ograniczeń nieholonomicznych). \\Wektor $u=\left(
+W naszym przypadku siły zewnętrze $F_e$ są sumą 2 składowych: $F_e=B(q)u+F_{nh}$, gdzie $B(q)u$ to uogólnione siły wejściowe(tj. wywierane na system przez elementy wykonawcze), a $F_{nh}$ to siły więzów nieholonomicznych(tj. siły zapewniające spełnienie ograniczeń nieholonomicznych). Wektor $u=\left(
 \begin{array}{c}
 u_m\\
 u_r
@@ -252,28 +252,29 @@ gdzie:
  D^*&=G^TD,\\
  B^*&=G^TB.
 \end{align*}
-Równanie (\ref{modelpp}) opisuje dynamikę manipulatora mobilnego wyrażoną w prędkościach pomocniczych.
+Równanie (\ref{modelpp}) opisuje dynamikę manipulatora mobilnego wyrażoną w prędkościach pomocniczych.\\
+
 \chapter{Odsprzęganie wejściowo-wyjściowe dla manipulatora mobilnego}
 Algorytm odsprzęgania wejściowo-wyjściowego jest wykorzystywany do sterowania manipulatorów mobilnych. Rozwiązuje on zadanie śledzenia zadanej trajektorii efektora $y_d(t)$ w przestrzeni zewnętrznej. Algorytm odpsprzęgania wejściowo-wyjściowego wymaga pełnej znajomości modelu manipulatora mobilnego.\\ 
 
  \noindent Istnieją dwie wersje tego algorytmu:
 \begin{itemize}[noitemsep,topsep=0pt]
-\item podstawowy algorytm Yamamoto i Yun'a \cite{2},\cite{3}
+\item podstawowy algorytm Yamamoto i Yuna \cite{2},\cite{3}
 \item algorytm z rozszerzonymi funkcjami wyjściowymi\cite{1}.
 \end{itemize}\vspace{0.2cm}
 
 Różnią się one wyborem funkcji wyjściowych $y(\cdot)$. Yamamoto i Yun założyli, że funkcje te będą zależne tylko od konfiguracji platformy $q_m$, natomiast Mazur pozwala, aby funkcje wyjścia były zależne zarówno od konfiguracji platformy $q_m$, jak i od konfiguracji manipulatora $q_r$. Rozdział ten poświęcony jest opisowi obu podejść.
 
-\section{Podstawowy algorytm Yamamoto i Yun'a}
+\section{Podstawowy algorytm Yamamoto i Yuna}
 \subsection{Specyfikacja podejścia}
 Yamamoto i Yun założyli, że manipulator ma ustawić się w stałej konfiguracji o maksymalnej manipulowalności, a zadanie śledzenia zadanej trajektorii ma być realizowane jedynie poprzez ruch platformy. Podejście takie traktuje cały manipulator mobilny bardziej jako samą platformę do której przymocowany jest unieruchomiony manipulator, niż pełen system, gdzie platforma i manipulator działają równocześnie.\\
-Podstawowy algorytm Yamamoto i Yun'a można stosować, np. gdy manipulator ma pozostać nieruchomy.
+Podstawowy algorytm Yamamoto i Yuna można stosować, np. gdy manipulator ma pozostać nieruchomy.
 \subsection{Funkcje wyjścia}
-Algorytm Yamamoto i Yun'a wymaga, aby funkcje wyjścia były zależne jedynie od konfiguracji platformy tj. $y(q_m)$. Wybór tych funkcji należy podporządkować rodzajowi zadania, jakie należy zrealizować.
+Algorytm Yamamoto i Yuna wymaga, aby funkcje wyjścia były zależne jedynie od konfiguracji platformy tj. $y(q_m)$. Wybór tych funkcji należy podporządkować rodzajowi zadania, jakie należy zrealizować.
 
 \subsection{Wybór konfiguracji manipulatora}
 Ponieważ manipulator %pozostaje przez czas działania algorytmu nieruchomy i 
-nie uczestniczy czynnie w realizacji zadania należy ustawić go w takiej konfigurację, aby ułatwić platformie realizację zadania. Za przykładem Yamamoto i Yun'a wybierzmy konfigurację maksymalizującą manipulowalność. Manipulowalność manipulatora zdefiniowana jest jako \cite{7}
+nie uczestniczy czynnie w realizacji zadania należy ustawić go w takiej konfigurację, aby ułatwić platformie realizację zadania. Za przykładem Yamamoto i Yuna wybierzmy konfigurację maksymalizującą manipulowalność. Manipulowalność manipulatora zdefiniowana jest jako \cite{7}
 \begin{equation}
 \label{manipulowa}
 w=\sqrt{\det(J(q_r)J^T(q_r))},
@@ -286,7 +287,7 @@ Pożądaną konfigurację  maksymalizującą manipulowalność można osiągną�
 
 \subsection{Algorytm sterowania}
 \label{YYalgster}
-Przed wyprowadzeniem algorytmu Yamamoto i Yun'a zlinearyzujmy dynamikę manipulatora mobilnego (\ref{modelpp}). Nie jest to krok konieczny, ale ułatwia on późniejsze obliczenia. Do linearyzacji dynamiki wykorzystamy prawo sterowania z grupy 'obliczanego momentu'
+Przed wyprowadzeniem algorytmu Yamamoto i Yuna zlinearyzujmy dynamikę manipulatora mobilnego (\ref{modelpp}). Nie jest to krok konieczny, ale ułatwia on późniejsze obliczenia. Do linearyzacji dynamiki wykorzystamy prawo sterowania z grupy 'obliczanego momentu'
 \begin{equation}
 \label{comTor}
 u=B^{*(-1)}[C^*z+D^*+Q^*v].
@@ -301,9 +302,9 @@ Po użyciu sterowania (\ref{comTor}) do modelu (\ref{modelpp}) uzyskamy system z
 \end{array}
 \right)=v.
 \end{equation}
-Mając liniowy model (\ref{eq:22}) wyprowadźmy algorytm Yamamoto i Yun'a.\\
+Mając liniowy model (\ref{eq:22}) wyprowadźmy algorytm Yamamoto i Yuna.\\
 
-\par Algorytm Yamamoto i Yun'a realizowany jest dzięki zastosowaniu do modelu (\ref{eq:22}) dwóch pętli sprzężenia zwrotnego.\\
+\par Algorytm Yamamoto i Yuna realizowany jest dzięki zastosowaniu do modelu (\ref{eq:22}) dwóch pętli sprzężenia zwrotnego.\\
 \par Pierwsza pętla - pętla wewnętrzna - przekształca układ do postaci liniowej typu "podwójny integrator". Druga pętla - zewnętrzna - zapewnia realizację zadania tj. śledzenia trajektori w uzyskanym układzie liniowym.\\
 \par Prawo sterowania pierwszej pętli wyprowadza się w następujący sposób: najpierw zróżniczkujmy $y(q_m)$ dwukrotnie po czasie
 \begin{equation}
@@ -370,8 +371,8 @@ Jakobian manipulatora będzie wtedy równy
 $J(q_r)=
 \left(
 \begin{array}{c}
-   \frac{\partial y_1(q_m)}{\partial q_m}  \\
-      \frac{\partial y_2(q_m)}{\partial q_m}  \\
+   \frac{\partial y_1(q_m)}{\partial q_r}  \\
+      \frac{\partial y_2(q_m)}{\partial q_r}  \\
 \end{array}
 \right)=\begin{bmatrix}
     -s_1(l_2+l_3c_3)  &0&-c_1s_3l_3\\
@@ -479,7 +480,7 @@ Przebiegi konfiguracji bazy i manipulatora pokazano na rys. \ref{fig:ZPq}
 \end{figure}
 \section{Algorytm z rozszerzonymi funkcjami wyjściowymi}
 \subsection{Specyfikacja podejścia}
-Odmiennie od założeń Yamamoto i Yun'a rozszerzony algorytm nie wymaga bezruchu manipulatora. Dzięki temu platforma i manipulator mogą działać równolegle w sposób skoordynowany. Sterowanie platformy nie odbywa się w sposób bezpośredni.\\
+Odmiennie od założeń Yamamoto i Yuna rozszerzony algorytm nie wymaga bezruchu manipulatora. Dzięki temu platforma i manipulator mogą działać równolegle w sposób skoordynowany. Sterowanie platformy nie odbywa się w sposób bezpośredni.\\
 Algorytm ten stosować można nawet wówczas, gdy np. sterowanie bazą jest niemożliwe(np. w przypadku robota free-floating).
 \subsection{Funkcje wyjścia}
 Funkcja wyjściowa zależy teraz od konfiguracji całego robota tj. zarówno od platformy, jak i manipulatora. Przyjmuje ona postać\cite{1}:
@@ -494,16 +495,21 @@ y_2(q_r)\\
 gdzie $y_1(q_m,q_r)$ jest wektorem wybranych współrzędnych efektora w podstawowym układzie odniesienia ($X_0$,$Y_0$), a $y_2(q_r)$ to wektor wybranych współrzędnych efektora w lokalnym układzie odniesienia ($X_P$,$Y_P$) związanym ze środkiem masy platformy.\\
 \par Liczba współrzędnych efektora w układzie ($X_0$,$Y_0$), które można odpsprząc zależy od liczby sterowań platformą. W przypadku platformy klasy $(2,0)$ możemy śledzić dwie współrzędne.\\
 \subsection{Algorytm sterowania}
-\par Identycznie jak w przypadku algorytmu podstawowego, algorytm z rozszerzonymi funkcjami wyjściowymi złożony jest z dwóch pętli sprzeżenia zwrotnego\cite{1}
-\begin{itemize}[noitemsep,topsep=0pt]
-\item wewnętrznej pętli linearyzującej transformację wejście-stan
-\item zewnętrzej pętli linearyzującej transformację wejście-wyjście
-\end{itemize}
-Tak jak poprzednio wewnętrzna pętla wykorzystuje prawo sterowania z rodziny algorytmów 'obliczanych momentów'
+Przed wyprowadzeniem algorytmu odsprzęgania wejściowo-wyjściowego dla manipulatora mobilnego, zlinearyzujmy jego dynamikę (\ref{modelpp}) przy użyciu prawa sterowania z grupy 'obliczanego momentu'. Tak jak wspomniano poprzednio nie jest to krok konieczny, ale zastosujemy go w celu ułatwienia późniejszych obliczeń. Prawo sterowania linearyzujące dynamikę ma następującą postać
 \begin{equation}
-\label{eq:petla1}
+\label{eq:petla11}
 u=B^{*-1}[C^*z+D^*+Q^*v].
 \end{equation}
+Po użyciu sterowania (\ref{eq:petla11}) do modelu dynamiki (\ref{modelpp}) uzyskamy system z nowym wejściem $v$
+\begin{equation}
+\label{eq:v2}
+\dot{z}=v.
+\end{equation}
+\par Identycznie jak w przypadku algorytmu podstawowego, algorytm z rozszerzonymi funkcjami wyjściowymi złożony jest z dwóch pętli sprzeżenia zwrotnego\cite{1}
+\begin{itemize}[noitemsep,topsep=0pt]
+\item wewnętrznej pętli linearyzującej transformację wejście-wyjście
+\item zewnętrznej pętli sterującej zlinearyzowanym układem
+\end{itemize}
 Prawo pętli wewnętrznej wyprowadzimy analogicznej jak w \ref{YYalgster}\\
 Obliczmy pochodną funkcji wyjściowej $y(q)$ po czasie
 \begin{equation}
@@ -538,19 +544,11 @@ Obliczmy pochodną funkcji wyjściowej $y(q)$ po czasie
 \]
 Ponownie zróżniczkujmy $\dot{y}(q)$ po czasie
 \begin{equation}
-\label{eq:1}
-\ddot{y}(q,\dot{q})=\dot{\Phi}(q,\dot{q})z+\Phi(q) \dot{z}.
+\label{eq:edwfwsefef}
+\ddot{y}(q,\dot{q})=\dot{\Phi}(q,\dot{q})z+\Phi(q) \dot{z}=\dot{\Phi}(q,\dot{q})z+\Phi(q) v.
 \end{equation} 
-Stosując pierwszą pętlę (\ref{eq:petla1}) do modelu (\ref{modelpp}) otrzymamy
-\begin{equation}
-\label{eq:2}
-\dot{z}=v.
-\end{equation}
-Po podstawieniu zależności (\ref{eq:2}) do równania (\ref{eq:1}) uzyskamy:
-\begin{equation}
-\ddot{y}(q,\dot{q})=\dot{\Phi}(q,\dot{q})z+\Phi(q) v.
-\end{equation} 
-Aby zapewnić linearyzację wejściowo-wyjściową należy więc użyć następującej pętli zewnętrznej
+
+Aby zapewnić linearyzację wejściowo-wyjściową układu (\ref{eq:edwfwsefef}) należy więc użyć następującej pętli wewnętrznej
 \begin{equation}
 v=\Phi^{-1}(q)[-\dot{\Phi}(q,\dot{q}) z+\zeta].
 \end{equation}
@@ -558,8 +556,8 @@ Po zastosowaniu algorytmu otrzymamy funkcję wyjściową o liniowej postaci
 \begin{equation}
 \ddot{y}(q,\dot{q})=\zeta.
 \end{equation}
-Otrzymaliśmy system identyczny jak ten po zastosowaniu algorytmu Yamamoto i Yun'a i również można nim sterować używając regulatora PD z korekcją(\ref{PD}).
-\paragraph{Warunki działania algorytmu} Tak jak w przypadku podstawowego algorytmu Yamamoto i Yun'a należy zapewnić odwracalość macierzy $\Phi$. Warunek taki trzeba spełnić aby algorytm funkcjonował. Ma on następującą postać
+Otrzymaliśmy system identyczny jak ten po zastosowaniu algorytmu Yamamoto i Yuna tj. układ liniowy typu "podwójny integrator". Jego sterowaniem zajmuje się pętla zewnętrzna, którą również można zrealizować jako regulatora PD z korekcją(\ref{PD}).
+\paragraph{Warunki działania algorytmu} Tak jak w przypadku podstawowego algorytmu Yamamoto i Yuna należy zapewnić odwracalość macierzy $\Phi$. Warunek taki trzeba spełnić aby algorytm funkcjonował. Ma on następującą postać
 \begin{equation}
 \text{det}(\Phi)=\text{det}(\Phi_m)\text{det}(\Phi_r)\neq0
 \end{equation}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.12)  6 JUN 2018 17:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.12)  17 JUN 2018 16:59
 entering extended mode
 **./W04_209118_2018_praca_magisterska.tex
 (W04_209118_2018_praca_magisterska.tex
@@ -875,26 +875,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 189--190
  []
 
 [4]
-Rozdzia\l  3.
-
-Underfull \hbox (badness 10000) in paragraph at lines 257--258
+Underfull \hbox (badness 10000) in paragraph at lines 254--256
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 261.
+Rozdzia\l  3.
+
+Underfull \hbox (badness 10000) in paragraph at lines 258--259
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 262.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 261.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 262.
  [5]
-Underfull \hbox (badness 10000) in paragraph at lines 303--305
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 306--307
+Underfull \hbox (badness 10000) in paragraph at lines 304--306
 
  []
 
@@ -903,96 +902,101 @@ Underfull \hbox (badness 10000) in paragraph at lines 307--308
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 308--309
+
+ []
+
 [6]
-Overfull \hbox (35.85039pt too wide) in paragraph at lines 369--381
+Overfull \hbox (35.85039pt too wide) in paragraph at lines 370--382
 \OT4/cmr/m/n/12 Jakobian ma-ni-pu-la-tora b¦-dzie wtedy równy $\OML/plm/m/it/12
  J\OT4/cmr/m/n/12 (\OML/plm/m/it/12 q[]\OT4/cmr/m/n/12 ) = [] = [] \OML/plm/m/i
 t/12 ;$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 383--385
+Underfull \hbox (badness 10000) in paragraph at lines 384--386
 
  []
 
 [7]
 Package epstopdf Info: Source file: <pics/ZPe.eps>
-(epstopdf)                    date: 2018-05-28 20:08:35
-(epstopdf)                    size: 24223 bytes
+(epstopdf)                    date: 2018-06-15 14:38:28
+(epstopdf)                    size: 23146 bytes
 (epstopdf)             Output file: <pics/ZPe-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-05-28 20:09:00
+(epstopdf)                    date: 2018-06-15 14:38:28
 (epstopdf)                    size: 5480 bytes
 (epstopdf)             Command: <epstopdf --outfile=pics/ZPe-eps-converted-to.p
 df pics/ZPe.eps>
-(epstopdf)             \includegraphics on input line 457.
+(epstopdf)             \includegraphics on input line 458.
 Package epstopdf Info: Output file is already uptodate.
  <pics/ZPe-eps-converted-to.pdf, id=37, 421.575pt x 316.18124pt>
 File: pics/ZPe-eps-converted-to.pdf Graphic file (type pdf)
 
 <use pics/ZPe-eps-converted-to.pdf>
-Package pdftex.def Info: pics/ZPe-eps-converted-to.pdf used on input line 457.
+Package pdftex.def Info: pics/ZPe-eps-converted-to.pdf used on input line 458.
 (pdftex.def)             Requested size: 273.14922pt x 204.86406pt.
 Package epstopdf Info: Source file: <pics/ZPx.eps>
-(epstopdf)                    date: 2018-05-28 20:08:56
-(epstopdf)                    size: 23660 bytes
+(epstopdf)                    date: 2018-06-15 14:38:28
+(epstopdf)                    size: 22655 bytes
 (epstopdf)             Output file: <pics/ZPx-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-05-28 20:09:01
+(epstopdf)                    date: 2018-06-15 14:38:28
 (epstopdf)                    size: 5894 bytes
 (epstopdf)             Command: <epstopdf --outfile=pics/ZPx-eps-converted-to.p
 df pics/ZPx.eps>
-(epstopdf)             \includegraphics on input line 467.
+(epstopdf)             \includegraphics on input line 468.
 Package epstopdf Info: Output file is already uptodate.
 
 <pics/ZPx-eps-converted-to.pdf, id=38, 421.575pt x 316.18124pt>
 File: pics/ZPx-eps-converted-to.pdf Graphic file (type pdf)
 
 <use pics/ZPx-eps-converted-to.pdf>
-Package pdftex.def Info: pics/ZPx-eps-converted-to.pdf used on input line 467.
+Package pdftex.def Info: pics/ZPx-eps-converted-to.pdf used on input line 468.
 (pdftex.def)             Requested size: 225.34706pt x 169.01297pt.
 Package epstopdf Info: Source file: <pics/ZPq.eps>
-(epstopdf)                    date: 2018-05-28 20:07:21
-(epstopdf)                    size: 33058 bytes
+(epstopdf)                    date: 2018-06-15 14:38:28
+(epstopdf)                    size: 31838 bytes
 (epstopdf)             Output file: <pics/ZPq-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-05-28 20:08:15
+(epstopdf)                    date: 2018-06-15 14:38:28
 (epstopdf)                    size: 5872 bytes
 (epstopdf)             Command: <epstopdf --outfile=pics/ZPq-eps-converted-to.p
 df pics/ZPq.eps>
-(epstopdf)             \includegraphics on input line 473.
+(epstopdf)             \includegraphics on input line 474.
 Package epstopdf Info: Output file is already uptodate.
 
 <pics/ZPq-eps-converted-to.pdf, id=39, 421.575pt x 316.18124pt>
 File: pics/ZPq-eps-converted-to.pdf Graphic file (type pdf)
 
 <use pics/ZPq-eps-converted-to.pdf>
-Package pdftex.def Info: pics/ZPq-eps-converted-to.pdf used on input line 473.
+Package pdftex.def Info: pics/ZPq-eps-converted-to.pdf used on input line 474.
 (pdftex.def)             Requested size: 225.34706pt x 169.01297pt.
  [8 <./pics/ZPe-eps-converted-to.pdf>]
-Overfull \hbox (6.25168pt too wide) in paragraph at lines 480--480
+Overfull \hbox (6.25168pt too wide) in paragraph at lines 481--481
 []\OT4/cmr/bx/n/17.28 Algorytm z roz-sze-rzo-nymi funk-cjami wyj-±cio-wymi 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 493--495
+Underfull \hbox (badness 10000) in paragraph at lines 494--496
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 495--496
+Underfull \hbox (badness 10000) in paragraph at lines 496--497
 
  []
 
 [9 <./pics/ZPx-eps-converted-to.pdf> <./pics/ZPq-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 567--569
+Underfull \hbox (badness 10000) in paragraph at lines 565--567
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 578--579
+Underfull \hbox (badness 10000) in paragraph at lines 576--577
 
  []
 
-
-Overfull \hbox (22.9168pt too wide) in paragraph at lines 589--593
+[10]
+Overfull \hbox (22.9168pt too wide) in paragraph at lines 587--591
 \OT4/cmr/m/n/12 (0\OML/plm/m/it/12 ; \OT4/cmr/m/n/12 0\OML/plm/m/it/12 ; \OT4/c
 mr/m/n/12 0\OML/plm/m/it/12 ; \OT4/cmr/m/n/12 0\OML/plm/m/it/12 ; \OT4/cmr/m/n/
 12 0)$, a po-cz¡t-kowa kon-fi-gu-ra-cja ma-ni-pu-la-tora byªa równa $\OML/plm/m
@@ -1000,61 +1004,61 @@ mr/m/n/12 0\OML/plm/m/it/12 ; \OT4/cmr/m/n/12 0\OML/plm/m/it/12 ; \OT4/cmr/m/n/
 m/m/it/12 ; q[]\OT4/cmr/m/n/12 (0)\OML/plm/m/it/12 ; q[]\OT4/cmr/m/n/12 (0)) =
  []
 
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 642--644
+
+Underfull \hbox (badness 10000) in paragraph at lines 640--642
 
  []
 
 Package epstopdf Info: Source file: <pics/ZRe.eps>
-(epstopdf)                    date: 2018-05-28 20:43:50
-(epstopdf)                    size: 38737 bytes
+(epstopdf)                    date: 2018-06-15 14:38:28
+(epstopdf)                    size: 37453 bytes
 (epstopdf)             Output file: <pics/ZRe-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-05-28 20:48:43
+(epstopdf)                    date: 2018-06-15 14:38:28
 (epstopdf)                    size: 8882 bytes
 (epstopdf)             Command: <epstopdf --outfile=pics/ZRe-eps-converted-to.p
 df pics/ZRe.eps>
-(epstopdf)             \includegraphics on input line 647.
+(epstopdf)             \includegraphics on input line 645.
 Package epstopdf Info: Output file is already uptodate.
 <pics/ZRe-eps-converted-to.pdf, id=60, 421.575pt x 316.18124pt>
 File: pics/ZRe-eps-converted-to.pdf Graphic file (type pdf)
 
 <use pics/ZRe-eps-converted-to.pdf>
-Package pdftex.def Info: pics/ZRe-eps-converted-to.pdf used on input line 647.
+Package pdftex.def Info: pics/ZRe-eps-converted-to.pdf used on input line 645.
 (pdftex.def)             Requested size: 273.14922pt x 204.86406pt.
  [11]
 Package epstopdf Info: Source file: <pics/ZRx.eps>
-(epstopdf)                    date: 2018-05-28 20:44:10
-(epstopdf)                    size: 26556 bytes
+(epstopdf)                    date: 2018-06-15 14:38:28
+(epstopdf)                    size: 25396 bytes
 (epstopdf)             Output file: <pics/ZRx-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-05-28 20:48:44
+(epstopdf)                    date: 2018-06-15 14:38:28
 (epstopdf)                    size: 6484 bytes
 (epstopdf)             Command: <epstopdf --outfile=pics/ZRx-eps-converted-to.p
 df pics/ZRx.eps>
-(epstopdf)             \includegraphics on input line 656.
+(epstopdf)             \includegraphics on input line 654.
 Package epstopdf Info: Output file is already uptodate.
 
 <pics/ZRx-eps-converted-to.pdf, id=64, 421.575pt x 316.18124pt>
 File: pics/ZRx-eps-converted-to.pdf Graphic file (type pdf)
 
 <use pics/ZRx-eps-converted-to.pdf>
-Package pdftex.def Info: pics/ZRx-eps-converted-to.pdf used on input line 656.
+Package pdftex.def Info: pics/ZRx-eps-converted-to.pdf used on input line 654.
 (pdftex.def)             Requested size: 225.34706pt x 169.01297pt.
 Package epstopdf Info: Source file: <pics/ZRq.eps>
-(epstopdf)                    date: 2018-05-28 20:44:28
-(epstopdf)                    size: 36445 bytes
+(epstopdf)                    date: 2018-06-15 14:38:28
+(epstopdf)                    size: 35163 bytes
 (epstopdf)             Output file: <pics/ZRq-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-05-28 20:48:45
+(epstopdf)                    date: 2018-06-15 14:38:28
 (epstopdf)                    size: 9561 bytes
 (epstopdf)             Command: <epstopdf --outfile=pics/ZRq-eps-converted-to.p
 df pics/ZRq.eps>
-(epstopdf)             \includegraphics on input line 662.
+(epstopdf)             \includegraphics on input line 660.
 Package epstopdf Info: Output file is already uptodate.
 
 <pics/ZRq-eps-converted-to.pdf, id=65, 421.575pt x 316.18124pt>
 File: pics/ZRq-eps-converted-to.pdf Graphic file (type pdf)
 
 <use pics/ZRq-eps-converted-to.pdf>
-Package pdftex.def Info: pics/ZRq-eps-converted-to.pdf used on input line 662.
+Package pdftex.def Info: pics/ZRq-eps-converted-to.pdf used on input line 660.
 (pdftex.def)             Requested size: 225.34706pt x 169.01297pt.
 
 Rozdzia\l  4.
@@ -1067,7 +1071,7 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  8176 strings out of 493634
- 110838 string characters out of 3143750
+ 110849 string characters out of 3143750
  215924 words of memory out of 3000000
  11336 multiletter control sequences out of 15000+200000
  18594 words of font info for 54 fonts, out of 3000000 for 9000
@@ -1087,7 +1091,7 @@ C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr6.pfb><C:/Program Files/Mi
 KTeX 2.9/fonts/type1/public/pl/plr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/public/pl/plsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plsy8
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb>
-Output written on W04_209118_2018_praca_magisterska.pdf (14 pages, 170359 bytes
+Output written on W04_209118_2018_praca_magisterska.pdf (14 pages, 170434 bytes
 ).
 PDF statistics:
  133 PDF objects out of 1000 (max. 8388607)
