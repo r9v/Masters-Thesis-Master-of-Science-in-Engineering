@@ -10,5 +10,5 @@ param.Kd=20;
 simTime=10;
          
 sim('FFBary.slx',simTime);
-DrawFFBary
-plotoFFBary
+%DrawFFBary
+%plotoFFBary

@@ -1,0 +1,13 @@
+t=0
+dln=1;
+lna=0.01;
+lnb=30;
+lndt=1;
+sina=0.5;
+sinb=0.5;
+ln=dln+lna*log(lnb*(t+lndt))
+sinn=sina*sin(sinb*t)
+y1=1.995;
+y2=0.0998;
+ln-y2
+sinn-y1

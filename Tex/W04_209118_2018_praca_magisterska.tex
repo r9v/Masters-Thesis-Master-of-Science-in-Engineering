@@ -125,8 +125,13 @@ Manipulator mobilny to platforma mobilna z zamontowanym na niej manipulatorem. B
 \item typ (\textit{h,nh}) -- na manipulator  nałożone są ograniczenia nieholonomiczne, natomiast na platformę holonomiczne.
 \end{enumerate} 
 
-W tym rozdziale zostanie przedstawiony model manipulatora mobilnego typu (\textit{nh,h}). W szczególności w rozważanym manipulatorze platformą będzie monocykl, czyli robot mobilny klasy (2,0). Za manipulator natomiast posłuży manipulator RTR. Rozważany manipulator mobilny przedstawiono na rys 1.
-
+W tym rozdziale zostanie przedstawiony model manipulatora mobilnego typu (\textit{nh,h}). W szczególności w rozważanym manipulatorze platformą będzie monocykl, czyli robot mobilny klasy (2,0). Za manipulator natomiast posłuży manipulator RTR. Rozważany manipulator mobilny przedstawiono na rys \ref{ziemskii}.
+\begin{figure}[H]
+\centering
+\includegraphics[width=.6\linewidth]{pics/ziemskii}
+\caption{Manipulator mobilny z platformą klasy (2,0) i manipulatorem RTR}
+\label{ziemskii}
+\end{figure}
 Przyjmijmy następujący wektor współrzędnych uogólnionych manipulatora mobilnego:
 \begin{equation}
 q=\left(
@@ -269,12 +274,9 @@ Różnią się one wyborem funkcji wyjściowych $y(\cdot)$. Yamamoto i Yun zało
 \subsection{Specyfikacja podejścia}
 Yamamoto i Yun założyli, że manipulator ma ustawić się w stałej konfiguracji o maksymalnej manipulowalności, a zadanie śledzenia zadanej trajektorii ma być realizowane jedynie poprzez ruch platformy. Podejście takie traktuje cały manipulator mobilny bardziej jako samą platformę do której przymocowany jest unieruchomiony manipulator, niż pełen system, gdzie platforma i manipulator działają równocześnie.\\
 Podstawowy algorytm Yamamoto i Yuna można stosować, np. gdy manipulator ma pozostać nieruchomy.
-\subsection{Funkcje wyjścia}
-Algorytm Yamamoto i Yuna wymaga, aby funkcje wyjścia były zależne jedynie od konfiguracji platformy tj. $y(q_m)$. Wybór tych funkcji należy podporządkować rodzajowi zadania, jakie należy zrealizować.
 
 \subsection{Wybór konfiguracji manipulatora}
-Ponieważ manipulator %pozostaje przez czas działania algorytmu nieruchomy i 
-nie uczestniczy czynnie w realizacji zadania należy ustawić go w takiej konfigurację, aby ułatwić platformie realizację zadania. Za przykładem Yamamoto i Yuna wybierzmy konfigurację maksymalizującą manipulowalność. Manipulowalność manipulatora zdefiniowana jest jako \cite{7}
+Ponieważ manipulator nie uczestniczy czynnie w realizacji zadania należy ustawić go w takiej konfigurację, aby ułatwić platformie realizację zadania. Za przykładem Yamamoto i Yuna wybierzmy konfigurację maksymalizującą manipulowalność. Manipulowalność manipulatora zdefiniowana jest jako \cite{7}
 \begin{equation}
 \label{manipulowa}
 w=\sqrt{\det(J(q_r)J^T(q_r))},
@@ -284,7 +286,8 @@ gdzie $J(q_r)$ to jakobian manipulatora. Jeśli manipulator jest nieredundantny,
 w=|\det(J(q_r))|.
 \end{equation} 
 Pożądaną konfigurację  maksymalizującą manipulowalność można osiągnąć w trakcie działania algorytmu, ale mając na względzie przedstawienie algorytmu w prosty sposób założymy, że ustawił się on w tej konfiguracji wcześniej.
-
+\subsection{Funkcje wyjścia}
+Algorytm Yamamoto i Yuna wymaga, aby funkcje wyjścia były zależne jedynie od konfiguracji platformy tj. $y(q_m,\bar{q}_r)=y(q_m)$. Symbol $\bar{q}_r$ oznacza stałą konfigurację manipulatora. Wybór funkcji wyjścia należy podporządkować rodzajowi zadania, jakie należy zrealizować.
 \subsection{Algorytm sterowania}
 \label{YYalgster}
 Przed wyprowadzeniem algorytmu Yamamoto i Yuna zlinearyzujmy dynamikę manipulatora mobilnego (\ref{modelpp}). Nie jest to krok konieczny, ale ułatwia on późniejsze obliczenia. Do linearyzacji dynamiki wykorzystamy prawo sterowania z grupy 'obliczanego momentu'
@@ -338,7 +341,7 @@ do równania (\ref{ypp}) otrzymamy
 \ddot{y}=\zeta.
 \end{equation} 
 
-Wynikowy układ liniowy (\ref{testtssts}) steruje się przy użyciu drugiej pętli. Można ją zrealizować na przykład jako regulator PD z korekcją:
+Wynikowy układ liniowy (\ref{testtssts}) steruje się przy użyciu drugiej pętli. Można ją zrealizować, na przykład, jako regulator PD z korekcją:
 \begin{equation}
 \label{PD}
 \zeta=\ddot{y}_d(t)-K_d\dot{e}(t)-K_pe(t),
@@ -352,7 +355,7 @@ gdzie $\ddot{y}_d(t)$ - druga pochodna zadanej funkcji wejściowej,\\ $e(t)=y_d(
 
 \subsection{Badania symulacyjne}\label{YYsim}
 Rozważany monocykl posiada dwa wejścia (sterowania obu kół), można więc odsprząc dwie współrzędne efektora. Odsprzęgnijmy współrzędne $x$ i $y$ efektora w podstawowym układzie odniesienia ($X_0$,$Y_0$).
-Funkcja wyjściowa $y(q_m)$ dla nieruchomego chwytaka, a więc ustalonych $q_1$, $q_2$, $q_3$ przyjmie wtedy postać
+Funkcja wyjściowa $y(q_m,\bar{q}_r)=y(q_m)$ dla nieruchomego chwytaka, a więc ustalonych $q_1$, $q_2$, $q_3$ przyjmie wtedy postać
 \begin{center}
 $y(q_m)=\left(
 \begin{array}{c}
@@ -368,20 +371,23 @@ $y(q_m)=\left(
 \right).$
 \end{center}
 Jakobian manipulatora będzie wtedy równy 
-$J(q_r)=
+\begin{equation}
+J(\bar{q}_r)=
 \left(
 \begin{array}{c}
-   \frac{\partial y_1(q_m)}{\partial q_r}  \\
-      \frac{\partial y_2(q_m)}{\partial q_r}  \\
+   \dfrac{\partial y_1(q_m,\bar{q}_r)}{\partial \bar{q}_r}  \\\\
+      \dfrac{\partial y_2(q_m,\bar{q}_r)}{\partial \bar{q}_r}  \\
 \end{array}
 \right)=\begin{bmatrix}
     -s_1(l_2+l_3c_3)  &0&-c_1s_3l_3\\
     c_1(l_2+l_3c_3)  &0&-s_1s_3l_3\\
-\end{bmatrix},$\\
+\end{bmatrix},
+\end{equation} 
 w związku z czym manipulowalność (\ref{manipulowa}) dana będzie wzorem
 \begin{equation}
 w=|s_3||(l_2+c_3l_3)|l_3.
 \end{equation} 
+Pojawiające się symbole oznaczają: $c_0=\cos(\theta)$, $c_1=\cos(q_1)$, $c_3=\cos(q_3)$, $s_0=\sin(\theta)$, $s_1=\sin(q_1)$, $s_3=\sin(q_3)$, $c_{01}=\cos(\theta+q_1)$, $s_{01}=\sin(\theta+q_1)$.\\
 Parametry geometryczne ustalono jako $l_2=0.3$m, $l_3=0.2$m, $a=0.2$m. Maksymalną manipulowalność osiągniemy dla $q_3=1.1314$ i dowolnych  $q_1$ i $q_2$.\\
 
 Do symulacji wybrano więc następujące konfiguracje początkowe platformy i manipulatora 
@@ -455,7 +461,7 @@ W badaniach wykorzystano środowisko Matlab/Simulink. \\
 Przebiegi błędów śledzenia trajektorii chwytaka pokazano na rys. \ref{fig:ZPe}
 \begin{figure}[H]
 \centering
-\includegraphics[width=.6\linewidth]{pics/ZPe}
+\includegraphics[width=.85\linewidth]{pics/ZPe}
 \caption{Przebiegi błędów śledzenia trajektorii chwytaka}
 \label{fig:ZPe}
 \end{figure}
@@ -467,17 +473,30 @@ Przebiegi konfiguracji bazy i manipulatora pokazano na rys. \ref{fig:ZPq}
   	\centering
   	\includegraphics[width=.99\linewidth]{pics/ZPx}
   	
-  	\label{fig:sub1}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
  	\centering
     \includegraphics[width=.99\linewidth]{pics/ZPq}
- 	
-  	\label{fig:sub1}
 \end{minipage}%
 \caption{Przebiegi konfiguracji bazy i manipulatora}
 \label{fig:ZPq}
 \end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.85\linewidth]{pics/ZPdrawingXY}
+\caption{Pozycja robota w kolejnych chwilach czasu -- widok na płaszczyznę XY}
+\label{ZPXY}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.85\linewidth]{pics/ZPdrawingXYZ}
+\caption{Pozycja robota w kolejnych chwilach czasu -- widok 3D}
+\label{ZPXYZ}
+\end{figure}
+
 \section{Algorytm z rozszerzonymi funkcjami wyjściowymi}
 \subsection{Specyfikacja podejścia}
 Odmiennie od założeń Yamamoto i Yuna rozszerzony algorytm nie wymaga bezruchu manipulatora. Dzięki temu platforma i manipulator mogą działać równolegle w sposób skoordynowany. Sterowanie platformy nie odbywa się w sposób bezpośredni.\\
@@ -552,11 +571,11 @@ Aby zapewnić linearyzację wejściowo-wyjściową układu (\ref{eq:edwfwsefef})
 \begin{equation}
 v=\Phi^{-1}(q)[-\dot{\Phi}(q,\dot{q}) z+\zeta].
 \end{equation}
-Po zastosowaniu algorytmu otrzymamy funkcję wyjściową o liniowej postaci
+Po zastosowaniu pierwszej pętli otrzymamy funkcję wyjściową o liniowej postaci
 \begin{equation}
 \ddot{y}(q,\dot{q})=\zeta.
 \end{equation}
-Otrzymaliśmy system identyczny jak ten po zastosowaniu algorytmu Yamamoto i Yuna tj. układ liniowy typu "podwójny integrator". Jego sterowaniem zajmuje się pętla zewnętrzna, którą również można zrealizować jako regulatora PD z korekcją(\ref{PD}).
+Otrzymaliśmy system identyczny jak ten po zastosowaniu algorytmu Yamamoto i Yuna tj. układ liniowy typu "podwójny integrator". Jego sterowaniem zajmuje się pętla zewnętrzna, którą również można zrealizować jako regulator PD z korekcją(\ref{PD}).
 \paragraph{Warunki działania algorytmu} Tak jak w przypadku podstawowego algorytmu Yamamoto i Yuna należy zapewnić odwracalość macierzy $\Phi$. Warunek taki trzeba spełnić aby algorytm funkcjonował. Ma on następującą postać
 \begin{equation}
 \text{det}(\Phi)=\text{det}(\Phi_m)\text{det}(\Phi_r)\neq0
@@ -584,6 +603,7 @@ $y_2(q_r)=
 \end{array}
 \right).$
 \end{center}
+Ponownie, symbole oznaczają: $c_0=\cos(\theta)$, $c_1=\cos(q_1)$, $c_3=\cos(q_3)$, $s_0=\sin(\theta)$, $s_1=\sin(q_1)$, $s_3=\sin(q_3)$, $c_{01}=\cos(\theta+q_1)$, $s_{01}=\sin(\theta+q_1)$.\\
 Parametry geometryczne ustalono jako: $l_2=0.3$m, $l_3=0.2$m, $a=0.2$m.\\
 Początkowe położenie platformy było równe $q_m(0)=(x(0),y(0),\theta(0),\phi_1(0),\phi_2(0))=(0,0,0,0,0)$, a początkowa konfiguracja manipulatora była równa $q_r(0)=(q_1(0),q_2(0),q_3(0))=(\frac{\pi}{2},0.2,-\frac{\pi}{2})$.\\
 Prędkości początkowe $\dot{q}(0)$ były równe zeru.  \\
@@ -639,33 +659,476 @@ $e(0)=
 \end{center}
 Do sterowania układem liniowym użyto regulator PD z korektą (\ref{PD}) z nastawami $K_d=4$, $K_p=2$.
 W badaniach wykorzystano środowisko Matlab/Simulink. \\
+Przebiegi błędów śledzenia trajektorii chwytaka pokazano na rys. \ref{ZRe}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=.6\linewidth]{pics/ZRe}
-\caption{Przebieg błędu}
-\label{fig:regnad}
+\includegraphics[width=.8\linewidth]{pics/ZRe}
+\caption{Przebieg błędów śledzenia trajektorii chwytaka}
+\label{ZRe}
 \end{figure}
 
+Przebiegi konfiguracji bazy i manipulatora pokazano na rys. \ref{ZRq}
 \begin{figure}[H]
 \centering 
 \begin{minipage}{.5\textwidth}
   	\centering
   	\includegraphics[width=.99\linewidth]{pics/ZRx}
-  	
-  	\label{fig:sub1}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
  	\centering
     \includegraphics[width=.99\linewidth]{pics/ZRq}
- 	
-  	\label{fig:sub1}
 \end{minipage}%
 \caption{Przebieg konfiguracji bazy i manipulatora}
-\label{fig:regnad}
+\label{ZRq}
 \end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.85\linewidth]{pics/ZRdrawingXY}
+\caption{Pozycja robota w kolejnych chwilach czasu -- widok na płaszczyznę XY}
+\label{ZRXY}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.85\linewidth]{pics/ZRdrawingXZ}
+\caption{Pozycja robota w kolejnych chwilach czasu -- widok na płaszczyznę XZ}
+\label{ZRXZ}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.85\linewidth]{pics/ZRdrawingXYZ}
+\caption{Pozycja robota w kolejnych chwilach czasu -- widok 3D}
+\label{ZRXYZ}
+\end{figure}
+
+
+
 \chapter{Model satelity typu free-floating}
-\chapter{Odsprzęganie wejściowo-wyjściowe dla satelity typu free-floating}
+\section{Model we współrzędnych uogólnionych}
+Robot free-floating z manipulatorem to nienapędzana platforma (baza) z zamontowanym na niej napędzanym manipulatorem. Robot taki znajduje się w przestrzeni kosmicznej w stanie mikrograwitacji (nieważkości).
+\par W rozważanym robocie platformą będzie jednolita prostokątna płyta, a za manipulator posłuży manipulator RR. Rozważanego robota free-floating z manipulatorem przedstawiono na rys \ref{FF}. \par Robot taki jest użyteczny ze względów praktycznych. Do badań eksperymentalnych bowiem, można wykorzystać płaską granitową płytę, po której baza może ślizgać się bez tarcia. %, a siły grawitacji nie mają wpływu na dynamikę.
+Dzięki temu testy można przeprowadzać na Ziemi, a nie w warunkach mikrograwitacji.
+\begin{figure}[H]
+\centering
+\includegraphics[width=.6\linewidth]{pics/FF}
+\caption{Robot free-floating z manipulatorem}
+\label{FF}
+\end{figure}
+
+\par Do wyprowadzenia modelu we współrzędnych uogólnionych weźmy następujące współrzędne
+\begin{equation}
+q=\left(
+\begin{array}{c}
+q_b\\
+q_r\\
+\end{array}
+\right),
+\end{equation}
+gdzie $q_b=(x,y,\theta)^T$ -- wektor współrzędnych uogólnionych bazy, $q_r=(q_1,q_2)^T$ -- wektor współrzędnych przegubowych manipulatora. 
+\par Równania dynamiki we współrzędnych uogólnionych takiego robota można, ponownie korzystając z formalizmu Langrange'a, zapisać jako\\
+\begin{equation}
+\label{wrsdad}
+H(q)\ddot{q}+C(q,\dot{q})\dot{q}=
+\left(
+\begin{array}{c}
+0\\
+u\\
+\end{array}
+\right).
+\end{equation}\\
+Brak wektora sił potencjalncyh $D(q)$ wynika z braku grawitacji. \par Sterowanie $u$ pojawia się tylko w dolnej części równania dynamiki (\ref{wrsdad}), ponieważ dotyczy jedynie manipulatora, jako że baza jest nienapędzana (free-floating).
+
+%\end{equation}\\
+\section{Model we współrzędnych barycentrycznych}
+Jeśli środek masy robota free-floating z manipulatorem ma pozostać nieruchomy (lub poruszać się ze stałą prędkością), konieczne jest zamodelowanie dynamiki we współrzędnych barycentrycznych.\\
+\par Położenie środka masy robota free-floating z manipulatorem można wyliczyć z definicji jako
+\begin{equation}
+\left(\sum\limits^w_{i=1}m_i\right)\phi_b=\sum\limits^w_{i=1}m_ir_i,
+\end{equation}
+gdzie $r_i$ to środek masy $i$-tego członu robota w podstawowym układzie współrzędnych, a  $m_i$ to masa $i$-tego członu. Z kolei $w$ to liczba członów robota. W naszym przypadku $w$ wynosi trzy, robot posiada bowiem jedną bazę i dwa ramiona.\\
+$\phi_b$ to współrzędne barycentryczne układu, czyli
+\begin{equation}
+\label{baro}
+\phi_b=
+\left(
+\begin{array}{c}
+\bar{x}\\
+\bar{y}\\
+\theta\\
+\end{array}
+\right)=
+\frac{\sum\limits^w_{i=1}m_ir_i}{\sum\limits^w_{i=1}m_i}.
+\end{equation}
+Kompletne współrzędne barycentryczne satelity wraz z manipulatorem $\phi$ mają postać
+\begin{equation}
+\phi=
+\left(
+\begin{array}{c}
+\phi_b\\
+q_r\\
+\end{array}
+\right).
+\end{equation}
+Model we współrzędnych barycentrycznych można więc wyrazić jako
+\begin{equation}
+\bar{H}\ddot{\phi}+\bar{C}\dot{\phi}
+=
+\left(
+\begin{array}{c}
+0\\
+u\\
+\end{array}
+\right),
+\end{equation}
+
+Macierze $\bar{H}$ i $\bar{C}$ uzyskuje się przez przeliczenie energii kinetycznej do układu współrzędnych barycentrycznych i wykorzystanie formalizmu Lagrange'a dla nowej energii kinetycznej.\\
+
+\chapter{Odsprzęganie wejściowo-wyjściowe dla robota free-floating z manipulatorem}
+
+Ponieważ baza robota free-floating z manipulatorem nie jest napędzana, do odsprzęgania wejściowo-wyjściowego nie można zastosować podstawowego algorytmu Yamamoto i Yuna. Do realizacji zadania śledzenia trajektorii w przestrzeni zadaniowej wykorzystamy więc algorytm z rozszerzonymi funkcjami wyjściowymi.
+\par Algorytm ten można stosować zarówno dla modelu robota free-floating z manipulatorem we współrzędnych uogólnionych, jak i we współrzędnych barycentrycznych. Wybór modelu należy podporządkować rodzajowi zadania, jakie ma zostać wykonane. Jeśli środek masy ma pozostać nieruchomy wykorzystać należy model we współrzędnych barycentrycznych, natomiast gdy środek masy ma się przemieszczać, to można użyć modelu we współrzędnych uogólnionych.
+\par Przy wyprowadzaniu algorytmu wykorzystamy model dynamiki we współrzędnych uogólnionych. Algorytm dla modelu we współrzędnych barycentrycznych wyprowadza się analogicznie, podstawiając jedynie za współrzędne uogólnione $q$ i macierze  $H$ i $C$ oraz ich odpowiedniki w modelu we współrzędnych barycentrycznych, tj.  współrzędne barycentryczne $\phi$ i macierze $\bar{H}$ i $\bar{C}$.
+
+\par Korzystamy z algorytmu z rozszerzonymi funkcjami wyjściowymi, więc postać funkcji wyjściowej będzie zależeć od całej konfiguracji $q$:
+\begin{equation}
+y=k(q).
+\end{equation}
+\section{Algorytm odsprzęgania wejściowo-wyjściowego}
+Przy wyprowadzaniu algorytmów odsprzęgania wejściowo-wyjściowego dla manipulatora mobilnego linearyzowaliśmy jego dynamikę w celu ułatwienia obliczeń. W przypadku robota free-floating z manipulatorem linearyzacja taka jest kłopotliwa, ponieważ tylko manipulator jest napędzany. Aby nie utrudniać sobie zadania i pokazać, że linearyzacja dynamiki nie jest konieczna, nie zastosujemy jej przy wyprowadzaniu algorytmu odsprzęgania wejściowo-wyjściowego dla robota free-floating z manipulatorem.
+\par Struktura algorytmu nie zmienia się i nadal składa się z dwóch pętli sprzężenia zwrotnego: pierwsza przekształca układ do postaci liniowej typu "podwójny integrator", druga steruje uzyskanym układem liniowym.
+\par Prawo sterowania pierwszej pętli wyprowadza się analogicznie, jak w przypadku manipulatorów mobilnych.
+Niech $y_i=k_i(q)$ oznacza $i$-tą współrzędną chwytaka satelity, wyrażoną względem układu podstawowego. Oczywiste jest, że $i=1,...,p$, gdzie $p\leq6$.
+\par Zróżniczkujmy wszystkie elementy wektora $y(q)$ dwukrotnie po czasie
+\begin{equation}
+\dot{y}_i=\dfrac{d}{dt}\left(k_i(q)\right)=\dfrac{\partial k_i(q)}{\partial q}\dot{q}=J_i\dot{q},
+\end{equation}
+\begin{equation}
+\ddot{y}_i=\dot{q}^T\dfrac{\partial^2k_i(q)}{\partial q^2}\dot{q}+J_i\ddot{q}=P_i+J_i\ddot{q},
+\end{equation}
+gdzie
+\begin{equation}
+J_i=\dfrac{\partial k_i(q)}{\partial q},
+\end{equation}
+\begin{equation}
+P_i=\dot{q}^T\dfrac{\partial^2k_i(q)}{\partial q^2}\dot{q}.
+\end{equation}
+Zapiszmy $\dot{y}$ i $\ddot{y}$ w postaci wektorowej
+\begin{equation}
+\dot{y}=J\dot{q},
+\end{equation}
+\begin{equation}
+\label{ypplol}
+\ddot{y}=P+J\ddot{q},
+\end{equation}
+gdzie
+\begin{equation}
+P=
+\left(
+\begin{array}{c}
+P_1\\
+P_2\\
+\vdots\\
+P_p\\
+\end{array}
+\right),
+\end{equation}
+\begin{equation}
+J=
+\left(
+\begin{array}{c}
+J_1\\
+J_2\\
+\vdots\\
+J_p\\
+\end{array}
+\right),
+\end{equation}
+$p$ jest liczbą zmiennych wyjściowych $y$.
+\par Korzystając z dynamiki we współrzędnych uogólnionych (\ref{wrsdad}), zapiszmy $\ddot{q}$  jako
+\begin{equation}
+\label{qpplol}
+\ddot{q}=H^{-1}
+\left[
+\left(
+\begin{array}{c}
+0\\
+u\\
+\end{array}
+\right)
+-C\dot{q}
+\right].
+\end{equation}
+Podstawmy teraz  (\ref{qpplol}) do (\ref{ypplol})
+\begin{equation}
+\ddot{y}=P+J
+H^{-1}
+\left[
+\left(
+\begin{array}{c}
+0\\
+u\\
+\end{array}
+\right)
+-C\dot{q}
+\right],
+\end{equation}
+a otrzymamy równanie o postaci
+\begin{equation}
+\ddot{y}=
+P-JH^{-1}C\dot{q}
++
+JH^{-1}\left(
+\begin{array}{c}
+0\\
+u\\
+\end{array}
+\right).
+\end{equation}
+Zapiszmy więc $\ddot{y}$ następująco
+\begin{equation}
+\ddot{y}=
+F+G\left(\begin{array}{c}
+0\\
+u\\
+\end{array}
+\right),
+\end{equation}
+gdzie
+\begin{equation}
+F=P-JH^{-1}C\dot{q},
+\end{equation}
+\begin{equation}
+G=JH^{-1}.
+\end{equation}
+macierz $G$ zapiszmy jako $G=[G_1|G_2]$. Macierz $G_2$ jest rozmiaru $p\times p$.\\
+Wektor $\ddot{y}$ można zapisać wtedy jako
+\begin{equation}
+\label{helloasdasda}
+\ddot{y}=F+G_2u.
+\end{equation}
+Prawo sterowania pętli linearyzującej jest następujące
+\begin{equation}
+\label{ulol}
+u=G_2^{-1}(-F+\zeta),
+\end{equation}
+przy czym symbolem $\zeta$ oznaczono nowe wejście do układu.
+Podstawiając (\ref{ulol}) do (\ref{helloasdasda}) otrzymujemy równanie układu z zamkniętą pętlą sprzężenia zwrotnego
+\begin{equation}
+\label{helloasdasdaasdasdasd}
+\ddot{y}=\zeta.
+\end{equation}
+Jak widać, jest to układ liniowy typu "podwójny integrator".
+Za wysterowanie go odpowiada druga pętla. Zrealizować ją, można np. jako regulator PD z korekcją (\ref{PD}).
+
+\subsection{Badania symulacyjne}
+Podrozdział ten jest poświęcony symulacji algorytmu odsprzęgania wejściowo-wyjściowego dla robota free-floating z manipulatorem.\\
+\par Algorytm zbadano na przedstawionym w pracy modelu dynamiki we współrzędnych barycentrycznych. \\
+\par Parametry geometryczne i masowe ustalono jako: $l_1$=1m, $l_2$=1m, $m_0=$20kg, $m_1$=$m_2$=10kg.\\
+Początkowa konfiguracja manipulatora była równa 
+\begin{center}
+$q_r(0)=
+\left(
+\begin{array}{c}
+   0 \\
+    0.1 \\
+\end{array}
+\right).$
+\end{center}
+Początkową konfigurację bazy $q_b(0)$ we współrzędnych uogólnionych ustalono jako
+\begin{center}
+$q_b(0)=
+\left(
+\begin{array}{c}
+   x(0) \\
+    y(0) \\
+    \theta(0)\\
+\end{array}
+\right)=
+\left(
+\begin{array}{c}
+    0 \\
+     0 \\
+     0 \\
+\end{array}
+\right),$
+\end{center}
+co odpowiada następującej konfiguracji początkowej bazy we współrzędnych barycentrycznych
+\begin{center}
+$\phi_b(0)=
+\left(
+\begin{array}{c}
+   \bar{x}(0) \\
+   \bar{y}(0) \\
+    \theta(0)\\
+\end{array}
+\right)=
+\left(
+\begin{array}{c}
+    0.4994 \\
+     0.0125 \\
+     0\\
+\end{array}
+\right).$
+\end{center}
+Wynika to z przekształcenia (\ref{baro}). W naszym wypadku $\bar{x}$ i $\bar{y}$ są równe
+\begin{center}$
+\begin{array}{c}
+\bar{x}= \dfrac{{m_2} \left({l_1}
+   c_{01}+\dfrac{1}{2} {l_2} c_{012}\right)}{{m_1}+{m_2}+{m_0}}+\dfrac{{l_1} {m_1} c_{01}}{2   ({m_1}+{m_2}+{m_0})}+x,\\
+   \bar{y}= \dfrac{{m_2} \left({l_1} s_{01}+\dfrac{1}{2} {l_2} s_{012}\right)}{{m_1}+{m_2}+{m_0}}+\dfrac{{l_1} {m_1} s_{01}}{2
+   ({m_1}+{m_2}+{m_0})}+y.
+   \end{array}
+$\end{center}
+Prędkości początkowe były równe
+\begin{center}
+$\dot{q}_r(0)=
+\left(
+\begin{array}{c}
+    0 \\
+     -0.1\\
+\end{array}
+\right),$
+\end{center}
+\begin{center}
+$\dot{q}_b(0)=
+\left(
+\begin{array}{c}
+    0 \\
+     0 \\
+     0.2\\
+\end{array}
+\right),$
+\end{center}
+\begin{center}
+$\dot{\phi}_b(0)=
+\left(
+\begin{array}{c}
+    -0.0012 \\
+     0.0874 \\
+     0.2\\
+\end{array}
+\right),$
+\end{center}
+\par Konieczne jest, aby liczba sterowań była równa liczbie wyjść. Wówczas sterować można dwoma przegubami manipulatora, a więc możliwe jest odsprzęgnięcie dwóch współrzędnych efektora. Wybrano współrzędne $x$ i $y$ efektora w podstawowym układzie odniesienia ($X_0$,$Y_0$).\\
+Funkcja wyjścia $y$ ma postać
+\begin{center}
+$y(t)=y(q_b,q_r)=y(\phi_b,q_r)=
+\left(
+\begin{array}{c}
+    x + l_1c_{01} + l_2c_{012}\\
+    y + l_1s_{01} + l_2s_{012}\\
+\end{array}
+\right)=$
+$=\left(
+\begin{array}{c}
+   \dfrac{{l_1} ({m_1}+2  {m_0}) c_{01}+ {l_2} (2
+    {m_1}+ {m_2}+2  {m_0}) c_{012}+2  \bar{x}
+   ( {m_1}+ {m_2}+ {m_0})}{2( {m_1}+ {m_2}+ {m_0})}\\\\
+   \dfrac{ {l_1}   ( {m_1}+2  {m_0}) s_{01}+ {l_2} (2  {m_1}+ {m_2}+2
+    {m_0}) s_{012}+2    \bar{y} ( {m_1}+ {m_2}+ {m_0})}{2
+   ( {m_1}+ {m_2}+ {m_0})}
+\end{array}
+\right).$
+\end{center}
+Funkcje wyjścia miały następujące wartości początkowe 
+\begin{center}
+$y(0)=y(q_b(0),q_r(0))=y(\phi_b(0),q_r(0))=
+\left(
+\begin{array}{c}
+     1.9950 \\
+     0.0998 \\
+\end{array}
+\right).$
+\end{center}
+Prędkości chwytaka w chwili początkowej były równe
+\begin{center}
+$\dot{y}(0)=
+\left(
+\begin{array}{c}
+    -0.0100 \\
+     0.2995 \\
+\end{array}
+\right).$
+\end{center}
+Wybrano następujące trajektorie zadane $y_d(t)$ 
+\begin{center}
+$y_d(t)=
+\left(
+\begin{array}{c}
+    0.5\sin(0.5t)\\
+   1+0.01\ln(30(t+1))\\
+\end{array}
+\right).$
+\end{center}
+Błąd początkowy $e(t)=y_d(t)-y(t)$ i jego pochodna były równe
+\begin{center}
+$e(0)=
+\left(
+\begin{array}{c}
+   -1.9950\\
+    0.9342\\
+   \end{array}
+\right), \hspace{1.5cm}
+\dot{e}(0)=
+\left(
+\begin{array}{c}
+    0.2600\\
+    -0.2895\\
+\end{array}
+\right).$
+\end{center}
+Do sterowania układem liniowym użyto regulatora PD z korekcją (\ref{PD}) z nastawami $K_d=4$, $K_p=2$.
+W badaniach raz jeszcze wykorzystano środowisko Matlab/Simulink. \\
+Rezultaty badań przedstawiono poniżej.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.8\linewidth]{pics/FF1BaryDrawing}
+\caption{Robot free-floating z manipulatorem w kolejnych chwilach czasu}
+\label{fig:FF1Drawing}
+\end{figure}
+
+Przebiegi błędów śledzenia trajektorii chwytaka pokazano na rys. \ref{fig:FF1Barye}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.6\linewidth]{pics/FF1Barye}
+\caption{Przebiegi błędów śledzenia trajektorii chwytaka}
+\label{fig:FF1Barye}
+\end{figure}
+
+Przebiegi współrzędnych uogólnionych $q_b$ i $q_r$ pokazano na rys. \ref{fig:FF1BaryQ}
+\begin{figure}[H]
+\centering 
+\begin{minipage}{.5\textwidth}
+  	\centering
+  	\includegraphics[width=.99\linewidth]{pics/FF1BaryX}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+ 	\centering
+    \includegraphics[width=.99\linewidth]{pics/FF1BaryQ}
+\end{minipage}%
+\caption{Przebiegi współrzędnych uogólnionych $q_b$ i $q_r$}
+\label{fig:FF1BaryQ}
+\end{figure}
+
+Przebiegi współrzędnych barycentrycznych $\bar{x}$ i $\bar{y}$ i ich prędkości pokazano na rys. \ref{fig:FF1BaryXBAR}
+\begin{figure}[H]
+\centering 
+\begin{minipage}{.5\textwidth}
+  	\centering
+  	\includegraphics[width=.99\linewidth]{pics/FF1BaryXBAR}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+ 	\centering
+    \includegraphics[width=.99\linewidth]{pics/FF1BaryXBARP}
+\end{minipage}%
+\caption{Przebiegi współrzędnych barycentrycznych $\bar{x}$ i $\bar{y}$ i ich prędkości}
+\label{fig:FF1BaryXBAR}
+\end{figure}
 \begin{thebibliography}{99}
 \bibitem{1} Mazur A. \textit{New approach to designing input-output decoupling controllers for mobile manipulators}. Bull. of the Polish Academy of sciences Tech. Sci. 53(1):31-37, (2005)
 

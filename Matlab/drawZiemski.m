@@ -18,4 +18,6 @@ line([corner1(1), corner4(1)], [corner1(2), corner4(2)], [corner1(3), corner4(3)
 line([K1(1), K1a(1)], [K1(2), K1a(2)], [K1(3), K1a(3)]);
 line([K1a(1), K2(1)], [K1a(2), K2(2)], [K1a(3), K2(3)]);
 line([K2(1), K3(1)], [K2(2), K3(2)], [K2(3), K3(3)]);
+
+
 end

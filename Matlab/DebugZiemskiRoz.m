@@ -12,5 +12,4 @@ simTime=10;
          
 sim('ZiemskiAlgorytmRoz.slx',simTime);
 
-plot(e);
-legend('ey1','ey2','ey3','ey4','ey5')
+

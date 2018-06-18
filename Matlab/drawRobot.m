@@ -1,13 +1,14 @@
-function []=drawRobot(Base,K1,K2,C1,C2,C3,C4);
+function []=drawRobot(Base,K1,K2,C1,C2,C3,C4,color);
 
-plot([Base(1) K1(1)], [Base(2) K1(2)],'R')
+plot([Base(1) K1(1)], [Base(2) K1(2)],'K')
 hold on
 ylim([-2,2])
 xlim([-2,2])
-plot([K1(1) K2(1)], [K1(2) K2(2)],'B')
-plot([C1(1) C2(1)], [C1(2) C2(2)],'K')
-plot([C2(1) C3(1)], [C2(2) C3(2)],'K')
-plot([C3(1) C4(1)], [C3(2) C4(2)],'K')
-plot([C4(1) C1(1)], [C4(2) C1(2)],'K')
+plot([K1(1) K2(1)], [K1(2) K2(2)],'K')
+
+plot([C1(1) C2(1)], [C1(2) C2(2)],color)
+plot([C2(1) C3(1)], [C2(2) C3(2)],color)
+plot([C3(1) C4(1)], [C3(2) C4(2)],color)
+plot([C4(1) C1(1)], [C4(2) C1(2)],color)
 
 end
