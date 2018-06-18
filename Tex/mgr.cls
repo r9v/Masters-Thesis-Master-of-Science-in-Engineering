@@ -248,7 +248,7 @@
 
 \if@eng
 \if@pl
-\renewcommand{\@naglowek}{PRACA DYPLOMOWA \\ IN\.ZYNIERSKA}
+\renewcommand{\@naglowek}{PRACA DYPLOMOWA \\ MAGISTERSKA}
 \fi
 \if@en
 \renewcommand{\@naglowek}{ENGINEERING THESIS}

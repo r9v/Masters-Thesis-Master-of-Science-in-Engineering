@@ -50,6 +50,7 @@
 \usepackage{wrapfig} 
 \reviewer{dypl}{0.2}{0.2}{0.67}
 \reviewer{prof}{0.2}{0.6}{0.2}
+
 \def\bp{\begin{review}[prof]}
 \def\ep{\end{review}}
 \def\bdypl{\begin{review}[dypl]}
@@ -93,29 +94,29 @@
 \patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
 \makeatother
 %%%%%%%%%%%%%
-\title{?}
-\engtitle{?}
+\title{Odsprzęganie wejściowo-wyjściowe dla manipulatora z ruchomą bazą}
+\engtitle{Input-Output decoupling control for manipulator with moving base}
 
 \author{inż. Bernard Malec}
-\supervisor{Prof.\ dr hab.\ inż.\ Alicja Mazur}
+\supervisor{Dr hab.\ inż.\ Alicja Mazur}
 
 
 \field{Automatyka i Robotyka (AIR)}
 \specialisation{Robotyka (ARR)}
 
-%\includeonly{mch0,mch1,mch2,mch3,mch4,bibl}
-%\includeonly{mch3}
-
 \begin{document}
 \bibliographystyle{plabbrv} %BibTeX polski styl bibliografii 
 
-% te ozdobniki dodaje się dopiero na końcu 
-%\maketitle
-\tableofcontents
+\maketitle
 
+\tableofcontents
+\newpage
 \chapter{Wstęp}
 \section{Cel pracy}
+
 \section{Zawartość pracy}
+
+\newpage
 \chapter{Model manipulatora mobilnego}
 Manipulator mobilny to platforma mobilna z zamontowanym na niej manipulatorem. Biorąc pod uwagę typ ograniczeń nałożonych kolejno na platformę i manipulator można wydzielić 4 typy manipulatorów mobilnych:
 \begin{enumerate}
@@ -258,7 +259,7 @@ gdzie:
  B^*&=G^TB.
 \end{align*}
 Równanie (\ref{modelpp}) opisuje dynamikę manipulatora mobilnego wyrażoną w prędkościach pomocniczych.\\
-
+\newpage
 \chapter{Odsprzęganie wejściowo-wyjściowe dla manipulatora mobilnego}
 Algorytm odsprzęgania wejściowo-wyjściowego jest wykorzystywany do sterowania manipulatorów mobilnych. Rozwiązuje on zadanie śledzenia zadanej trajektorii efektora $y_d(t)$ w przestrzeni zewnętrznej. Algorytm odpsprzęgania wejściowo-wyjściowego wymaga pełnej znajomości modelu manipulatora mobilnego.\\ 
 
@@ -706,7 +707,7 @@ Przebiegi konfiguracji bazy i manipulatora pokazano na rys. \ref{ZRq}
 \end{figure}
 
 
-
+\newpage
 \chapter{Model satelity typu free-floating}
 \section{Model we współrzędnych uogólnionych}
 Robot free-floating z manipulatorem to nienapędzana platforma (baza) z zamontowanym na niej napędzanym manipulatorem. Robot taki znajduje się w przestrzeni kosmicznej w stanie mikrograwitacji (nieważkości).
@@ -786,7 +787,7 @@ u\\
 \end{equation}
 
 Macierze $\bar{H}$ i $\bar{C}$ uzyskuje się przez przeliczenie energii kinetycznej do układu współrzędnych barycentrycznych i wykorzystanie formalizmu Lagrange'a dla nowej energii kinetycznej.\\
-
+\newpage
 \chapter{Odsprzęganie wejściowo-wyjściowe dla robota free-floating z manipulatorem}
 
 Ponieważ baza robota free-floating z manipulatorem nie jest napędzana, do odsprzęgania wejściowo-wyjściowego nie można zastosować podstawowego algorytmu Yamamoto i Yuna. Do realizacji zadania śledzenia trajektorii w przestrzeni zadaniowej wykorzystamy więc algorytm z rozszerzonymi funkcjami wyjściowymi.
@@ -922,9 +923,9 @@ Podstawiając (\ref{ulol}) do (\ref{helloasdasda}) otrzymujemy równanie układu
 \ddot{y}=\zeta.
 \end{equation}
 Jak widać, jest to układ liniowy typu "podwójny integrator".
-Za wysterowanie go odpowiada druga pętla. Zrealizować ją, można np. jako regulator PD z korekcją (\ref{PD}).
+Za wysterowanie go odpowiada druga pętla. Zrealizować ją, można np. jako regulator PD z korekcją (\ref{PD}).\\
 
-\subsection{Badania symulacyjne}
+\section{Badania symulacyjne}
 Podrozdział ten jest poświęcony symulacji algorytmu odsprzęgania wejściowo-wyjściowego dla robota free-floating z manipulatorem.\\
 \par Algorytm zbadano na przedstawionym w pracy modelu dynamiki we współrzędnych barycentrycznych. \\
 \par Parametry geometryczne i masowe ustalono jako: $l_1$=1m, $l_2$=1m, $m_0=$20kg, $m_1$=$m_2$=10kg.\\
@@ -1129,6 +1130,7 @@ Przebiegi współrzędnych barycentrycznych $\bar{x}$ i $\bar{y}$ i ich prędko�
 \caption{Przebiegi współrzędnych barycentrycznych $\bar{x}$ i $\bar{y}$ i ich prędkości}
 \label{fig:FF1BaryXBAR}
 \end{figure}
+\newpage
 \begin{thebibliography}{99}
 \bibitem{1} Mazur A. \textit{New approach to designing input-output decoupling controllers for mobile manipulators}. Bull. of the Polish Academy of sciences Tech. Sci. 53(1):31-37, (2005)
 
