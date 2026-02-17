@@ -103,6 +103,7 @@
 
 \field{Automatyka i Robotyka (AIR)}
 \specialisation{Robotyka (ARR)}
+\date{2018}
 
 \begin{document}
 \bibliographystyle{plabbrv} %BibTeX polski styl bibliografii 
@@ -111,10 +112,39 @@
 
 \tableofcontents
 \newpage
+
 \chapter{Wstęp}
+
+Manipulatory mobilne oraz roboty free-floating z manipulatorami stanowią jedne z najważniejszych klas systemów robotycznych. Łączą one zdolność lokomotoryczną z możliwością manipulacji obiektami, co znacząco poszerza zakres realizowanych zadań w porównaniu ze stacjonarnymi manipulatorami przemysłowymi. Jednocześnie dynamiczne sprzężenie pomiędzy bazą a manipulatorem oraz obecność ograniczeń nieholonomicznych (w przypadku platform kołowych) lub brak napędu bazy (w przypadku robotów kosmicznych) stwarzają istotne wyzwania sterowania.
+
+Jednym ze skutecznych podejść do rozwiązania tych problemów jest odsprzęganie wejściowo-wyjściowe oparte na linearyzacji sprzężenia zwrotnego. Metoda ta pozwala na przekształcenie nieliniowej dynamiki systemu do postaci liniowego układu typu ,,podwójny integrator'', co umożliwia precyzyjne śledzenie zadanej trajektorii efektora końcowego.
+
 \section{Cel pracy}
 
+Celem niniejszej pracy jest implementacja i analiza algorytmów odsprzęgania wejściowo-wyjściowego dla manipulatorów z ruchomą bazą. W szczególności w pracy zrealizowano następujące zadania:
+\begin{itemize}[noitemsep,topsep=0pt]
+\item wyprowadzenie modelu dynamiki manipulatora mobilnego typu (nh,h) -- monocykl z manipulatorem RTR -- we współrzędnych uogólnionych i prędkościach pomocniczych,
+\item wyprowadzenie modelu dynamiki robota free-floating z manipulatorem RR we współrzędnych uogólnionych i barycentrycznych,
+\item implementację podstawowego algorytmu Yamamoto i Yuna dla manipulatora mobilnego,
+\item implementację algorytmu z rozszerzonymi funkcjami wyjściowymi (Mazur) dla manipulatora mobilnego,
+\item implementację algorytmu odsprzęgania wejściowo-wyjściowego dla robota free-floating z manipulatorem we współrzędnych barycentrycznych,
+\item przeprowadzenie badań symulacyjnych w środowisku Matlab/Simulink dla każdego z zaimplementowanych algorytmów,
+\item symboliczne wyprowadzenie macierzy dynamiki (macierzy bezwładności, Coriolisa i sił potencjalnych) z~wykorzystaniem środowiska Wolfram Mathematica,
+\item analizę zbieżności błędów śledzenia trajektorii efektora końcowego oraz wpływu nastaw regulatora PD na jakość sterowania,
+\item porównanie działania algorytmu podstawowego i rozszerzonego pod kątem koordynacji ruchu platformy i manipulatora.
+\end{itemize}
+\newpage
 \section{Zawartość pracy}
+
+Praca składa się z~czterech rozdziałów.
+
+W~\textbf{rozdziale 2} przedstawiono model manipulatora mobilnego typu (nh,h), składającego się z~platformy klasy (2,0) -- monocykla -- oraz manipulatora RTR. Wyprowadzono równania dynamiki we współrzędnych uogólnionych z~wykorzystaniem formalizmu Lagrange'a, opisano ograniczenia nieholonomiczne w postaci Pfaffa, a~następnie przekształcono model do postaci wyrażonej w~prędkościach pomocniczych.
+
+W~\textbf{rozdziale 3} opisano dwa algorytmy odsprzęgania wejściowo-wyjściowego dla manipulatora mobilnego: podstawowy algorytm Yamamoto i~Yuna, w~którym manipulator utrzymuje stałą konfigurację o~maksymalnej manipulowalności, oraz algorytm z~rozszerzonymi funkcjami wyjściowymi (Mazur), w~którym platforma i~manipulator działają w~sposób skoordynowany. Dla obu algorytmów przeprowadzono badania symulacyjne.
+
+W~\textbf{rozdziale 4} przedstawiono model robota free-floating z~manipulatorem RR -- nienapędzanej platformy kosmicznej z~dwuczłonowym manipulatorem. Wyprowadzono model we współrzędnych uogólnionych oraz we współrzędnych barycentrycznych.
+
+W~\textbf{rozdziale 5} opisano algorytm odsprzęgania wejściowo-wyjściowego dla robota free-floating z~manipulatorem oraz przeprowadzono badania symulacyjne z~wykorzystaniem modelu we współrzędnych barycentrycznych.
 
 \newpage
 \chapter{Model manipulatora mobilnego}

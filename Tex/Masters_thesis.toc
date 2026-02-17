@@ -1,0 +1,28 @@
+\babel@toc {polish}{}\relax 
+\contentsline {chapter}{\numberline {1}Wstęp}{2}{}%
+\contentsline {section}{\numberline {1.1}Cel pracy}{2}{}%
+\contentsline {section}{\numberline {1.2}Zawartość pracy}{3}{}%
+\contentsline {chapter}{\numberline {2}Model manipulatora mobilnego}{4}{}%
+\contentsline {section}{\numberline {2.1}Model we współrzędnych uogólnionych}{5}{}%
+\contentsline {subsection}{\numberline {2.1.1}Ograniczenia nieholonomiczne}{6}{}%
+\contentsline {section}{\numberline {2.2}Model w prędkościach pomocniczych}{6}{}%
+\contentsline {chapter}{\numberline {3}Odsprzęganie wejściowo-wyjściowe dla manipulatora mobilnego}{8}{}%
+\contentsline {section}{\numberline {3.1}Podstawowy algorytm Yamamoto i Yuna}{8}{}%
+\contentsline {subsection}{\numberline {3.1.1}Specyfikacja podejścia}{8}{}%
+\contentsline {subsection}{\numberline {3.1.2}Wybór konfiguracji manipulatora}{8}{}%
+\contentsline {subsection}{\numberline {3.1.3}Funkcje wyjścia}{9}{}%
+\contentsline {subsection}{\numberline {3.1.4}Algorytm sterowania}{9}{}%
+\contentsline {paragraph}{Warunki działania algorytmu}{10}{}%
+\contentsline {subsection}{\numberline {3.1.5}Badania symulacyjne}{10}{}%
+\contentsline {section}{\numberline {3.2}Algorytm z rozszerzonymi funkcjami wyjściowymi}{13}{}%
+\contentsline {subsection}{\numberline {3.2.1}Specyfikacja podejścia}{13}{}%
+\contentsline {subsection}{\numberline {3.2.2}Funkcje wyjścia}{13}{}%
+\contentsline {subsection}{\numberline {3.2.3}Algorytm sterowania}{14}{}%
+\contentsline {paragraph}{Warunki działania algorytmu}{14}{}%
+\contentsline {subsection}{\numberline {3.2.4}Badania symulacyjne}{15}{}%
+\contentsline {chapter}{\numberline {4}Model satelity typu free-floating}{19}{}%
+\contentsline {section}{\numberline {4.1}Model we współrzędnych uogólnionych}{19}{}%
+\contentsline {section}{\numberline {4.2}Model we współrzędnych barycentrycznych}{20}{}%
+\contentsline {chapter}{\numberline {5}Odsprzęganie wejściowo-wyjściowe dla robota free-floating z manipulatorem}{21}{}%
+\contentsline {section}{\numberline {5.1}Algorytm odsprzęgania wejściowo-wyjściowego}{21}{}%
+\contentsline {section}{\numberline {5.2}Badania symulacyjne}{23}{}%
